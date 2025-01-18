@@ -1,0 +1,746 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NextFTCOpMode</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    NextFTC
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ftc:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ftc:dokkaHtmlPartial/release" data-filter=":ftc:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    NextFTC
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ftc::com.rowanmcalpin.nextftc.ftc/NextFTCOpMode///PointingToDeclaration//-421602704">
+  <div class="breadcrumbs"><a href="../../index.html">ftc</a><span class="delimiter">/</span><a href="../index.html">com.rowanmcalpin.nextftc.ftc</a><span class="delimiter">/</span><span class="current">NextFTCOpMode</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Next</span><wbr><span>FTCOp</span><wbr><span><span>Mode</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">NextFTCOpMode</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>subsystems<span class="token operator">: </span><a href="../../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator"> = </span>arrayOf()</span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.qualcomm.robotcore.eventloop.opmode/LinearOpMode///PointingToDeclaration/">LinearOpMode</span></div><p class="paragraph">This is a wrapper class for an OpMode that does the following:</p><ul><li><p class="paragraph">Automatically initializes and runs the CommandManager</p></li><li><p class="paragraph">If desired, automatically implements and handles Gamepads</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="596623292%2FConstructors%2F-421602704" anchor-label="NextFTCOpMode" id="596623292%2FConstructors%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-next-f-t-c-op-mode.html"><span>Next</span><wbr><span>FTCOp</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="596623292%2FConstructors%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>subsystems<span class="token operator">: </span><a href="../../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator"> = </span>arrayOf()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1533398127%2FProperties%2F-421602704" anchor-label="gamepad1" id="1533398127%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1533398127%2FProperties%2F-421602704"><span><span>gamepad1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1533398127%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#1533398127%2FProperties%2F-421602704">gamepad1</a><span class="token operator">: </span><span data-unresolved-link="com.qualcomm.robotcore.hardware/Gamepad///PointingToDeclaration/">Gamepad</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1564417934%2FProperties%2F-421602704" anchor-label="gamepad2" id="1564417934%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1564417934%2FProperties%2F-421602704"><span><span>gamepad2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1564417934%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#1564417934%2FProperties%2F-421602704">gamepad2</a><span class="token operator">: </span><span data-unresolved-link="com.qualcomm.robotcore.hardware/Gamepad///PointingToDeclaration/">Gamepad</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2008060462%2FProperties%2F-421602704" anchor-label="gamepadManager" id="2008060462%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="gamepad-manager.html"><span>gamepad</span><wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2008060462%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="gamepad-manager.html">gamepadManager</a><span class="token operator">: </span><a href="../../com.rowanmcalpin.nextftc.ftc.gamepad/-gamepad-manager/index.html">GamepadManager</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1397214969%2FProperties%2F-421602704" anchor-label="hardwareMap" id="-1397214969%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1397214969%2FProperties%2F-421602704"><span>hardware</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1397214969%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-1397214969%2FProperties%2F-421602704">hardwareMap</a><span class="token operator">: </span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1892877380%2FProperties%2F-421602704" anchor-label="isStarted" id="1892877380%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1892877380%2FProperties%2F-421602704"><span>is</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1892877380%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1892877380%2FProperties%2F-421602704">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1483349743%2FProperties%2F-421602704" anchor-label="msStuckDetectInit" id="1483349743%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1483349743%2FProperties%2F-421602704"><span>ms</span><wbr><span>Stuck</span><wbr><span>Detect</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1483349743%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#1483349743%2FProperties%2F-421602704"><strike>msStuckDetectInit</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-553001045%2FProperties%2F-421602704" anchor-label="msStuckDetectInitLoop" id="-553001045%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-553001045%2FProperties%2F-421602704"><span>ms</span><wbr><span>Stuck</span><wbr><span>Detect</span><wbr><span>Init</span><wbr><span><span>Loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-553001045%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-553001045%2FProperties%2F-421602704"><strike>msStuckDetectInitLoop</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="363588571%2FProperties%2F-421602704" anchor-label="msStuckDetectLoop" id="363588571%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#363588571%2FProperties%2F-421602704"><span>ms</span><wbr><span>Stuck</span><wbr><span>Detect</span><wbr><span><span>Loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="363588571%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#363588571%2FProperties%2F-421602704"><strike>msStuckDetectLoop</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="427944857%2FProperties%2F-421602704" anchor-label="msStuckDetectStart" id="427944857%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#427944857%2FProperties%2F-421602704"><span>ms</span><wbr><span>Stuck</span><wbr><span>Detect</span><wbr><span><span>Start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="427944857%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#427944857%2FProperties%2F-421602704"><strike>msStuckDetectStart</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-409341632%2FProperties%2F-421602704" anchor-label="msStuckDetectStop" id="-409341632%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-409341632%2FProperties%2F-421602704"><span>ms</span><wbr><span>Stuck</span><wbr><span>Detect</span><wbr><span><span>Stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-409341632%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-409341632%2FProperties%2F-421602704"><strike>msStuckDetectStop</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1991443121%2FProperties%2F-421602704" anchor-label="stopRequested" id="-1991443121%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1991443121%2FProperties%2F-421602704"><span>stop</span><wbr><span><span>Requested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1991443121%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1991443121%2FProperties%2F-421602704">stopRequested</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1173319382%2FProperties%2F-421602704" anchor-label="subsystems" id="1173319382%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subsystems.html"><span><span>subsystems</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1173319382%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="subsystems.html">subsystems</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1097975490%2FProperties%2F-421602704" anchor-label="telemetry" id="1097975490%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1097975490%2FProperties%2F-421602704"><span><span>telemetry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1097975490%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#1097975490%2FProperties%2F-421602704">telemetry</a><span class="token operator">: </span><span data-unresolved-link="org.firstinspires.ftc.robotcore.external/Telemetry///PointingToDeclaration/">Telemetry</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-591827947%2FProperties%2F-421602704" anchor-label="time" id="-591827947%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-591827947%2FProperties%2F-421602704"><span><span>time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-591827947%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-591827947%2FProperties%2F-421602704">time</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="537756679%2FProperties%2F-421602704" anchor-label="useBulkReading" id="537756679%2FProperties%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use-bulk-reading.html"><span>use</span><wbr><span>Bulk</span><wbr><span><span>Reading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="537756679%2FProperties%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="use-bulk-reading.html">useBulkReading</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether to bulk read the hubs. It is recommended to leave this ON. You must only update this in <a href="on-init.html">onInit</a>. If you update it in <a href="on-update.html">onUpdate</a> or from a command, you will likely break things.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="503260448%2FFunctions%2F-421602704" anchor-label="getRuntime" id="503260448%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#503260448%2FFunctions%2F-421602704"><span>get</span><wbr><span><span>Runtime</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="503260448%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#503260448%2FFunctions%2F-421602704"><span class="token function">getRuntime</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-945285709%2FFunctions%2F-421602704" anchor-label="idle" id="-945285709%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-945285709%2FFunctions%2F-421602704"><span><span>idle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945285709%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-945285709%2FFunctions%2F-421602704"><span class="token function">idle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1617228809%2FFunctions%2F-421602704" anchor-label="init" id="-1617228809%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1617228809%2FFunctions%2F-421602704"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1617228809%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1617228809%2FFunctions%2F-421602704"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-493667936%2FFunctions%2F-421602704" anchor-label="init_loop" id="-493667936%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-493667936%2FFunctions%2F-421602704"><span>init_</span><wbr><span>loop</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-493667936%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-493667936%2FFunctions%2F-421602704"><span class="token function">init_loop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="832637297%2FFunctions%2F-421602704" anchor-label="internalPostInitLoop" id="832637297%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#832637297%2FFunctions%2F-421602704"><span>internal</span><wbr><span>Post</span><wbr><span>Init</span><wbr><span><span>Loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="832637297%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#832637297%2FFunctions%2F-421602704"><span class="token function"><strike>internalPostInitLoop</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-180688735%2FFunctions%2F-421602704" anchor-label="internalPostLoop" id="-180688735%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-180688735%2FFunctions%2F-421602704"><span>internal</span><wbr><span>Post</span><wbr><span><span>Loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-180688735%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-180688735%2FFunctions%2F-421602704"><span class="token function"><strike>internalPostLoop</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="958221314%2FFunctions%2F-421602704" anchor-label="internalPreInit" id="958221314%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#958221314%2FFunctions%2F-421602704"><span>internal</span><wbr><span>Pre</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="958221314%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#958221314%2FFunctions%2F-421602704"><span class="token function"><strike>internalPreInit</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="949931346%2FFunctions%2F-421602704" anchor-label="internalUpdateTelemetryNow" id="949931346%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#949931346%2FFunctions%2F-421602704"><span>internal</span><wbr><span>Update</span><wbr><span>Telemetry</span><wbr><span><span>Now</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="949931346%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#949931346%2FFunctions%2F-421602704"><span class="token function">internalUpdateTelemetryNow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><span data-unresolved-link="com.qualcomm.robotcore.robocol/TelemetryMessage///PointingToDeclaration/">TelemetryMessage</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1557977315%2FFunctions%2F-421602704" anchor-label="loop" id="1557977315%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1557977315%2FFunctions%2F-421602704"><span><span>loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1557977315%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1557977315%2FFunctions%2F-421602704"><span class="token function">loop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="789809675%2FFunctions%2F-421602704" anchor-label="onInit" id="789809675%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-init.html"><span>on</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="789809675%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-init.html"><span class="token function">onInit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function runs ONCE when the init button is pressed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1289750259%2FFunctions%2F-421602704" anchor-label="onStartButtonPressed" id="-1289750259%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-start-button-pressed.html"><span>on</span><wbr><span>Start</span><wbr><span>Button</span><wbr><span><span>Pressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1289750259%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-start-button-pressed.html"><span class="token function">onStartButtonPressed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function runs ONCE when the start button is pressed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1046889639%2FFunctions%2F-421602704" anchor-label="onStop" id="-1046889639%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-stop.html"><span>on</span><wbr><span><span>Stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1046889639%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-stop.html"><span class="token function">onStop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function runs ONCE when the stop button is pressed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-782481166%2FFunctions%2F-421602704" anchor-label="onUpdate" id="-782481166%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-update.html"><span>on</span><wbr><span><span>Update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-782481166%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-update.html"><span class="token function">onUpdate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function runs REPEATEDLY when the OpMode is running.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-366513875%2FFunctions%2F-421602704" anchor-label="onWaitForStart" id="-366513875%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-wait-for-start.html"><span>on</span><wbr><span>Wait</span><wbr><span>For</span><wbr><span><span>Start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-366513875%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-wait-for-start.html"><span class="token function">onWaitForStart</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function runs REPEATEDLY during initialization.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1015161614%2FFunctions%2F-421602704" anchor-label="opModeInInit" id="1015161614%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1015161614%2FFunctions%2F-421602704"><span>op</span><wbr><span>Mode</span><wbr><span>In</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1015161614%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#1015161614%2FFunctions%2F-421602704"><span class="token function">opModeInInit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-911330061%2FFunctions%2F-421602704" anchor-label="opModeIsActive" id="-911330061%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-911330061%2FFunctions%2F-421602704"><span>op</span><wbr><span>Mode</span><wbr><span>Is</span><wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-911330061%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-911330061%2FFunctions%2F-421602704"><span class="token function">opModeIsActive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-765560122%2FFunctions%2F-421602704" anchor-label="requestOpModeStop" id="-765560122%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-765560122%2FFunctions%2F-421602704"><span>request</span><wbr><span>Op</span><wbr><span>Mode</span><wbr><span><span>Stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-765560122%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-765560122%2FFunctions%2F-421602704"><span class="token function">requestOpModeStop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1757147609%2FFunctions%2F-421602704" anchor-label="resetRuntime" id="1757147609%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1757147609%2FFunctions%2F-421602704"><span>reset</span><wbr><span><span>Runtime</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1757147609%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1757147609%2FFunctions%2F-421602704"><span class="token function">resetRuntime</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1091782897%2FFunctions%2F-421602704" anchor-label="runOpMode" id="1091782897%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-op-mode.html"><span>run</span><wbr><span>Op</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1091782897%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="run-op-mode.html"><span class="token function">runOpMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1955259651%2FFunctions%2F-421602704" anchor-label="sleep" id="-1955259651%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1955259651%2FFunctions%2F-421602704"><span><span>sleep</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1955259651%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1955259651%2FFunctions%2F-421602704"><span class="token function">sleep</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1200709743%2FFunctions%2F-421602704" anchor-label="start" id="-1200709743%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1200709743%2FFunctions%2F-421602704"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200709743%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1200709743%2FFunctions%2F-421602704"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="841039173%2FFunctions%2F-421602704" anchor-label="stop" id="841039173%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#841039173%2FFunctions%2F-421602704"><span><span>stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="841039173%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#841039173%2FFunctions%2F-421602704"><span class="token function">stop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-167858447%2FFunctions%2F-421602704" anchor-label="terminateOpModeNow" id="-167858447%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-167858447%2FFunctions%2F-421602704"><span>terminate</span><wbr><span>Op</span><wbr><span>Mode</span><wbr><span><span>Now</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-167858447%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-167858447%2FFunctions%2F-421602704"><span class="token function">terminateOpModeNow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1080474565%2FFunctions%2F-421602704" anchor-label="updateTelemetry" id="1080474565%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1080474565%2FFunctions%2F-421602704"><span>update</span><wbr><span><span>Telemetry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1080474565%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1080474565%2FFunctions%2F-421602704"><span class="token function">updateTelemetry</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><span data-unresolved-link="org.firstinspires.ftc.robotcore.external/Telemetry///PointingToDeclaration/">Telemetry</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="246695705%2FFunctions%2F-421602704" anchor-label="waitForStart" id="246695705%2FFunctions%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#246695705%2FFunctions%2F-421602704"><span>wait</span><wbr><span>For</span><wbr><span><span>Start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="246695705%2FFunctions%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#246695705%2FFunctions%2F-421602704"><span class="token function">waitForStart</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

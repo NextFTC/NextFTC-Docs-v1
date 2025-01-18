@@ -1,0 +1,15 @@
+{
+    "name": "nextftcdocumentation",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "docs:build": "vitepress build",
+        "docs:preview": "vitepress preview"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "vitepress": "^1.5.0",
+        "vitepress-plugin-tabs": "^0.5.0"
+    }
+}
