@@ -1,3 +1,12 @@
+---
+prev:
+    link: /installation
+    text: Installation
+next:
+    link: /user-guide/subsystems/lift
+    text: Lift
+---
+
 # Subsystems
 
 Subsystems are an important feature of NextFTC. A Subsystem is a collection of hardware devices and Commands that all interact with a discrete aspect of the robot, such as a lift, claw, or arm.
