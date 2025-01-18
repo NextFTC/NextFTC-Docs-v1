@@ -18,7 +18,7 @@ export default defineConfig({
         nav: [
             {text: "Home", link: "/"},
             {text: "Installation", link: "/installation"},
-            {text: "Reference", link: "/reference/"}
+            {text: "Reference", link: "https://docs.rowanmcalpin.com/reference/"}
         ],
 
         sidebar: [

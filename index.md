@@ -15,7 +15,7 @@ hero:
           link: /installation
         - theme: alt
           text: Reference
-          link: /reference/
+          link: https://docs.rowanmcalpin.com/reference/
 
 features:
     - title: Easy to use
