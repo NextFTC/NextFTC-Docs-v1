@@ -36,7 +36,7 @@ features:
 
 NextFTC was written in Kotlin, a JVM programming language. You can use either Kotlin or Java, but there are small advantages to using Kotlin. Each section with code examples will offer both Kotlin and Java tabs. It's recommended to choose one language for your project to avoid compatibility issues.
 
-To use Kotlin, configure it in your project. I recommend the Kotlin Gradle Plugin version `1.9.25`. (Kotlin is pre-installed in the Quickstart template.)
+To use Kotlin, configure it in your project. I recommend the Kotlin Gradle Plugin version `1.9.0`. (Kotlin is pre-installed in the Quickstart template.)
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
