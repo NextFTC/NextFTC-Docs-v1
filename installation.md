@@ -1,3 +1,36 @@
+<script setup>
+import {ref, onMounted} from "vue";
+
+const pedroPathingVersion = ref("Loading...");
+
+onMounted(async () => {
+    try {
+        const response = await fetch(
+            "https://api.github.com/repos/Pedro-Pathing/PedroPathing/releases/latest",
+            {
+                headers: {
+                    "Accept": "application/vnd.github+json",
+                    "X-GitHub-Api-Version": "2022-11-28"
+                }
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`Error fetching version (${response.status})`);
+        }
+
+        const data = await response.json();
+        if (data.tag_name.charAt(0) === "v") {
+            pedroPathingVersion.value = data.tag_name.substring(1); // or str.slice(1);
+        } else {
+            pedroPathingVersion.value = data.tag_name;
+        }
+    } catch (error) {
+        pedroPathingVersion.value = `Error fetching version: ${error.message}`;
+    }
+});
+</script>
+
 # Installation
 
 The first step to using NextFTC is installing it. There are two ways to install it.
@@ -11,7 +44,7 @@ The easiest way to install NextFTC is by using the quickstart. In addition to ha
 
 ## Method 2: Manually using Gradle (existing project)
 
-Installing NextFTC using Gradle is fairly simple. This tutorial assumes you are starting from an unmodified (or minimally modified) [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) project.
+Installing NextFTC using Gradle is fairly simple. This tutorial assumes you haven't modified your Gradle files..
 
 ### Step 1: Add the repositories
 
@@ -45,21 +78,21 @@ Still in the `build.dependencies.gradle` file, go to the `dependencies` block. A
 
 == .gradle
 
-```groovy
+```groovy-vue
 implementation 'com.rowanmcalpin.nextftc:core:0.5.5-beta1'
 implementation 'com.rowanmcalpin.nextftc:ftc:0.5.5-beta1'
 implementation 'com.rowanmcalpin.nextftc:pedro:0.5.5-beta1' // Remove if you don't intend to use PedroPathing
-implementation 'com.pedropathing:pedro:1.0.3' // Remove if you don't intend to use PedroPathing
+implementation 'com.pedropathing:pedro:{{ pedroPathingVersion }}' // Remove if you don't intend to use PedroPathing
 implementation 'com.acmerobotics.dashboard:dashboard:0.4.16' // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
 ```
 
 == .gradle.kts
 
-```kotlin
+```kotlin-vue
 implementation("com.rowanmcalpin.nextftc:core:0.5.5-beta1")
 implementation("com.rowanmcalpin.nextftc:ftc:0.5.5-beta1")
 implementation("com.rowanmcalpin.nextftc:pedro:0.5.5-beta1") // Remove if you don't intend to use PedroPathing
-implementation("com.pedropathing:pedro:1.0.3") // Remove if you don't intend to use PedroPathing
+implementation("com.pedropathing:pedro:{{ pedroPathingVersion }}") // Remove if you don't intend to use PedroPathing
 implementation("com.acmerobotics.dashboard:dashboard:0.4.16") // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
 ```
 

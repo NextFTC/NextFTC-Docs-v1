@@ -19,17 +19,17 @@ hero:
 
 features:
     - title: Easy to use
-      details: NextFTC doesn't require you to write commands as classes, like you do in FTCLib.
-    - title: Gamepad bindings
-      details: Easy to bind commands to gamepad buttons.
+      details: NextFTC offers numerous built-in commands so you don't need to write everything yourself like you do with FTCLib. Examples include running a motor to a position using a custom PID controller, following a path, or driving during TeleOp.
+    - title: Gamepad Integration
+      details: "NextFTC has complex gamepad integration, including:<ul style='list-style:inherit;padding-inline-start:2rem'><li>Bindings commands to buttons</li><li>Rising and falling edge detection</li><li>Automatic gamepad polling</li><li>Joystick curving</li></ul>"
     - title: Subsystems
       details: Subsystems help you organize your code and prevent conflicts by ensuring that no two commands using the same subsystem run simultaneously.
     - title: Commands
       details: Commands are units of code that can be executed. They consist of several steps and can be grouped into command groups, allowing them to run sequentially or simultaneously.
-    - title: Built-In Commands
-      details: You almost never need to write your own commands, as dozens of pre-built commands are available. Examples include running a motor to a position using a custom PID controller, following a path, or driving during TeleOp.
     - title: PedroPathing
-      details: NextFTC integrates with [PedroPathing](https://pedropathing.com), an autonomous pathing library. Compared to Roadrunner, PedroPathing is faster, smoother, and easier to tune.
+      details: NextFTC integrates with <a style="text-decoration:underline;color:var(--vp-c-brand-1)" target="_blank" href="https://pedropathing.com">PedroPathing</a>, an autonomous pathing library. Compared to Roadrunner, PedroPathing is faster, smoother, and easier to tune.
+    - title: Welcoming Community
+      details: "NextFTC has a welcoming support Discord server where you can ask questions or chat with the community. <br> Join the <a style='text-decoration:underline;color:var(--vp-c-brand-1)' target='_blank' href='https://discord.gg/PjP9Ze6fkX'>NextFTC Discord</a>!"
 ---
 
 ## A note on these docs
@@ -55,9 +55,20 @@ const members = [
       },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/rowan-mcalpin/'},
       {
-        icon: { 'svg': '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>'},
+        icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>'},
         link: 'https://rowanmcalpin.com',
         ariaLabel: 'website'
+      }
+    ]
+  },
+  {
+    avatar: 'https://github.com/beepbot99.png',
+    name: 'Davis Luxenberg',
+    title: 'NextFTC Dev',
+    links: [
+      {
+        icon: "github",
+        link: "https://github.com/beepbot99"
       }
     ]
   }
