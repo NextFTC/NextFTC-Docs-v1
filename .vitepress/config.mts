@@ -3,6 +3,20 @@ import {tabsMarkdownPlugin} from "vitepress-plugin-tabs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    head: [
+        ["link", {rel: "shortcut icon", type: "image/x-icon", href: "/favicon.ico"}],
+        ["link", {rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96"}],
+        ["link", {rel: "icon", type: "image/svg+xml", href: "/favicon.svg"}],
+        [
+            "link",
+            {
+                rel: "apple-touch-icon",
+                href: "/apple-touch-icon.png",
+                sizes: "180x180"
+            }
+        ],
+        ["link", {rel: "manifest", href: "/site.webmanifest"}]
+    ],
     cleanUrls: true,
     ignoreDeadLinks: true,
     base: "/",
@@ -36,7 +50,10 @@ export default defineConfig({
                     },
                     {
                         text: "OpModes",
-                        items: [{text: "Autonomous", link: "/user-guide/opmodes/autonomous"}]
+                        items: [
+                            {text: "Autonomous", link: "/user-guide/opmodes/autonomous"},
+                            {text: "TeleOp", link: "/user-guide/opmodes/teleop"}
+                        ]
                     },
                     {
                         text: "PedroPathing",
@@ -58,6 +75,29 @@ export default defineConfig({
                     {
                         text: "Controllers",
                         link: "/components/controllers"
+                    }
+                ]
+            },
+            {
+                text: "Built-In Commands",
+                items: [
+                    {
+                        text: "Drivetrain Commands",
+                        link: "/builtin-commands/drivetrain-commands",
+                        items: [
+                            {
+                                text: "PedroPathing",
+                                link: "/builtin-commands/drivetrain-commands/pedropathing"
+                            },
+                            {
+                                text: "Holonomic",
+                                link: "/builtin-commands/drivetrain-commands/holonomic"
+                            },
+                            {
+                                text: "Differential",
+                                link: "/builtin-commands/drivetrain-commands/differential"
+                            }
+                        ]
                     }
                 ]
             }
