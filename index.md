@@ -21,7 +21,7 @@ features:
     - title: Easy to use
       details: NextFTC offers numerous built-in commands so you don't need to write everything yourself like you do with FTCLib. Examples include running a motor to a position using a custom PID controller, following a path, or driving during TeleOp.
     - title: Gamepad Integration
-      details: "NextFTC has complex gamepad integration, including:<ul style='list-style:inherit;padding-inline-start:2rem'><li>Bindings commands to buttons</li><li>Rising and falling edge detection</li><li>Automatic gamepad polling</li><li>Joystick curving</li></ul>"
+      details: NextFTC has complex gamepad integration, including binding commands to buttons, rising and falling edge detection, automatic gamepad polling, and even joystick curving!
     - title: Subsystems
       details: Subsystems help you organize your code and prevent conflicts by ensuring that no two commands using the same subsystem run simultaneously.
     - title: Commands
