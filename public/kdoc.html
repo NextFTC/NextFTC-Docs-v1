@@ -55,11 +55,10 @@ NextFTC: a user-friendly control library for FIRST Tech Challenge
         if (target == package) {
             target = ""
         } else {
-            target = target.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
-            target += "/index.html"
+            target = target.replace(/[A-Z]/g, m => "-" + m.toLowerCase())+"/";
         }
 
-        window.location.replace("/reference/"+module+"/com.rowanmcalpin.nextftc."+package+"/"+target);
+        window.location.replace("/reference/"+module+"/com.rowanmcalpin.nextftc."+package+"/"+target+"index.html");
     </script>
 </head>
 <body>
