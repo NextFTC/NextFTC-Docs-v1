@@ -103,7 +103,10 @@ export default defineConfig({
             }
         ],
 
-        socialLinks: [{icon: "github", link: "https://github.com/rowan-mcalpin/nextftc"}],
+        socialLinks: [
+            {icon: "github", link: "https://github.com/rowan-mcalpin/nextftc"},
+            {icon: "discord", link: "https://discord.gg/PjP9Ze6fkX"}
+        ],
         editLink: {
             pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/:path"
         },
