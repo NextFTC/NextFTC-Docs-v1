@@ -79,9 +79,9 @@ Still in the `build.dependencies.gradle` file, go to the `dependencies` block. A
 == .gradle
 
 ```groovy-vue
-implementation 'com.rowanmcalpin.nextftc:core:0.5.6-beta'
-implementation 'com.rowanmcalpin.nextftc:ftc:0.5.6-beta'
-implementation 'com.rowanmcalpin.nextftc:pedro:0.5.6-beta' // Remove if you don't intend to use PedroPathing
+implementation 'com.rowanmcalpin.nextftc:core:0.5.8-beta'
+implementation 'com.rowanmcalpin.nextftc:ftc:0.5.8-beta'
+implementation 'com.rowanmcalpin.nextftc:pedro:0.5.8-beta' // Remove if you don't intend to use PedroPathing
 implementation 'com.pedropathing:pedro:{{ pedroPathingVersion }}' // Remove if you don't intend to use PedroPathing
 implementation 'com.acmerobotics.dashboard:dashboard:0.4.16' // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
 ```
@@ -89,9 +89,9 @@ implementation 'com.acmerobotics.dashboard:dashboard:0.4.16' // Remove if you do
 == .gradle.kts
 
 ```kotlin-vue
-implementation("com.rowanmcalpin.nextftc:core:0.5.6-beta")
-implementation("com.rowanmcalpin.nextftc:ftc:0.5.6-beta")
-implementation("com.rowanmcalpin.nextftc:pedro:0.5.6-beta") // Remove if you don't intend to use PedroPathing
+implementation("com.rowanmcalpin.nextftc:core:0.5.8-beta")
+implementation("com.rowanmcalpin.nextftc:ftc:0.5.8-beta")
+implementation("com.rowanmcalpin.nextftc:pedro:0.5.8-beta") // Remove if you don't intend to use PedroPathing
 implementation("com.pedropathing:pedro:{{ pedroPathingVersion }}") // Remove if you don't intend to use PedroPathing
 implementation("com.acmerobotics.dashboard:dashboard:0.4.16") // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
 ```
