@@ -4,7 +4,8 @@
     "description": "NextFTC Documentation",
     "scripts": {
         "docs:build": "vitepress build",
-        "docs:preview": "vitepress preview"
+        "docs:preview": "vitepress preview",
+        "docs:dev": "vitepress dev"
     },
     "author": "NextFTC",
     "license": "GPL-3.0-only",

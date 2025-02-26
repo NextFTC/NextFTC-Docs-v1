@@ -20,13 +20,13 @@ You can run it robot centric:
 == Kotlin
 
 ```kotlin
-CommandManager.addCommand(DriverControlled(gamepadManager.gamepad1, true))
+CommandManager.scheduleCommand(DriverControlled(gamepadManager.gamepad1, true))
 ```
 
 == Java
 
 ```java
-CommandManager.INSTANCE.addCommand(new DriverControlled(gamepadManager.gamepad1, true));
+CommandManager.INSTANCE.scheduleCommand(new DriverControlled(gamepadManager.gamepad1, true));
 ```
 
 :::
@@ -37,16 +37,16 @@ Or field centric:
 == Kotlin
 
 ```kotlin
-CommandManager.addCommand(DriverControlled(gamepadManager.gamepad1, false))
+CommandManager.scheduleCommand(DriverControlled(gamepadManager.gamepad1, false))
 ```
 
 == Java
 
 ```java
-CommandManager.INSTANCE.addCommand(new DriverControlled(gamepadManager.gamepad1, false));
+CommandManager.INSTANCE.scheduleCommand(new DriverControlled(gamepadManager.gamepad1, false));
 ```
 
 :::
 
 > [!NOTE]
-> See the [`DriverControlled` reference](https://docs.rowanmcalpin.com/reference/pedro/com.rowanmcalpin.nextftc.pedro/-driver-controlled/) for constructor overloads and more.
+> See the [`DriverControlled` reference](https://docs.rowanmcalpin.com/reference/pedro/com.rowanmcalpin.nextftc.pedro/-driver-controlled/) for more information.

@@ -63,13 +63,13 @@ We also need a `Controller`, since we want to move our motor. Let's use a PID co
 == Kotlin
 
 ```kotlin
-val controller = PIDFController(PIDCoefficients(0.005, 0.0, 0.0))
+val controller = PIDFController(0.005, 0.0, 0.0, StaticFeedforward(0.0))
 ```
 
 == Java
 
 ```java
-public PIDFController controller = new PIDFController(new PIDCoefficients(0.005, 0.0, 0.0));
+public PIDFController controller = new PIDFController(0.005, 0.0, 0.0, new StaticFeedforward(0.0));
 ```
 
 :::
@@ -213,7 +213,7 @@ That's it! You've created your first Subsystem! Here is the final result:
 object Lift: Subsystem() {
     lateinit var motor: MotorEx
 
-    val controller = PIDFController(PIDCoefficients(0.005, 0.0, 0.0))
+    val controller = PIDFController(0.005, 0.0, 0.0, StaticFeedforward(0.0))
 
     val name = "lift_motor"
 
@@ -252,7 +252,7 @@ public class Lift extends Subsystem {
     // USER CODE
     public MotorEx motor;
 
-    public PIDFController controller = new PIDFController(new PIDCoefficients(0.005, 0.0, 0.0));
+    public PIDFController controller = new PIDFController(0.005, 0.0, 0.0, new StaticFeedforward(0.0));
 
     public String name = "lift_motor";
 

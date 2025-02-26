@@ -31,7 +31,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: "Home", link: "/"},
-            {text: "Installation", link: "/installation"},
+            {text: "Documentation", link: "/installation"},
             {text: "Reference", link: "https://docs.rowanmcalpin.com/reference/"}
         ],
 
@@ -52,12 +52,9 @@ export default defineConfig({
                         text: "OpModes",
                         items: [
                             {text: "Autonomous", link: "/user-guide/opmodes/autonomous"},
-                            {text: "TeleOp", link: "/user-guide/opmodes/teleop"}
+                            {text: "TeleOp", link: "/user-guide/opmodes/teleop"},
+                            {text: "PedroPathing", link: "/user-guide/pedropathing"}
                         ]
-                    },
-                    {
-                        text: "PedroPathing",
-                        link: "/user-guide/pedropathing"
                     }
                 ]
             },
@@ -69,8 +66,17 @@ export default defineConfig({
                         link: "/components/commands"
                     },
                     {
-                        text: "MotorEx",
-                        link: "/components/motorex"
+                        text: "Command Groups",
+                        link: "/components/commandgroups"
+                    },
+                    {
+                        text: "Hardware",
+                        items: [
+                            {
+                                text: "Motors",
+                                link: "/components/hardware/motors"
+                            }
+                        ]
                     },
                     {
                         text: "Controllers",
@@ -81,6 +87,18 @@ export default defineConfig({
             {
                 text: "Built-In Commands",
                 items: [
+                    {
+                        text: "Utilities",
+                        link: "/builtin-commands/utilities"
+                    },
+                    {
+                        text: "Conditionals",
+                        link: "/builtin-commands/conditionals"
+                    },
+                    {
+                        text: "Delays",
+                        link: "/builtin-commands/delays"
+                    },
                     {
                         text: "Drivetrain Commands",
                         link: "/builtin-commands/drivetrain-commands",

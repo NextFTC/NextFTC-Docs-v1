@@ -28,57 +28,50 @@ A lambda command is the main way to create a command in NextFTC. A lambda comman
 == Kotlin
 
 ```kotlin
-val myLambdaCommand = LambdaCommand(
-    isDoneLambda = {
-        // Return if the command is finished
-    },
-    startLambda = {
-        // Executed on start
-    },
-    updateLambda = {
-        // Executed every update
-    },
-    stopLambda = { interrupted ->
-        // Executed on the end of the command.
-    },
-    subsystemCollection = setOf(/*Put the subsystem(s) the command is in here*/),
-    interruptible = true // Whether or not the command is interruptible
-)
+val myLambdaCommand = LambdaCommand()
+    .setStart {
+        // Runs on start
+    }
+    .setUpdate {
+        // Runs on update
+    }
+    .setStop { interrupted ->
+        // Runs on stop
+    }
+    .setIsDone { true } // Returns if the commmand has finished
+    .setSubsystems(/* subsystems the command implements */)
+    .setInterruptible(true)
 ```
 
 == Java
 
 ```java
-Command myLambdaCommand = new LambdaCommand(
-    // isDoneLambda
-    () -> {
-        // Return if the command is finished
-        return false;
-    },
-    // startLambda
-    () -> {
-        // Executed on start
-    },
-    // updateLambda
-    () -> {
-        // Executed every update
-    },
-    // stopLambda
-    interrupted -> {
-        // Executed on the end of the command.
-    },
-    // subsystemCollection
-    Set.of(/*Put the subsystem(s) the command is in here*/),
-    // interruptible
-    true // Whether or not the command is interruptible
-)
+Command myLambdaCommand = new LambdaCommand()
+    .setStart(() -> {
+        // Runs on start
+    })
+    .setUpdate(() -> {
+        // Runs on update
+    })
+    .setStop(interrupted -> {
+        // Runs on stop
+    })
+    .setIsDone(() -> true) // Returns if the command has finished
+    .setSubsystems(/* subsystems the command implements */)
+    .setInterruptible(true)
 ```
 
 :::
 
+> [!TIP]
+> All functions are completely optional. You only need to call the ones you will use. They can be called in any order.
+
+> [!NOTE]
+> See the [`LambdaCommand` reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-lambda-command/index.html) for more information.
+
 ## Commands as Classes
 
-It is unlikely that you will need to use this very often, but you can also create a command as a class. An command can be created as follows:
+It is unlikely that you will need to use this very often, but you can also create a command as a class. This is useful for cases where you need to reuse your command a lot. An command can be created as a class as follows:
 
 :::tabs key:code
 == Kotlin
@@ -150,14 +143,14 @@ You can either call:
 
 ```kotlin
 val myCommand = MyCommand() // Or a LambdaCommand
-CommandManager.addCommand(commandToAdd)
+CommandManager.scheduleCommand(commandToAdd)
 ```
 
 == Java
 
 ```java
 Command myCommand = new MyCommand(); // Or a LambdaCommand
-CommandManager.INSTANCE.addCommand(myCommand);
+CommandManager.INSTANCE.scheduleCommand(myCommand);
 ```
 
 :::
@@ -179,3 +172,6 @@ myCommand.invoke();
 ```
 
 :::
+
+> [!NOTE]
+> See the [`Command` reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command/-command/index.html) for more information.

@@ -288,7 +288,7 @@ Now that we have our routine, we just need to run it. To do this, let's override
 
 == Kotlin
 
-To schedule a command, you can either call `CommandManager.addCommand(commandToAdd)`, or you can just do `commandToAdd()`. In this case, let's do the latter.
+To schedule a command, you can either call `CommandManager.scheduleCommand(commandToAdd)`, or you can just do `commandToAdd()`. In this case, let's do the latter.
 
 ```kotlin
 override fun onStartButtonPressed() {
@@ -298,7 +298,7 @@ override fun onStartButtonPressed() {
 
 == Java
 
-To schedule a command, you can either call `CommandManager.INSTANCE.addCommand(commandToAdd())`, or you can just do `commandToAdd().invoke()`. In this case, let's do the latter.
+To schedule a command, you can either call `CommandManager.INSTANCE.scheduleCommand(commandToAdd())`, or you can just do `commandToAdd().invoke()`. In this case, let's do the latter.
 
 ```java
 @Override
