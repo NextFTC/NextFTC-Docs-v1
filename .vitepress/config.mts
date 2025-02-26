@@ -53,7 +53,7 @@ export default defineConfig({
                         items: [
                             {text: "Autonomous", link: "/user-guide/opmodes/autonomous"},
                             {text: "TeleOp", link: "/user-guide/opmodes/teleop"},
-                            {text: "PedroPathing", link: "/user-guide/pedropathing"}
+                            {text: "PedroPathing", link: "/user-guide/opmodes/pedropathing"}
                         ]
                     }
                 ]
