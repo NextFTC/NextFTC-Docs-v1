@@ -59,34 +59,34 @@ export default defineConfig({
                 ]
             },
             {
-                text: "Core Components",
+                text: "Core concepts",
                 items: [
                     {
                         text: "Commands",
-                        link: "/components/commands"
-                    },
-                    {
-                        text: "Command Groups",
-                        link: "/components/commandgroups"
+                        link: "/concepts/commands"
                     },
                     {
                         text: "Hardware",
                         items: [
                             {
                                 text: "Motors",
-                                link: "/components/hardware/motors"
+                                link: "/concepts/hardware/motors"
                             }
                         ]
                     },
                     {
-                        text: "Controllers",
-                        link: "/components/controllers"
+                        text: "Units",
+                        link: "/concepts/units"
                     }
                 ]
             },
             {
                 text: "Built-In Commands",
                 items: [
+                    {
+                        text: "Command Groups",
+                        link: "/builtin-commands/commandgroups"
+                    },
                     {
                         text: "Utilities",
                         link: "/builtin-commands/utilities"
@@ -116,6 +116,36 @@ export default defineConfig({
                                 link: "/builtin-commands/drivetrain-commands/differential"
                             }
                         ]
+                    },
+                    {
+                        text: "Hardware Commands",
+                        items: [
+                            {
+                                text: "Motor Commands",
+                                link: "/builtin-commands/hardware/motors"
+                            },
+                            {
+                                text: "Servo Commands",
+                                link: "/builtin-commands/hardware/servos"
+                            }
+                        ]
+                    },
+                    {
+                        text: "PedroPathing",
+                        items: [
+                           {
+                               text: "Movement",
+                               link: "/builtin-commands/pedro/movement"
+                           },
+                           {
+                               text: "Delays",
+                               link: "/builtin-commands/pedro/delays"
+                           }
+                        ]
+                    },
+                    {
+                        text: "Miscellanous",
+                        link: "/builtin-commands/misc"
                     }
                 ]
             }
