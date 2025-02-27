@@ -143,7 +143,7 @@ You can either call:
 
 ```kotlin
 val myCommand = MyCommand() // Or a LambdaCommand
-CommandManager.scheduleCommand(commandToAdd)
+CommandManager.scheduleCommand(myCommand)
 ```
 
 == Java
