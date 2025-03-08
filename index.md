@@ -15,7 +15,7 @@ hero:
           link: /installation
         - theme: alt
           text: Reference
-          link: https://docs.rowanmcalpin.com/reference/
+          link: https://nextftc.dev/reference/
 
 features:
     - title: Easy to use
