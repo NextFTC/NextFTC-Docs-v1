@@ -10,7 +10,9 @@ Let's get started!
 
 OpModes in NextFTC will extend one of two classes: `NextFTCOpMode` and `PedroOpMode`, depending on if you're using PedroPathing.
 
-Every OpMode in NextFTC must extend `NextFTCOpMode` using the following structure:
+This example will use `NextFTCOpMode`. Refer to the [PedroPathing page](/user-guide/pedropathing) to learn how to convert a NextFTCOpMode to a PedroOpMode and incorporate PedroPathing.
+
+That being said, here is the basic structure for every Autonomous OpMode:
 
 :::tabs key:code
 
@@ -34,16 +36,15 @@ public class AutonomousProgram extends NextFTCOpMode {
 
 :::
 
-Since we want our autonomous program to use the Lift and Claw subsystems we created in the [subsystems guide](../subsystems.md), we need to
-add a `SubsystemComponent` to our OpMode constructor, and pass it our subsystems.
+That's not all, though. We want our autonomous program to use the Lift and Claw subsystems we created in the [subsystems guide](../subsystems.md). To do that, we need to
+add them into the constructor of NextFTCOpMode.
 
 :::tabs key:code
 
 == Kotlin
 
 ```kotlin
-class AutonomousProgram: NextFTCOpMode(
-    SubsystemComponent(Claw, Lift)) {
+class AutonomousProgram: NextFTCOpMode(Claw, Lift) {
 ```
 
 == Java
@@ -51,16 +52,13 @@ We will create a constructor for the AutonomousProgram class, in which we can ca
 
 ```java
 public AutonomousProgram() {
-    super(new SubsystemComponent(Claw.INSTANCE, Lift.INSTANCE));
+    super(Claw.INSTANCE, Lift.INSTANCE);
 }
 ```
 
 :::
 
 This will tell NextFTC that we will be using those subystems in this OpMode, and will initialize them accordingly.
-
-> [!WARNING]
-> Every subsystem you will be using in an OpMode *must* be passed to the SubsystemComponent.
 
 ## Step 2: Creating a routine
 

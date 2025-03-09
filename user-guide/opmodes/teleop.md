@@ -6,12 +6,12 @@ This TeleOp program will teach you how to bind commands to gamepad buttons and c
 
 ## Step 1: Create your class
 
-Just like for autonomous, your OpMode will extend `NextFTCOpMode`.
+Just like for autonomous, your OpMode will extend either `NextFTCOpMode` or `PedroOpMode`. However unlike autonomous, this page will cover both.
 
 > [!NOTE]
 > The main thing PedroPathing is used for in TeleOp is centripetal force correction while driving, which prevents your robot from "bulging" out while turning.
 > **It is completely a matter of preference whether or not to use it.**
-> Read the [PedroPathing guide](/user-guide/pedropathing.md) to learn how to add PedroPathing to your OpMode.
+> If you are not using PedroPathing in your TeleOp, you do not need to extend `PedroOpMode`, even if you have PedroPathing in your project.
 
 With that in mind, here is the basic structure for a TeleOp:
 
@@ -37,28 +37,29 @@ class TeleOpProgram extends NextFTCOpMode {
 
 :::
 
-Just like for autonomous, we need to add a `SubsystemComponent` with our subsystems:
+Don't forget to replace `NextFTCOpMode` with `PedroOpMode` if you want to use PedroPathing.
+
+Just like for autonomous, we need to add the required subsystems into the constructor of our OpMode:
 
 :::tabs key:code
 
 == Kotlin
 
 ```kotlin
-class TeleOpProgram: NextFTCOpMode(
-    SubsystemComponent(Claw, Lift)) {
+class TeleOpProgram: NextFTCOpMode(Claw, Lift) {
 ```
 
 == Java
 
 ```java
 public TeleOpProgram() {
-    super(new SubsystemComponent(Claw.INSTANCE, Lift.INSTANCE));
+    super(Claw.INSTANCE, Lift.INSTANCE);
 }
 ```
 
 :::
 
-Now we will make the joysticks to control our robot's driving.
+That's all! Now we will allow the joysticks to control our robot's driving.
 
 ## Step 2: Create your drive command
 
@@ -76,8 +77,7 @@ After adding the `MecanumDriverControlled` command, here is our code:
 
 ```kotlin
 @TeleOp(name = "NextFTC TeleOp Program Kotlin")
-class TeleOpProgram: NextFTCOpMode(
-    SubsystemComponent(Claw, Lift)) {
+class TeleOpProgram: NextFTCOpMode(Claw, Lift) {
 
     // Change the motor names to suit your robot.
     val frontLeftName = "front_left"
@@ -123,8 +123,7 @@ class TeleOpProgram: NextFTCOpMode(
 class TeleOpProgram extends NextFTCOpMode {
 
     public TeleOpProgram() {
-        super(SubsystemComponent(
-            Claw.INSTANCE, Lift.INSTANCE));
+        super(Claw.INSTANCE, Lift.INSTANCE);
     }
 
     // Change the motor names to suit your robot.
