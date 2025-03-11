@@ -141,4 +141,4 @@ new MultipleServosToSeperatePositions(
 :::
 
 > [!NOTE]
-> See the [hardware reference](https://docs.rowanmcalpin.com/reference/ftc/com.rowanmcalpin.nextftc.ftc.hardware/index.html) for more information.
+> See the [hardware reference](https://nextftc.dev/reference/ftc/com.rowanmcalpin.nextftc.ftc.hardware/index.html) for more information.

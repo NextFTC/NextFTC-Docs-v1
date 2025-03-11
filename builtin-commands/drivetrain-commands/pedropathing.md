@@ -49,4 +49,4 @@ CommandManager.INSTANCE.scheduleCommand(new DriverControlled(gamepadManager.game
 :::
 
 > [!NOTE]
-> See the [`DriverControlled` reference](https://docs.rowanmcalpin.com/reference/pedro/com.rowanmcalpin.nextftc.pedro/-driver-controlled/) for more information.
+> See the [`DriverControlled` reference](https://nextftc.dev/reference/pedro/com.rowanmcalpin.nextftc.pedro/-driver-controlled/) for more information.

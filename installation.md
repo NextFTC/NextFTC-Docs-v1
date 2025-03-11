@@ -79,9 +79,9 @@ Still in the `build.dependencies.gradle` file, go to the `dependencies` block. A
 == .gradle
 
 ```groovy-vue
-implementation 'com.rowanmcalpin.nextftc:core:0.6.0'
-implementation 'com.rowanmcalpin.nextftc:ftc:0.6.0'
-implementation 'com.rowanmcalpin.nextftc:pedro:0.6.0' // Remove if you don't intend to use PedroPathing
+implementation 'com.rowanmcalpin.nextftc:core:0.6.1'
+implementation 'com.rowanmcalpin.nextftc:ftc:0.6.1'
+implementation 'com.rowanmcalpin.nextftc:pedro:0.6.1' // Remove if you don't intend to use PedroPathing
 implementation 'com.pedropathing:pedro:{{ pedroPathingVersion }}' // Remove if you don't intend to use PedroPathing
 implementation 'com.acmerobotics.dashboard:dashboard:0.4.16' // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
 ```

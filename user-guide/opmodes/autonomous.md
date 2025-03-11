@@ -106,7 +106,7 @@ public Command firstRoutine() {
 I've made an empty SequentialGroup here, for demonstration purposes.
 
 > [!CAUTION]
-> Do not attempt to use empty `SequentialGroups` in your code. They will cause errors that break your OpMode. If you need a placeholder, use a [`NullCommand`](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-null-command/).
+> Do not attempt to use empty `SequentialGroups` in your code. They will cause errors that break your OpMode. If you need a placeholder, use a [`NullCommand`](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-null-command/).
 >
 > The above snippet is incomplete and that's why it appears to create an empty `SequentialGroup`. That won't work in practice.
 

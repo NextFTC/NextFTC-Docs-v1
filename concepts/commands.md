@@ -67,7 +67,7 @@ Command myLambdaCommand = new LambdaCommand()
 > All functions are completely optional. You only need to call the ones you will use. They can be called in any order.
 
 > [!NOTE]
-> See the [`LambdaCommand` reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-lambda-command/index.html) for more information.
+> See the [`LambdaCommand` reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-lambda-command/index.html) for more information.
 
 ## Commands as Classes
 
@@ -174,4 +174,4 @@ myCommand.invoke();
 :::
 
 > [!NOTE]
-> See the [`Command` reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command/-command/index.html) for more information.
+> See the [`Command` reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command/-command/index.html) for more information.

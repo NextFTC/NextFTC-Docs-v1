@@ -32,7 +32,7 @@ export default defineConfig({
         nav: [
             {text: "Home", link: "/"},
             {text: "Documentation", link: "/installation"},
-            {text: "Reference", link: "https://docs.rowanmcalpin.com/reference/"}
+            {text: "Reference", link: "https://nextftc.dev/reference/"}
         ],
 
         sidebar: [

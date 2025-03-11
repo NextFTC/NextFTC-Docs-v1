@@ -183,4 +183,4 @@ new PassiveSwitchCommand(
 :::
 
 > [!NOTE]
-> See the [conditionals reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command.utility.conditionals/index.html) for more information.
+> See the [conditionals reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility.conditionals/index.html) for more information.

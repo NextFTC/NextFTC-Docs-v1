@@ -162,4 +162,4 @@ new SequentialGroup(
 :::
 
 > [!NOTE]
-> See the [delays reference](https://docs.rowanmcalpin.com/reference/core/com.rowanmcalpin.nextftc.core.command.utility.delays/index.html) for more information.
+> See the [delays reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility.delays/index.html) for more information.

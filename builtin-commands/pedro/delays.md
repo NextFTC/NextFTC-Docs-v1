@@ -45,4 +45,4 @@ new DisplacementDelay(10.0) // distance from starting position
 :::
 
 > [!NOTE]
-> See the [PedroPathing reference](https://docs.rowanmcalpin.com/reference/pedro/com.rowanmcalpin.nextftc.pedro/index.html) for more information.
+> See the [PedroPathing reference](https://nextftc.dev/reference/pedro/com.rowanmcalpin.nextftc.pedro/index.html) for more information.

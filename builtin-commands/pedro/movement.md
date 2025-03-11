@@ -110,4 +110,4 @@ new TurnTo(Angle.fromDeg(45), Angle.fromDeg(10))
 :::
 
 > [!NOTE]
-> See the [PedroPathing reference](https://docs.rowanmcalpin.com/reference/pedro/com.rowanmcalpin.nextftc.pedro/index.html) for more information.
+> See the [PedroPathing reference](https://nextftc.dev/reference/pedro/com.rowanmcalpin.nextftc.pedro/index.html) for more information.

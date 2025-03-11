@@ -48,4 +48,4 @@ MotorGroup myMotorGroup = new MotorGroup(myMotorEx, myMotorEx2);
 :::
 
 > [!NOTE]
-> See the [controllables reference](https://docs.rowanmcalpin.com/reference/ftc/com.rowanmcalpin.nextftc.ftc.hardware.controllables/) for more information.
+> See the [controllables reference](https://nextftc.dev/reference/ftc/com.rowanmcalpin.nextftc.ftc.hardware.controllables/) for more information.
