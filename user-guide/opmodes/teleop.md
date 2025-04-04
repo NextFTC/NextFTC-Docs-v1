@@ -30,7 +30,7 @@ class TeleOpProgram: NextFTCOpMode() {
 
 ```java [TeleOpProgram.java]
 @TeleOp(name = "NextFTC TeleOp Program Java")
-class TeleOpProgram extends NextFTCOpMode {
+public class TeleOpProgram extends NextFTCOpMode {
 
 }
 ```
@@ -395,7 +395,7 @@ class TeleOpProgram: NextFTCOpMode(Claw, Lift) {
 
 ```java
 @TeleOp(name = "NextFTC TeleOp Program Java")
-class TeleOpProgram extends NextFTCOpMode {
+public class TeleOpProgram extends NextFTCOpMode {
 
     public TeleOpProgram() {
         super(Claw.INSTANCE, Lift.INSTANCE);
