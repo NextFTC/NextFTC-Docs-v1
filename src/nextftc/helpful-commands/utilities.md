@@ -63,55 +63,20 @@ new ForcedParallelCommand(command)
 
 :::
 
-## `SingleFunctionCommand`
-
-A `SingleFunctionCommand` is very similar to an Action from RoadRunner Actions. It only has one function that is run every loop and returns whether or not it is done.
+Alternatively, you can used the `.forcedParallel()` utility:
 
 :::tabs key:code
+
 == Kotlin
 
 ```kotlin
-class MyCommand: SingleFunctionCommand() {
-    override fun run(): Boolean {
-        // do stuff here
-        return false // don't continue
-    }
-}
+command.forcedParallel()
 ```
 
 == Java
 
 ```java
-public class MyCommand extends SingleFunctionCommand {
-    @Override
-    public boolean run() {
-        // do stuff here
-        return false; // don't continue
-    }
-}
-```
-
-:::
-
-Alternatively, you can create a `SingleFunctionCommand` inline with a lambda:
-
-:::tabs key:code
-== Kotlin
-
-```kotlin
-SingleFunctionCommand {
-    // do stuff here
-    return false // don't continue
-}
-```
-
-== Java
-
-```java
-new SingleFunctionCommand(() -> {
-    // do stuff here
-    return false; // don't continue
-})
+command.forcedParallel()
 ```
 
 :::

@@ -50,7 +50,7 @@ new FollowPath(path, true, 0.75)
 
 ## `Turn`
 
-`Turn` turns the robot by an angle. It takes an [`Angle`](/concepts/units#angle) to turn by.
+`Turn` turns the robot by an angle. It takes an [`Angle`](/src/nextftc/concepts/units#angle) to turn by.
 
 :::tabs key:code
 == Kotlin
