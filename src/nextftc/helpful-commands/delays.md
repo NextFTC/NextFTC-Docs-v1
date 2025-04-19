@@ -4,7 +4,7 @@ In NextFTC there are two types of delays.
 
 ## `Delay`
 
-A `Delay` is a command that waits a certain amount of time before finishing. It takes a [`TimeSpan`](/concepts/units#timespan) to determine how long it will take. Alternatively, it can take a time in seconds.
+A `Delay` is a command that waits a certain amount of time before finishing. It takes a [`TimeSpan`](/nextftc/concepts/units#timespan) to determine how long it will take. Alternatively, it can take a time in seconds.
 
 :::tabs key:code
 == Kotlin

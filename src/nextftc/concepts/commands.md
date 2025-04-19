@@ -77,22 +77,26 @@ It is unlikely that you will need to use this very often, but you can also creat
 == Kotlin
 
 ```kotlin
-class MyCommand(override val subsystems: Set<Subsystem>): Command() {
-    override val isDone: Boolean
-        get() = false // Whether or not the command is done
+class MyCommand(): Command() {
 
-    override val interruptible = true // Whether or not the command can be interrupted
+    init {
+        setSubsystems(/* subsystems */) // you can make this a constructor parameter, if needed
+        setInterruptible(true) // this is the default, so you don't need to specify
+    }
+
+    override val isDone: Boolean
+        get() = false // whether or not the command is done
 
     override fun start() {
-        // Executed when the command begins
+        // executed when the command begins
     }
 
     override fun update() {
-        // Executed on every update of the command
+        // executed on every update of the command
     }
 
     override fun stop(interrupted: Boolean) {
-        // Executed when the command ends
+        // executed when the command ends
     }
 }
 ```
@@ -102,31 +106,29 @@ class MyCommand(override val subsystems: Set<Subsystem>): Command() {
 ```java
 public class MyCommand extends Command {
 
-    private final Set<Subsystem> subsystems;
-    private final boolean interruptible = true;
-
-    public MyCommand(Set<Subsystem> subsystems) {
-        this.subsystems = subsystems;
+    public MyCommand() {
+        setSubsystems(/* subsystems */); // you can make this a constructor parameter, if needed
+        setInterrptuptible(true); // this is the default, so you don't need to specify
     }
 
     @Override
     public boolean isDone() {
-        return false; // Whether or not the command is done
+        return false; // whether or not the command is done
     }
 
     @Override
     public void start() {
-        // Executed when the command begins
+        // executed when the command begins
     }
 
     @Override
     public void update() {
-        // Executed on every update of the command
+        // executed on every update of the command
     }
 
     @Override
     public void stop(boolean interrupted) {
-        // Executed when the command ends
+        // executed when the command ends
     }
 }
 ```
@@ -168,7 +170,7 @@ myCommand()
 
 ```java
 Command myCommand = new MyCommand(); // Or a LambdaCommand
-myCommand.invoke();
+myCommand.schedule();
 ```
 
 :::
