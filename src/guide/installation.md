@@ -57,6 +57,8 @@ Still in the `build.dependencies.gradle` file, go to the `dependencies` block. A
 implementation 'dev.nextftc:core:1.0.0'
 implementation 'dev.nextftc:ftc:1.0.0'
 implementation 'dev.nextftc:hardware:1.0.0'
+implementation 'dev.nextftc:control:1.0.0'
+implementation 'dev.nextftc:bindings:1.0.0'
 implementation 'dev.nextftc:pedro:1.0.0' // If you would like to use NextPedro
 ```
 
@@ -66,6 +68,8 @@ implementation 'dev.nextftc:pedro:1.0.0' // If you would like to use NextPedro
 implementation("dev.nextftc:core:1.0.0")
 implementation("dev.nextftc:ftc:1.0.0")
 implementation("dev.nextftc:hardware:1.0.0")
+implementation("dev.nextftc:control:1.0.0")
+implementation("dev.nextftc:bindings:1.0.0")
 implementation("dev.nextftc:pedro:1.0.0") // If you would like to use NextPedro
 ```
 
