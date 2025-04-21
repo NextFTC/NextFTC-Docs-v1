@@ -1,15 +1,16 @@
 # OpModes
 
 OpModes in NextFTC extend the `NextFTCOpMode` base class, which is a subtype 
-of `opmode`. `nextftcopmodes` have five functions, similar to `opmode's`.
+of `OpMode`. `NextFTCOpModes` have five functions, similar to `OpMode`'s 
+five functions.
 
-| `OpMode` function | `NextFTCOpMode` function |
-|-------------------|--------------------------|
-| `init`            | `onInit`                 |
-| `init_loop`       | `onWaitForStart`         |
-| `start`           | `onStartButtonPressed`   |
-| `loop`            | `onUpdate`               |
-| `stop`            | `onStop`                 |
+| `OpMode` function | `NextFTCOpMode` function | Called                                                                      |
+|-------------------|--------------------------|-----------------------------------------------------------------------------|
+| `init`            | `onInit`                 | Once, when the init button is pressed                                       |
+| `init_loop`       | `onWaitForStart`         | Every loop between initialization and when the start/stop button is pressed |
+| `start`           | `onStartButtonPressed`   | Once, when the start button is pressed                                      |
+| `loop`            | `onUpdate`               | Every loop, between start and when the stop button is pressed               |
+| `stop`            | `onStop`                 | Once, when the stop button is pressed                                       |
 
 Additionally, OpModes can have [components](/nextftc/concepts/components) 
 that are registered with the `addComponents` function.
