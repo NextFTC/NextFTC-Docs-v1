@@ -104,6 +104,14 @@ export default defineConfig({
                             link: "/nextftc/concepts/subsystems"
                         },
                         {
+                            text: "Components",
+                            link: "/nextftc/concepts/components"
+                        },
+                        {
+                            text: "OpModes",
+                            link: "/nextftc/concepts/opmodes"
+                        },
+                        {
                             text: "Units",
                             link: "/nextftc/concepts/units"
                         }
