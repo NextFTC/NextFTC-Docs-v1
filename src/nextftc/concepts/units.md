@@ -232,6 +232,3 @@ double normalized = bigAngle.normalized().inDeg; // -170
 ```
 
 :::
-
-> [!NOTE]
-> See the [units reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.units/index.html) for more information.

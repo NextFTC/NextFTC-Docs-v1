@@ -167,7 +167,4 @@ driverControlled.invoke();
 
 :::
 
-That's it! Now you are able to control your holonomic drivetrain using a gamepad.
-
-> [!NOTE]
-> See the [`DifferentialTankDriverControlled`](https://nextftc.dev/reference/ftc/com.rowanmcalpin.nextftc.ftc.driving/-differential-tank-driver-controlled/) and [`DifferentialArcadeDriverControlled`](https://nextftc.dev/reference/ftc/com.rowanmcalpin.nextftc.ftc.driving/-differential-arcade-driver-controlled/) references more information.
+That's it! Now you are able to control your differential drivetrain using a gamepad.

@@ -188,6 +188,3 @@ driverControlled.invoke();
 :::
 
 That's it! Now you are able to control your holonomic drivetrain using a gamepad.
-
-> [!NOTE]
-> See the [`MecanumDriverControlled` reference](https://nextftc.dev/reference/ftc/com.rowanmcalpin.nextftc.ftc.driving/-mecanum-driver-controlled/) for more information.
