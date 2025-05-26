@@ -256,7 +256,7 @@ To do this, we will override the `onInit()` function.
 override fun onInit() {
     Constants.setConstants(FConstants::class.java, LConstants::class.java)
     follower = Follower(hardwareMap)
-    follower.setStartingPose(new Pose(0, 0, 0))
+    follower.setStartingPose(startingPose)
     buildPaths()
 }
 ```
@@ -268,7 +268,7 @@ override fun onInit() {
 public void onInit() {
     Constants.setConstants(FConstants.class, LConstants.class);
     follower = new Follower(hardwareMap);
-    follower.setStartingPose(new Pose(0, 0, 0));
+    follower.setStartingPose(startingPose);
     buildPaths();
 }
 ```
@@ -345,7 +345,7 @@ class AutonomousProgram: PedroOpMode(Claw, Lift) {
     override fun onInit() {
         Constants.setConstants(FConstants::class.java, LConstants::class.java)
         follower = Follower(hardwareMap)
-        follower.setStartingPose(new Pose(0, 0, 0))
+        follower.setStartingPose(startingPose)
         buildPaths()
     }
 
@@ -395,7 +395,7 @@ public class AutonomousProgram extends PedroOpMode {
     public void onInit() {
         Constants.setConstants(FConstants.class, LConstants.class);
         follower = new Follower(hardwareMap);
-        follower.setStartingPose(new Pose(0, 0, 0));
+        follower.setStartingPose(startingPose);
         buildPaths();
     }
 
