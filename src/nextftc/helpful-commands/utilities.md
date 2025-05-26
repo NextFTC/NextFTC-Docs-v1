@@ -116,6 +116,3 @@ commandToWrap.perpetually()
 ```
 
 :::
-
-> [!NOTE]
-> See the [utilities reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility/index.html) for more information.

@@ -218,6 +218,3 @@ command2.withDeadline(deadlineCommand)
 ```
 
 :::
-
-> [!NOTE]
-> See the [command groups reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.groups/index.html) for more information.

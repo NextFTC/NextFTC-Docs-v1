@@ -66,9 +66,6 @@ Command myLambdaCommand = new LambdaCommand()
 > [!TIP]
 > All functions are completely optional. You only need to call the ones you will use. They can be called in any order.
 
-> [!NOTE]
-> See the [`LambdaCommand` reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-lambda-command/index.html) for more information.
-
 ## Commands as Classes
 
 It is unlikely that you will need to use this very often, but you can also create a command as a class. This is useful for cases where you need to reuse your command a lot. An command can be created as a class as follows:
@@ -174,6 +171,3 @@ myCommand.schedule();
 ```
 
 :::
-
-> [!NOTE]
-> See the [`Command` reference](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command/-command/index.html) for more information.
