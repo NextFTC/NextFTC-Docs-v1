@@ -2,11 +2,13 @@
 
 > [!NOTE]
 > Some of the content on the following pages was taken with permission from
-> the [FTCLib Drivebases page](https://docs.ftclib.org/ftclib/features/drivebases).
+>
+the [FTCLib Drivebases page](https://docs.ftclib.org/ftclib/features/drivebases).
 
 > [!IMPORTANT]
-> Currently, NextFTC only has support for mecanum, x-drive, and differential (
-> tank) drivetrains. If you write a command for another, please share it with us!
+> Currently, NextFTC only has support for mecanum, x-drive, and differential
+> (tank) drivetrains. If you write a command for another, please share it with
+> us!
 
 NextFTC has commands to control different types of drivetrains. This page goes
 through the different options for controlling your drivetrain in TeleOp.
@@ -14,11 +16,12 @@ through the different options for controlling your drivetrain in TeleOp.
 ## Holonomic Drivetrains
 
 A holonomic drive is one that can move in omnidirectional space, which is why it
-is often called an omnidirectional drive. There are different sub-types of
-holonomic drivetrains. Currently NextFTC only has support for mecanum drives and
+is often called an omnidirectional drive. There are different subtypes of
+holonomic drivetrains. Currently, NextFTC only has support for mecanum 
+drives and
 x-drives.
 
-An X-drive is a holonomic base that has four omniwheels positioned into an "X"
+An X-drive is a holonomic base that has four omni wheels positioned into an "X"
 shape.
 
 :::details X-Drive
