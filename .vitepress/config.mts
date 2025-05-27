@@ -20,7 +20,7 @@ export default defineConfig({
     ],
     cleanUrls: true,
     ignoreDeadLinks: true,
-    base: "/",
+    base: "/NextFTC-Docs-v1/",
     markdown: {
         config(md) {
             md.use(tabsMarkdownPlugin);
