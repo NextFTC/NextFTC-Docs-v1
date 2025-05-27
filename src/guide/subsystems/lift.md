@@ -1,17 +1,18 @@
 # Lift Subsystem
 
-A subsystem that is found on almost all FTC robots in most seasons is a lift, a type of linear slide. Here, you
+A subsystem that is found on almost all FTC robots in most seasons is a lift, a
+type of linear slide. Here, you
 will learn how to program your own lift subsystem.
 
-> [!NOTE]
+> [!TIP]
 > This subsystem can be generalized to any subsystem with a motor.
 
 ## Step 1: Create your subsystem
 
-The first step to creating your subsystem is setting up the structure for it. There should only be one instance of each
+The first step to creating your subsystem is setting up the structure for it.
+There should only be one instance of each
 subsystem. To do this, we will make our subsystem
-a [singleton](https://www.geeksforgeeks.org/singleton-design-pattern/). Here is the most basic structure that can be
-copy+pasted to create all of your subsystems.
+a [singleton](https://www.geeksforgeeks.org/singleton-design-pattern/).
 
 :::tabs key:codes
 
@@ -26,17 +27,15 @@ object Lift : Subsystem {
 ```
 
 == Java
-In Java, there are a couple lines of boilerplate you will need to add to the top of every subsystem you create to
+In Java, there are a couple lines of boilerplate you will need to add to the top
+of every subsystem you create to
 make it a singleton:
 
 ```java
 public class Lift implements Subsystem {
-
-    // Boilerplate
     public static final Lift INSTANCE = new Lift();
     private Lift() { }
-
-    // User code
+    
 }
 ```
 
@@ -44,7 +43,8 @@ public class Lift implements Subsystem {
 
 ## Step 2: Create your motor
 
-Next, we need to set up a motor to power our lift. Let's start by creating a variable to store our motor. It should be
+Next, we need to set up a motor to power our lift. Let's start by creating a
+variable to store our motor. It should be
 of type `MotorEx`.
 
 :::tabs key:code
@@ -63,8 +63,10 @@ private MotorEx motor = new MotorEx("lift_motor");
 
 :::
 
-We also need a `ControlSystem`, since we want to move our motor. We'll be using [NextControl](/control), NextFTC's
-solution to control in FTC. NextControl makes it very easy to create more complex controllers if you ever need them.
+We also need a `ControlSystem`, since we want to move our motor. We'll be
+using [NextControl](/control), NextFTC's
+solution to control in FTC. NextControl makes it very easy to create more
+complex controllers if you ever need them.
 Let's use a PID controller with a gravity-compensating feedforward.
 
 :::tabs key:code
@@ -88,9 +90,11 @@ private ControlSystem controlSystem = ControlSystem.builder()
 
 :::
 
-Remember to tune your controller!
+> [!IMPORTANT]
+> Don't forget to tune your controller!
 
-Now, we must set our motor power to the `ControlSystem`'s output every loop. We can run code every loop by
+Now, we must set our motor power to the `ControlSystem`'s output every loop. We
+can run code every loop by
 overriding the `periodic()` function.
 
 :::tabs key:code
@@ -132,8 +136,10 @@ We're not quite done, though. We still need to create our commands!
 
 ## Step 3: Create commands
 
-The last step when you create a Subsystem is to create the commands you'll be using. This process varies with each
-subsystem. Here, I'll walk you through creating three commands that each move the lift to a different height: `toLow`,
+The last step when you create a Subsystem is to create the commands you'll be
+using. This process varies with each
+subsystem. Here, we'll create three commands that each move
+the lift to a different height: `toLow`,
 `toMiddle`, and `toHigh`.
 
 To control our motor's position, we will be using the `RunToPosition` command.
@@ -144,42 +150,43 @@ Let's create our first `RunToPosition` command.
 == Kotlin
 
 ```kotlin
-val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
+val toLow = RunToPosition(controlSystem, 0.0).setRequirements(this)
 ```
 
 == Java
 
-In Java, the best way to create commands is by making methods that return instances of command classes:
-
 ```java
-public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
+public Command toLow = new RunToPosition(controlSystem, 0).setRequirements(this);
 ```
 
 :::
 
-Note the `setSubsystems(this)`. This is what tells NextFTC which commands should be allowed to run at the same
-time. If it weren't set, `toLow` would be able to run at the same time as other commands that use the `Lift`
-subsystem -- so there would be multiple things fighting to set the motor's power. Generally, you just need to pass
-`this` as the subsystem -- there are exceptions with more complicated custom commands.
+Note the `setRequirements(this)`. This is what tells NextFTC which commands should
+be allowed to run at the same time. If it weren't set, `toLow` would be able to
+run at the same time as other commands that use the `Lift` subsystem - so there
+would be multiple things fighting to set the motor's power. Generally, you need
+to pass `this` as the subsystem, although there are exceptions with more
+complicated custom commands.
 
-Pretty easy, right? Let's duplicate it and update our variable name and target position to create our other two
+Pretty easy, right? Let's duplicate it and update our variable name and target
+position to create our other two
 commands:
 
 :::tabs key:code
 == Kotlin
 
 ```kotlin
-val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
+val toMiddle = RunToPosition(controlSystem, 500.0).setRequirements(this)
 
-val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
+val toHigh = RunToPosition(controlSystem, 1200.0).setRequirements(this)
 ```
 
 == Java
 
 ```java
-public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
+public Command toMiddle = new RunToPosition(controlSystem, 500).setRequirements(this);
 
-public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
+public Command toHigh = new RunToPosition(controlSystem, 1200).setRequirements(this);
 ```
 
 :::
@@ -193,7 +200,6 @@ That's it! You've created your first subsystem! Here is the final result:
 
 ```kotlin
 object Lift : Subsystem {
-
     private val motor = MotorEx("lift_motor")
 
     private val controlSystem = controlSystem {
@@ -201,9 +207,9 @@ object Lift : Subsystem {
         elevatorFF(0.0)
     }
 
-    val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
-    val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
-    val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
+    val toLow = RunToPosition(controlSystem, 0.0).setRequirements(this)
+    val toMiddle = RunToPosition(controlSystem, 500.0).setRequirements(this)
+    val toHigh = RunToPosition(controlSystem, 1200.0).setRequirements(this)
 
     override fun periodic() {
         motor.power = controlSystem.calculate(
@@ -220,12 +226,9 @@ object Lift : Subsystem {
 
 ```java
 public class Lift implements Subsystem {
-
-    // Boilerplate
     public static final Lift INSTANCE = new Lift();
     private Lift() { }
 
-    // User code 
     private MotorEx motor = new MotorEx("lift_motor");
 
     private ControlSystem controlSystem = ControlSystem.builder()
@@ -233,9 +236,9 @@ public class Lift implements Subsystem {
         .elevatorFF(0)
         .build();
 
-    public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
-    public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
-    public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
+    public Command toLow = new RunToPosition(controlSystem, 0).setRequirements(this);
+    public Command toMiddle = new RunToPosition(controlSystem, 500).setRequirements(this);
+    public Command toHigh = new RunToPosition(controlSystem, 1200).setRequirements(this);
 
     @Override
     public void periodic() {

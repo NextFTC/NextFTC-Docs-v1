@@ -143,7 +143,7 @@ driverControlled()
 
 ```java
 driverControlled = new MecanumDriverControlled(leftMotors, rightMotors, gamepadManager.gamepad1);
-driverControlled.invoke();
+driverControlled.schedule();
 ```
 
 :::
@@ -162,7 +162,7 @@ driverControlled()
 
 ```java
 driverControlled = new DifferentialArcadeDriverControlled(leftMotors, rightMotors, gamepadManager.gamepad1, false, imu);
-driverControlled.invoke();
+driverControlled.schedule();
 ```
 
 :::
