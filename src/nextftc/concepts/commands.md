@@ -39,7 +39,7 @@ val myLambdaCommand = LambdaCommand()
         // Runs on stop
     }
     .setIsDone { true } // Returns if the commmand has finished
-    .setSubsystems(/* subsystems the command implements */)
+    .setRequirements(/* subsystems the command implements */)
     .setInterruptible(true)
 ```
 
@@ -57,7 +57,7 @@ Command myLambdaCommand = new LambdaCommand()
         // Runs on stop
     })
     .setIsDone(() -> true) // Returns if the command has finished
-    .setSubsystems(/* subsystems the command implements */)
+    .setRequirements(/* subsystems the command implements */)
     .setInterruptible(true)
 ```
 
@@ -77,7 +77,7 @@ It is unlikely that you will need to use this very often, but you can also creat
 class MyCommand(): Command() {
 
     init {
-        setSubsystems(/* subsystems */) // you can make this a constructor parameter, if needed
+        setRequirements(/* subsystems */) // you can make this a constructor parameter, if needed
         setInterruptible(true) // this is the default, so you don't need to specify
     }
 
@@ -104,7 +104,7 @@ class MyCommand(): Command() {
 public class MyCommand extends Command {
 
     public MyCommand() {
-        setSubsystems(/* subsystems */); // you can make this a constructor parameter, if needed
+        setRequirements(/* subsystems */); // you can make this a constructor parameter, if needed
         setInterrptuptible(true); // this is the default, so you don't need to specify
     }
 
