@@ -1,6 +1,6 @@
 # Autonomous
 
-Creating an autonomous in NextFTC is fairly straighforward. This page will walk you through creating an autonomous. I will not be covering usage of PedroPathing in this page; refer to the [PedroPathing page](/user-guide/pedropathing) for details on that.
+Creating an autonomous in NextFTC is fairly straightforward. This page will walk you through creating an autonomous. I will not be covering usage of PedroPathing in this page; refer to the [PedroPathing page](/user-guide/pedropathing) for details on that.
 
 This autonomous program will introduce you to some core features of NextFTC such as command groups, delays, and running the commands you created in your Subsystems.
 
