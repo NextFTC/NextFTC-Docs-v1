@@ -99,7 +99,7 @@ const members = [
   {
     avatar: 'https://github.com/zachwaffle4.png',
     name: 'Zach Harel',
-    title: 'NextControl',
+    title: 'NextControl | NextRunner',
     links: [
       {
         icon: "github",
