@@ -254,8 +254,7 @@ To do this, we will override the `onInit()` function.
 
 ```kotlin
 override fun onInit() {
-    Constants.setConstants(FConstants::class.java, LConstants::class.java)
-    follower = Follower(hardwareMap)
+    follower = Follower(hardwareMap, FConstants::class.java, LConstants::class.java)
     follower.setStartingPose(startingPose)
     buildPaths()
 }
@@ -266,8 +265,7 @@ override fun onInit() {
 ```java
 @Override
 public void onInit() {
-    Constants.setConstants(FConstants.class, LConstants.class);
-    follower = new Follower(hardwareMap);
+    follower = new Follower(hardwareMap, FConstants.class, LConstants.class);
     follower.setStartingPose(startingPose);
     buildPaths();
 }
@@ -343,8 +341,7 @@ class AutonomousProgram: PedroOpMode(Claw, Lift) {
         )
 
     override fun onInit() {
-        Constants.setConstants(FConstants::class.java, LConstants::class.java)
-        follower = Follower(hardwareMap)
+        follower = Follower(hardwareMap, FConstants::class.java, LConstants::class.java)
         follower.setStartingPose(startingPose)
         buildPaths()
     }
@@ -393,8 +390,7 @@ public class AutonomousProgram extends PedroOpMode {
 
     @Override
     public void onInit() {
-        Constants.setConstants(FConstants.class, LConstants.class);
-        follower = new Follower(hardwareMap);
+        follower = new Follower(hardwareMap, FConstants.class, LConstants.class);
         follower.setStartingPose(startingPose);
         buildPaths();
     }
