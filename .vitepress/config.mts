@@ -1,5 +1,8 @@
 import {defineConfig} from "vitepress";
 import {tabsMarkdownPlugin} from "vitepress-plugin-tabs";
+import guide from "./sidebar/guide.mts";
+import nextftc from "./sidebar/nextftc.mts";
+import bindings from "./sidebar/bindings.mts";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -31,7 +34,6 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: "Home", link: "/"},
             {text: "Guide", link: "/guide/about", activeMatch: "^/guide/"},
             {
                 text: "Libraries",
@@ -51,161 +53,17 @@ export default defineConfig({
                 ]
             },
             {
-                text: "Dokka Reference", items: [
-                    {text: "NextFTC", link: "https://nextftc.dev/reference/nextftc"},
-                    {text: "NextControl", link: "https://nextftc.dev/reference/control"},
-                    {text: "NextBindings", link: "https://nextftc.dev/reference/bindings"},
-                    {text: "NextPedro", link: "https://nextftc.dev/reference/pedro"},
-                ]
-            }
+                text: "KDoc",
+                link: "https://javadoc.io/doc/dev.nextftc"
+            },
+            {text: "Contributing", link: "/contributing"},
+            {text: "Code of Conduct", link: "/code-of-conduct"}
         ],
 
         sidebar: {
-            '/guide/': [
-                {
-                    text: "Introduction", items: [
-                        {text: "What is NextFTC?", link: "/guide/about"},
-                        {text: "Installation", link: "/guide/installation"},
-                    ]
-                },
-                {
-                    text: "Subsystems",
-                    items: [
-                        {text: "Overview", link: "/guide/subsystems/overview"},
-                        {text: "Lift", link: "/guide/subsystems/lift"},
-                        {text: "Claw", link: "/guide/subsystems/claw"}
-                    ]
-                },
-                {
-                    text: "OpModes",
-                    items: [
-                        {text: "Autonomous", link: "/guide/opmodes/autonomous"},
-                        {text: "TeleOp", link: "/guide/opmodes/teleop"},
-                        {text: "PedroPathing", link: "/guide/opmodes/pedropathing"}
-                    ]
-                },
-                {
-                    text: "Further Reading",
-                    link: "/guide/further-reading"
-                }
-            ],
-            '/nextftc/': [
-                {text: "Overview", link: "/nextftc/"},
-                {
-                    text: "Core Concepts",
-                    collapsed: false,
-                    items: [
-                        {
-                            text: "Commands",
-                            link: "/nextftc/concepts/commands"
-                        },
-                        {
-                            text: "Subsystems",
-                            link: "/nextftc/concepts/subsystems"
-                        },
-                        {
-                            text: "Components",
-                            link: "/nextftc/concepts/components"
-                        },
-                        {
-                            text: "OpModes",
-                            link: "/nextftc/concepts/opmodes"
-                        },
-                        {
-                            text: "Units",
-                            link: "/nextftc/concepts/units"
-                        }
-                    ]
-                },
-                {
-                    text: "Helpful Commands",
-                    collapsed: false,
-                    items: [
-                        {
-                            text: "Command Groups",
-                            link: "/nextftc/helpful-commands/groups"
-                        },
-                        {
-                            text: "Utilities",
-                            link: "/nextftc/helpful-commands/utilities"
-                        },
-                        {
-                            text: "Conditionals",
-                            link: "/nextftc/helpful-commands/conditionals"
-                        },
-                        {
-                            text: "Delays",
-                            link: "/nextftc/helpful-commands/delays"
-                        },
-                        {
-                            text: "Miscellaneous",
-                            link: "/nextftc/helpful-commands/misc"
-                        }
-                    ]
-                },
-                {
-                    text: "Hardware",
-                    collapsed: false,
-                    items: [
-                        {
-                            text: "Drivetrain Commands",
-                            link: "/nextftc/hardware/drivetrain-commands",
-                            items: [
-                                {
-                                    text: "Holonomic",
-                                    link: "/nextftc/hardware/drivetrain-commands/holonomic"
-                                },
-                                {
-                                    text: "Differential",
-                                    link: "/nextftc/hardware/drivetrain-commands/differential"
-                                }
-                            ]
-                        },
-                        {
-                            text: "Motors and Servos",
-                            items: [
-                                {
-                                    text: "Introduction",
-                                    link: "/nextftc/hardware/motors-and-servos"
-                                },
-                                {
-                                    text: "Motors",
-                                    link: "/nextftc/hardware/motors-and-servos/motors"
-                                },
-                                {
-                                    text: "Servos",
-                                    link: "/nextftc/hardware/motors-and-servos/servos"
-                                },
-                                {
-                                    text: "Continuous-Rotation Servos",
-                                    link: "/nextftc/hardware/motors-and-servos/cr-servos"
-                                },
-                                {
-                                    text: "Servos with Feedback",
-                                    link: "/nextftc/hardware/motors-and-servos/feedback-servos"
-                                }
-                            ]
-                        },
-                        {
-                            text: "Motor and Servo Commands",
-                            items: [
-                                {
-                                    text: "SetPower",
-                                    link: "/nextftc/hardware/motor-and-servo-commands/setpower"
-                                },
-                                {
-                                    text: "SetPositions",
-                                    link: "/nextftc/hardware/motor-and-servo-commands/setpositions"
-                                },
-                                {
-                                    text: "RunToState",
-                                    link: "/nextftc/hardware/motor-and-servo-commands/runtostate"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            '/guide/': guide,
+            '/nextftc/': nextftc,
+            '/bindings/': bindings
         },
 
         socialLinks:
@@ -215,7 +73,7 @@ export default defineConfig({
             ],
         editLink:
             {
-                pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/:path"
+                pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/src/:path"
             }
         ,
         search: {

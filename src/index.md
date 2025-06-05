@@ -27,24 +27,50 @@ hero:
       link: /pedro
 features:
   - title: Easy to use
-    details: NextFTC offers numerous built-in commands so you don't need to write everything yourself like you do with FTCLib. Examples include running a motor to a position using a custom PID controller, following a path, or driving during TeleOp.
+    details: >
+      NextFTC offers numerous built-in features so you don't need to write
+      everything yourself. When you write code with NextFTC, we want it to feel
+      magical, and like everything "just works."
   - title: Gamepad Integration
-    details: NextFTC has complex gamepad integration, including binding commands to buttons, rising and falling edge detection, automatic gamepad polling, and even joystick curving!
-  - title: Subsystems
-    details: Subsystems help you organize your code and prevent conflicts by ensuring that no two commands using the same subsystem run simultaneously.
+    details: >
+      NextBindings, our bindings library, has complex gamepad integration, 
+      including binding callbacks to buttons, rising and falling edge 
+      detection, automatic gamepad polling, and even joystick curving!
+  - title: Control
+    details: >
+      NextControl, our solution to control in FTC, makes complex control easy.
+      With features such as PID control, feedforward, motion profiling, and
+      even Kalman filters, you can control your robot exactly how you want to,
+      with seamless integration with the rest of NextFTC.
   - title: Commands
-    details: Commands are units of code that can be executed. They consist of several steps and can be grouped into command groups, allowing them to run sequentially or simultaneously.
+    details: >
+      Commands are units of code that can be executed. They consist 
+      of several steps and can be grouped into command groups, allowing them 
+      to run sequentially or simultaneously, allowing you to create complex
+      routines.
   - title: PedroPathing
-    details: NextFTC integrates with <a style="text-decoration:underline;color:var(--vp-c-brand-1)" target="_blank" href="https://pedropathing.com">PedroPathing</a>, an autonomous pathing library. Compared to Roadrunner, PedroPathing is faster, smoother, and easier to tune.
+    details: >
+      NextFTC integrates with 
+      <a style="text-decoration:underline;color:var(--vp-c-brand-1)" 
+      target="_blank" href="https://pedropathing.com">PedroPathing</a>,
+      an autonomous pathing library. We are also currently working on built-in
+      integration with
+      <a style="text-decoration:underline;color:var(--vp-c-brand-1)"
+      target="_blank" href="https://rr.brott.dev.com">RoadRunner</a>.
   - title: Welcoming Community
-    details: "NextFTC has a welcoming support Discord server where you can ask questions or chat with the community. <br> Join the <a style='text-decoration:underline;color:var(--vp-c-brand-1)' target='_blank' href='https://discord.gg/PjP9Ze6fkX'>NextFTC Discord</a>!"
+    details: >
+      NextFTC has a welcoming support Discord server where you can ask 
+      questions or chat with the community. <br> Join the 
+      <a style='text-decoration:underline;color:var(--vp-c-brand-1)'
+      target='_blank' href='https://discord.gg/PjP9Ze6fkX'>NextFTC Discord</a>!
 ---
 
 ## Docs overview
 
 These docs have two main parts: the guide and a section for each library.
 
-The [guide](/guide/about) is designed to teach you the basics of NextFTC using a few of our most popular libraries.
+The [guide](/guide/about) is designed to teach you the basics of NextFTC using a
+few of our most popular libraries.
 
 Each NextFTC library also has a section on these docs specific to that library:
 
@@ -55,11 +81,14 @@ Each NextFTC library also has a section on these docs specific to that library:
 
 ## A note on these docs
 
-NextFTC was written in Kotlin, a JVM programming language. You can use either Kotlin or Java, but there are small
-advantages to using Kotlin. Each section with code examples will offer both Kotlin and Java tabs. It's recommended to
+NextFTC was written in Kotlin, a JVM programming language. You can use either
+Kotlin or Java, but there are small
+advantages to using Kotlin. Each section with code examples will offer both
+Kotlin and Java tabs. It's recommended to
 choose one language for your project to avoid compatibility issues.
 
-To use Kotlin, configure it in your project. I recommend the Kotlin Gradle Plugin version `1.9.0`. (Kotlin is
+To use Kotlin, configure it in your project. I recommend the Kotlin Gradle
+Plugin version `1.9.0`. (Kotlin is
 pre-installed in the Quickstart template.)
 
 <script setup>

@@ -22,45 +22,21 @@ quickstart, do one of the following:
    Make
    sure you have [git](https://git-scm.com/) installed first.
 
-> [!TIP]
+> [!NOTE]
 > If you are using PedroPathing, use the `nextftc-and-pedro` branch instead.
 
 ## Method 2: Manually using Gradle (existing project)
 
 Installing NextFTC using Gradle is fairly simple.
 
-### Step 1: Add the repositories
-
-Open your `build.dependencies.gradle` file. Inside, you should see two "blocks"
-of code. The top one is the
-`repositories` block. Add the following line to it:
-
-::: tabs key:gradle
-
-== .gradle
-
-```groovy
-maven { url = "https://maven.rowanmcalpin.com/" }
-```
-
-== .gradle.kts
-
-```kotlin
-maven(url = "https://maven.rowanmcalpin.com/")
-```
-
-:::
-
-### Step 2: Add the dependencies
-
-Still in the `build.dependencies.gradle` file, go to the `dependencies` block.
+In the `build.dependencies.gradle` file, go to the `dependencies` block.
 Add the following lines to the bottom:
 
 ::: tabs key:gradle
 
 == .gradle
 
-```groovy-vue
+```groovy
 implementation 'dev.nextftc:core:1.0.0'
 implementation 'dev.nextftc:ftc:1.0.0'
 implementation 'dev.nextftc:hardware:1.0.0'
@@ -71,7 +47,7 @@ implementation 'dev.nextftc:pedro:1.0.0' // If you would like to use NextPedro
 
 == .gradle.kts
 
-```kotlin-vue
+```kotlin
 implementation("dev.nextftc:core:1.0.0")
 implementation("dev.nextftc:ftc:1.0.0")
 implementation("dev.nextftc:hardware:1.0.0")
