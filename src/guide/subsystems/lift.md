@@ -150,18 +150,18 @@ Let's create our first `RunToPosition` command.
 == Kotlin
 
 ```kotlin
-val toLow = RunToPosition(controlSystem, 0.0).setRequirements(this)
+val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
 ```
 
 == Java
 
 ```java
-public Command toLow = new RunToPosition(controlSystem, 0).setRequirements(this);
+public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
 ```
 
 :::
 
-Note the `setRequirements(this)`. This is what tells NextFTC which commands should
+Note the `setSubsystems(this)`. This is what tells NextFTC which commands should
 be allowed to run at the same time. If it weren't set, `toLow` would be able to
 run at the same time as other commands that use the `Lift` subsystem - so there
 would be multiple things fighting to set the motor's power. Generally, you need
@@ -176,17 +176,17 @@ commands:
 == Kotlin
 
 ```kotlin
-val toMiddle = RunToPosition(controlSystem, 500.0).setRequirements(this)
+val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
 
-val toHigh = RunToPosition(controlSystem, 1200.0).setRequirements(this)
+val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
 ```
 
 == Java
 
 ```java
-public Command toMiddle = new RunToPosition(controlSystem, 500).setRequirements(this);
+public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
 
-public Command toHigh = new RunToPosition(controlSystem, 1200).setRequirements(this);
+public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
 ```
 
 :::
@@ -207,9 +207,9 @@ object Lift : Subsystem {
         elevatorFF(0.0)
     }
 
-    val toLow = RunToPosition(controlSystem, 0.0).setRequirements(this)
-    val toMiddle = RunToPosition(controlSystem, 500.0).setRequirements(this)
-    val toHigh = RunToPosition(controlSystem, 1200.0).setRequirements(this)
+    val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
+    val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
+    val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
 
     override fun periodic() {
         motor.power = controlSystem.calculate(
@@ -236,9 +236,9 @@ public class Lift implements Subsystem {
         .elevatorFF(0)
         .build();
 
-    public Command toLow = new RunToPosition(controlSystem, 0).setRequirements(this);
-    public Command toMiddle = new RunToPosition(controlSystem, 500).setRequirements(this);
-    public Command toHigh = new RunToPosition(controlSystem, 1200).setRequirements(this);
+    public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
+    public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
+    public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
 
     @Override
     public void periodic() {
