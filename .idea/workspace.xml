@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vitepress/sidebar/bindings.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vitepress/sidebar/guide.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vitepress/sidebar/nextftc.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vitepress/theme/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bindings/buttons.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bindings/getting-started.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bindings/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bindings/variables.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code-of-conduct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contributing.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/theme/index.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/theme/index.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/further-reading.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/further-reading.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/installation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nextftc/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/index.md" afterDir="false" />
+    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="revert: Replace setRequirements with setSubsystems">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/claw.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/claw.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/lift.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/lift.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +145,7 @@
       <workItem from="1748655835366" duration="586000" />
       <workItem from="1748730882937" duration="36000" />
       <workItem from="1749079625231" duration="8059000" />
-      <workItem from="1749092233151" duration="1624000" />
+      <workItem from="1749092233151" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
@@ -265,7 +251,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749080182575</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: NextBindings docs and some other stuff">
+      <option name="closed" value="true" />
+      <created>1749093974436</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749093974436</updated>
+    </task>
+    <task id="LOCAL-00015" summary="revert: Replace setRequirements with setSubsystems">
+      <option name="closed" value="true" />
+      <created>1749094188732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1749094188732</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +298,8 @@
     <MESSAGE value="um i think i changed some stuff" />
     <MESSAGE value="change base" />
     <MESSAGE value="refactor: Remove Dokka files" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Remove Dokka files" />
+    <MESSAGE value="feat: NextBindings docs and some other stuff" />
+    <MESSAGE value="revert: Replace setRequirements with setSubsystems" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert: Replace setRequirements with setSubsystems" />
   </component>
 </project>
