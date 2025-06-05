@@ -43,8 +43,8 @@ into. We will then try to get back to you as soon as possible.
 > When contributing to this project, you must agree that you have authored 100%
 > of the content, that you have the necessary rights to the content and that the
 > content you contribute may be provided under the project license,
->
-the [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.html).
+> the
+> [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ### Reporting Bugs
 
