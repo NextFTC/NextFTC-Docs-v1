@@ -1,31 +1,37 @@
-# Control
+# NextControl
 
-NextControl is our robust control library that uses the "Four Elements"
-of control systems to model actuated systems.
+NextControl is our robust control library that allows you to create any
+controller imaginable. It supports PID control, feedforward, and even motion
+profiling.
 
-Some examples are featured in the [examples folder](/examples/), 
-and all components have thorough javadoc/kdoc documentation.
+> [!IMPORTANT]
+> We haven't gone through the work here explaining in detail what
+> different
+> control methods do, because [CTRL ALT FTC](https://www.ctrlaltftc.com) is
+> already a great resource for that!
 
-## The Four Elements
-These four elements make up a Control System. Not all are required, of course.
-- **Feedback elements** provide feedback (closed-loop) control for your system.
-  For example, PID Control, SquID
-  Control, and
-  Bang-Bang Control.
-- **Feedforward elements** provide feedforward (open-loop) control. NextControl
-  has three feedforward controllers:
-  basic, elevator, and arm.
-- **Filter elements** filter your sensor measurements to remove noise. Examples
-  are low-pass filters and Kalman filters.
-- **Interpolator elements** interpolate the setpoint in order to smooth out
-  setpoint changes. 
-  For example, a trapezoidal motion profile or a moving-average setpoint filter.
+## Installation
 
+In the `build.dependencies.gradle` file, go to the `dependencies` block. Add
+the following line to the bottom:
 
-The control system calculation process involves:
-1. Filtering sensor measurements
-2. Obtaining the current reference from the interpolator
-3. Calculating feedback component based on error
-4. Calculating feedforward component based on reference
-5. Returning the sum of feedback and feedforward
+:::tabs key:gradle
 
+== .gradle
+
+```groovy
+implementation 'dev.nextftc:control:1.0.0'
+```
+
+== .gradle.kts
+
+```kotlin
+implementation("dev.nextftc:control:1.0.0")
+```
+
+:::
+
+Then, press the `Sync Now` button that appeared as a banner at the top of
+your Gradle file.
+
+*You're good to go!*
