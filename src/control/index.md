@@ -3,7 +3,7 @@
 NextControl is our robust control library that uses the "Four Elements"
 of control systems to model actuated systems.
 
-Some examples are featured in the [examples folder](/control/examples], 
+Some examples are featured in the [examples folder](/examples/), 
 and all components have thorough javadoc/kdoc documentation.
 
 ## The Four Elements

@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="add: basic nextcontrol info + sidebar">
-      <changelist_data name="Zach Harel" email="zach.harel42@gmail.com" automatic="false" />
-      <change afterPath="$PROJECT_DIR$/.vitepress/sidebar/control.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/controlsystem.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/examples/slides.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/kineticstates.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/examples/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/config.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +158,7 @@
       <workItem from="1749421412230" duration="206000" />
       <workItem from="1749421628542" duration="699000" />
       <workItem from="1749422337663" duration="277000" />
+      <workItem from="1749422779347" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
@@ -292,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749413915584</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add: basic nextcontrol info + sidebar">
+      <option name="closed" value="true" />
+      <created>1749422791098</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1749422791098</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

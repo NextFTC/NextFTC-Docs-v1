@@ -19,6 +19,10 @@ export default [
         text: "Examples",
         items: [
             {
+                text: "Index",
+                link: "/control/examples/",
+            },
+            {
                 text: "Linear Slides",
                 link: "/control/examples/slides",
             }
