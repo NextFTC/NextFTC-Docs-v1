@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="add: basic nextcontrol info + sidebar">
-      <change afterPath="$PROJECT_DIR$/src/control/dashboard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/getting-started.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/usage/feedback-elements.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/usage/feedforward-elements.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="add: examples index">
+      <change afterPath="$PROJECT_DIR$/.vitepress/sidebar/nextrunner.mts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nextrunner/changes-from-rr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nextrunner/examples/action-builder.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nextrunner/examples/command-builder.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nextrunner/examples/follower.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nextrunner/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabs.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/sidebar/control.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/sidebar/control.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/controlsystem.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/usage/control-systems.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/kineticstates.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/usage/kinetic-states.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/config.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/about.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +44,33 @@
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;BeepBot99&quot;
-  }
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOO4QWnc6ZwrP1&quot;,
+        &quot;number&quot;: 1
+      },
+      &quot;lastSeen&quot;: 1749511110320
+    }
+  ]
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/BeepBot99/NextFTC-Docs.git&quot;,
-    &quot;accountId&quot;: &quot;3ad9a11f-0710-4d75-940f-e34cc0a3111d&quot;
+    &quot;url&quot;: &quot;https://github.com/NextFTC/NextFTC-Docs.git&quot;,
+    &quot;accountId&quot;: &quot;62a4ef25-0b91-4ce6-a5d0-68f8136f53c5&quot;
   }
 }</component>
+  <component name="LLMProjectSettings">
+    <option name="turned_on" value="false" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -63,34 +79,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;JavaScript Debug.redirect.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rowan/Documents/Programming/Libraries/NextFTC-Docs/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.docs:dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\davis\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JavaScript Debug.redirect.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/zach/IdeaProjects/NextFTC-Docs",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.docs:dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.grazie.pro",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Markdown&quot;
-    ]
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown"
+    ],
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -104,6 +126,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="docs:dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -118,7 +145,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -167,6 +195,11 @@
       <workItem from="1749422779347" duration="1533000" />
       <workItem from="1749501951564" duration="2931000" />
       <workItem from="1749508463549" duration="1659000" />
+      <workItem from="1749553519553" duration="3071000" />
+      <workItem from="1750022120363" duration="1489000" />
+      <workItem from="1750033600209" duration="5000" />
+      <workItem from="1750733796535" duration="834000" />
+      <workItem from="1750734642561" duration="3506000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
@@ -315,7 +348,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
