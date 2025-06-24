@@ -66,3 +66,11 @@ each of our libraries is also on this site.
 - **Follow paths** and `PathChains` with the `FollowPath` command.
 - **Turn your robot** with the `Turn` and `TurnTo` commands.
 - **Position-based timing** with `ProximityDelay` and `DisplacementDelay`.
+
+[**NextRunner is our modernized fork of RoadRunner**](/nextrunner) 
+
+- [**RoadRunner**](https://rr.brott.dev/) is a wheeled mobile robot 
+  motion planning library designed for FTC.
+- **Customize** your `Trajectory` following with `Follower`s.
+- **Easily queue** `Action`s using `ActionRunner`.
+- **Create** a `Trajectory` without `TrajectoryActionBuilder`.

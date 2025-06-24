@@ -4,6 +4,7 @@ import guide from "./sidebar/guide.mts";
 import nextftc from "./sidebar/nextftc.mts";
 import bindings from "./sidebar/bindings.mts";
 import control from "./sidebar/control.mts";
+import nextrunner from "./sidebar/nextrunner.mts";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -41,7 +42,8 @@ export default defineConfig({
                     {text: "NextFTC", link: "/nextftc/", activeMatch: "^/nextftc/"},
                     {text: "NextControl", link: "/control/", activeMatch: "^/control/"},
                     {text: "NextBindings", link: "/bindings/", activeMatch: "^/bindings/"},
-                    {text: "NextPedro", link: "/pedro/", activeMatch: "^/pedro/"}
+                    {text: "NextPedro", link: "/pedro/", activeMatch: "^/pedro/"},
+                    {text: "NextRunner", link: "/nextrunner/", activeMatch: "^/nextrunner/"}
                 ],
                 activeMatch: "^/(nextftc|control|bindings|pedro)/"
 
@@ -64,17 +66,18 @@ export default defineConfig({
             '/guide/': guide,
             '/nextftc/': nextftc,
             '/bindings/': bindings,
-            '/control/': control
+            '/control/': control,
+            '/nextrunner/': nextrunner
         },
 
         socialLinks:
             [
-                {icon: "github", link: "https://github.com/rowan-mcalpin/nextftc"},
+                {icon: "github", link: "https://github.com/NextFTC"},
                 {icon: "discord", link: "https://discord.gg/PjP9Ze6fkX"}
             ],
         editLink:
             {
-                pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/src/:path"
+                pattern: "https://github.com/NextFTC/NextFTC-Docs/edit/main/src/:path"
             }
         ,
         search: {
