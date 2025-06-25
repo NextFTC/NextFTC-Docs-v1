@@ -1,4 +1,5 @@
 # NextRunner
+![Maven Central Version](https://img.shields.io/maven-central/v/dev.nextftc.nextrunner/core?label=latest%20release&labelColor=darkBlue&color=yellow)
 
 NextRunner is our modernized fork of RoadRunner designed to make using RoadRunner easier.
 
@@ -23,10 +24,12 @@ In your `build.dependencies.gradle` file, add the following three lines
 to the `dependencies` block:
 
 ```groovy
-    implementation 'dev.nextftc.nextrunner:core:2.3.0'
-    implementation 'dev.nextftc.nextrunner:actions:2.3.0'
-    implementation 'dev.nextftc.nextrunner:ftc:2.3.0'
+    implementation 'dev.nextftc.nextrunner:core:<latest>>'
+    implementation 'dev.nextftc.nextrunner:actions:<latest>'
+    implementation 'dev.nextftc.nextrunner:ftc:<latest>'
 ```
+
+Where `latest` is replaced by the latest version as displayed above.
 
 If you are using NextRunner with NextFTC's command-based library,
 add the following to the `repositories` block of the same file:
