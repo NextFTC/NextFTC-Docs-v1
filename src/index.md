@@ -25,6 +25,9 @@ hero:
     - theme: alt
       text: NextPedro
       link: /pedro
+    - theme: alt
+      text: NextRunner
+      link: /nextrunner
 features:
   - title: Easy to use
     details: >

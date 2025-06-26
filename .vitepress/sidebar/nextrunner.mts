@@ -12,6 +12,10 @@ export default [
         link: "/nextrunner/changes-from-rr"
     },
     {
+        text: "Path and Trajectory Generation",
+        link: "/nextrunner/traj-generation"
+    },
+    {
         text: "Examples",
         items: [
             {
@@ -25,6 +29,10 @@ export default [
             {
                 text: "Followers",
                 link: "/nextrunner/examples/follower"
+            },
+            {
+                text: "Manually Making Path Objects",
+                link: "/nextrunner/examples/manual-paths"
             }
         ]
     }
