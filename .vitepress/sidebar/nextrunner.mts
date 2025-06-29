@@ -16,6 +16,19 @@ export default [
         link: "/nextrunner/traj-generation"
     },
     {
+        text: "Actions",
+        items: [
+            {
+                text: "Creating Actions",
+                link: "/nextrunner/creating-actions"
+            },
+            {
+                text: "Using Actions",
+                link: "/nextrunner/using-actions"
+            },
+        ]
+    },
+    {
         text: "Examples",
         items: [
             {
@@ -33,7 +46,15 @@ export default [
             {
                 text: "Manually Making Path Objects",
                 link: "/nextrunner/examples/manual-paths"
-            }
+            },
+            {
+                text: "Custom Actions",
+                link: "/nextrunner/examples/custom-actions"
+            },
+            {
+                text: "Teleop Actions",
+                link: "/nextrunner/examples/teleop-actions"
+            },
         ]
     }
 ] satisfies SidebarItem[]

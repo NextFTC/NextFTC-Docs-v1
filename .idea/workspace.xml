@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="add: nextrunner stuff&#10;&#10;Signed-off-by: Zach Harel &lt;zach.harel42@gmail.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="path making guide + example" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,14 +107,20 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/nextrunner" />
       <recent name="C:\Users\davis\NextFTCProjects\NextFTC-Docs\src\control\usage" />
       <recent name="C:\Users\davis\WebstormProjects\NextFTC-Docs\src\nextftc\hardware\motors-and-servos" />
       <recent name="C:\Users\davis\WebstormProjects\NextFTC-Docs\src\nextftc\hardware" />
       <recent name="C:\Users\davis\WebstormProjects\NextFTC-Docs\src\nextftc\helpful-commands" />
-      <recent name="C:\Users\davis\WebstormProjects\NextFTC-Docs\src\guide" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="docs:dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -187,6 +191,7 @@
       <workItem from="1750733796535" duration="834000" />
       <workItem from="1750734642561" duration="5012000" />
       <workItem from="1750794781998" duration="601000" />
+      <workItem from="1750883106722" duration="6489000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
@@ -340,7 +345,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750738433470</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add: nextrunner version display">
+      <option name="closed" value="true" />
+      <created>1750883207622</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1750883207622</updated>
+    </task>
+    <task id="LOCAL-00021" summary="path making guide + example">
+      <option name="closed" value="true" />
+      <created>1750907791865</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1750907791865</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,6 +410,8 @@
     <MESSAGE value="add: basic nextcontrol info + sidebar" />
     <MESSAGE value="add: nextrunner stuff" />
     <MESSAGE value="add: nextrunner stuff&#10;&#10;Signed-off-by: Zach Harel &lt;zach.harel42@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: nextrunner stuff&#10;&#10;Signed-off-by: Zach Harel &lt;zach.harel42@gmail.com&gt;" />
+    <MESSAGE value="add: nextrunner version display" />
+    <MESSAGE value="path making guide + example" />
+    <option name="LAST_COMMIT_MESSAGE" value="path making guide + example" />
   </component>
 </project>
