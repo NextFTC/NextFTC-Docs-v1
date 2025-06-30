@@ -51,7 +51,7 @@ export default defineConfig({
             {
                 text: "v1.0.0",
                 items: [
-                    {text: "v0.6.1", link: "https://v0.nextftc.dev"}
+                    {text: "v0.6.1", link: "https://nextftc.dev"} // TODO: Update to `v0.nextftc.dev` when v1 is released
                 ]
             },
             {
@@ -73,11 +73,11 @@ export default defineConfig({
         socialLinks:
             [
                 {icon: "github", link: "https://github.com/NextFTC"},
-                {icon: "discord", link: "https://discord.gg/PjP9Ze6fkX"}
+                {icon: "discord", link: "https://nextftc.dev/discord"}
             ],
         editLink:
             {
-                pattern: "https://github.com/NextFTC/NextFTC-Docs/edit/main/src/:path"
+                pattern: "https://github.com/NextFTC/NextFTC-Docs-v1/edit/main/src/:path" // TODO: Update to `NextFTC-Docs` when v1 is released
             }
         ,
         search: {
