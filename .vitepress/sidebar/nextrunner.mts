@@ -20,11 +20,11 @@ export default [
         items: [
             {
                 text: "Creating Actions",
-                link: "/nextrunner/creating-actions"
+                link: "/nextrunner/actions/creating-actions"
             },
             {
                 text: "Using Actions",
-                link: "/nextrunner/using-actions"
+                link: "/nextrunner/actions/using-actions"
             },
         ]
     },
