@@ -101,15 +101,13 @@ public class MyTeleOp extends OpMode {
 Now, let's map some controller buttons to actions. 
 We'll use the `gamepad1` object to get button presses.
 
+To prevent an action from being triggered every loop cycle while a button is held down,
+we can use the `aWasPressed()`, `bWasPressed()`, etc. methods.
+These methods return true only on the first frame the button is pressed.
+
 `ActionRunner` is a named object, 
 meaning there is one instance of it that is accessed globally.
 Its functions are called like static methods in Java.
-
-> [!CAUTION]
-> Because `ActionRunner` does not check for duplicates,
-> make sure that you do trigger an action before it completes.
-> If you do, it can cause unexpected behavior,
-> depending on the action's implementation.
 
 :::tabs key:code
 
@@ -117,19 +115,19 @@ Its functions are called like static methods in Java.
 
 ```kotlin
 // in loop()
-if (gamepad1.a) {
+if (gamepad1.aWasPressed()) {
     ActionRunner.run(claw.open())
 }
 
-if (gamepad1.b) {
+if (gamepad1.bWasPressed()) {
     ActionRunner.run(claw.close())
 }
 
-if (gamepad1.x) {
+if (gamepad1.xWasPressed()) {
     ActionRunner.run(lift.goToPosition(1000.0))
 }
 
-if (gamepad1.y) {
+if (gamepad1.yWasPressed()) {
     ActionRunner.run(lift.goToPosition(0.0))
 }
 ```
@@ -138,19 +136,19 @@ if (gamepad1.y) {
 
 ```java
 // in loop()
-if (gamepad1.a) {
+if (gamepad1.aWasPressed()) {
     ActionRunner.run(claw.open());
 }
 
-if (gamepad1.b) {
+if (gamepad1.bWasPressed()) {
     ActionRunner.run(claw.close());
 }
 
-if (gamepad1.x) {
+if (gamepad1.xWasPressed()) {
     ActionRunner.run(lift.goToPosition(1000));
 }
 
-if (gamepad1.y) {
+if (gamepad1.yWasPressed()) {
     ActionRunner.run(lift.goToPosition(0));
 }
 ```
@@ -226,19 +224,19 @@ class MyTeleOp : OpMode() {
     }
 
     override fun loop() {
-        if (gamepad1.a) {
+        if (gamepad1.aWasPressed()) {
             ActionRunner.run(claw.open())
         }
 
-        if (gamepad1.b) {
+        if (gamepad1.bWasPressed()) {
             ActionRunner.run(claw.close())
         }
 
-        if (gamepad1.x) {
+        if (gamepad1.xWasPressed()) {
             ActionRunner.run(lift.goToPosition(1000.0))
         }
 
-        if (gamepad1.y) {
+        if (gamepad1.yWasPressed()) {
             ActionRunner.run(lift.goToPosition(0.0))
         }
 
@@ -273,19 +271,19 @@ public class MyTeleOp extends OpMode {
 
     @Override
     public void loop() {
-        if (gamepad1.a) {
+        if (gamepad1.aWasPressed()) {
             ActionRunner.run(claw.open());
         }
 
-        if (gamepad1.b) {
+        if (gamepad1.bWasPressed()) {
             ActionRunner.run(claw.close());
         }
 
-        if (gamepad1.x) {
+        if (gamepad1.xWasPressed()) {
             ActionRunner.run(lift.goToPosition(1000));
         }
 
-        if (gamepad1.y) {
+        if (gamepad1.yWasPressed()) {
             ActionRunner.run(lift.goToPosition(0));
         }
 
