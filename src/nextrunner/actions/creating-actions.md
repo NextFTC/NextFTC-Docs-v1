@@ -120,13 +120,19 @@ class MyAction implements Action {
 
 ### Action Requirements
 
-Actions can also declare requirements. Requirements are a set of objects that the action needs to function. The `ActionRunner` will ensure that no two actions with the same requirement can run at the same time. This is useful for preventing two different actions from trying to control the same motor or servo simultaneously.
+Actions can also declare requirements. 
+Requirements are a set of objects that the action needs to function.
+The `ActionRunner` will ensure that no two actions with the same requirement can run at the same time.
+This is useful for preventing two different actions from trying to control 
+the same motor or servo simultaneously.
 
 The type of `requirements` is `Set<Any>` to allow any object to be a requirement.
 This can be a subsystem, a motor object, etc.
 
 You can specify requirements by overriding the `requirements` property in your action, 
-or by calling the `withRequirements` function, which returns a copy of the receiver with its argument (either multiple objects or a set of objects) as the requirements.
+or by calling the `withRequirements` function, 
+which returns a copy of the receiver with its argument
+(either multiple objects or a set of objects) as the requirements.
 
 :::tabs key:code
 
@@ -308,9 +314,12 @@ InstantAction myInstantAction = new InstantAction(() -> {
 `NextRunner` provides several ways to combine actions into groups.
 
 - `SequentialAction`: Executes a series of actions one after the other.
-- `ParallelAction`: Executes a group of actions at the same time. The group completes when all actions have completed.
-- `RaceAction`: Executes a group of actions at the same time. The group completes when any one of the actions completes.
-- `SleepAction` (not technically a group, but a similar utility): does nothing and completes after the specified `Duration`.
+- `ParallelAction`: Executes a group of actions at the same time. 
+   The group completes when all actions have completed.
+- `RaceAction`: Executes a group of actions at the same time. 
+   The group completes when any one of the actions completes.
+- `SleepAction` (not technically a group, but a similar utility): 
+   does nothing and completes after the specified `Duration`.
 
 You can also use the `then()`, `with()`, `race()`, and `delay()`  functions to chain actions together in a more readable way.
 

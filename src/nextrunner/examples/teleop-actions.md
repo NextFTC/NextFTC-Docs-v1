@@ -1,6 +1,8 @@
 # Using ActionRunner in TeleOp
 
-This guide will show you how to use `ActionRunner` to run actions in your TeleOp OpMode. We will be using the `Lift` and `Claw` subsystems from the [custom actions guide](./custom-actions.md), and a `Drive` class from the QuickStart.
+This guide will show you how to use `ActionRunner` to run actions in your TeleOp OpMode. 
+We will be using the `Lift` and `Claw` subsystems from the [custom actions guide](./custom-actions.md),
+and a `Drive` class from the QuickStart.
 
 ## Step 1: Create your OpMode
 
@@ -99,6 +101,10 @@ public class MyTeleOp extends OpMode {
 Now, let's map some controller buttons to actions. 
 We'll use the `gamepad1` object to get button presses.
 
+`ActionRunner` is a named object, 
+meaning there is one instance of it that is accessed globally.
+Its functions are called like static methods in Java.
+
 > [!CAUTION]
 > Because `ActionRunner` does not check for duplicates,
 > make sure that you do trigger an action before it completes.
@@ -112,19 +118,19 @@ We'll use the `gamepad1` object to get button presses.
 ```kotlin
 // in loop()
 if (gamepad1.a) {
-    actionRunner.run(claw.open())
+    ActionRunner.run(claw.open())
 }
 
 if (gamepad1.b) {
-    actionRunner.run(claw.close())
+    ActionRunner.run(claw.close())
 }
 
 if (gamepad1.x) {
-    actionRunner.run(lift.goToPosition(1000.0))
+    ActionRunner.run(lift.goToPosition(1000.0))
 }
 
 if (gamepad1.y) {
-    actionRunner.run(lift.goToPosition(0.0))
+    ActionRunner.run(lift.goToPosition(0.0))
 }
 ```
 
@@ -133,19 +139,19 @@ if (gamepad1.y) {
 ```java
 // in loop()
 if (gamepad1.a) {
-    actionRunner.run(claw.open());
+    ActionRunner.run(claw.open());
 }
 
 if (gamepad1.b) {
-    actionRunner.run(claw.close());
+    ActionRunner.run(claw.close());
 }
 
 if (gamepad1.x) {
-    actionRunner.run(lift.goToPosition(1000));
+    ActionRunner.run(lift.goToPosition(1000));
 }
 
 if (gamepad1.y) {
-    actionRunner.run(lift.goToPosition(0));
+    ActionRunner.run(lift.goToPosition(0));
 }
 ```
 
@@ -160,7 +166,7 @@ Instead, we directly set the drive power using the `setDrivePower()` method of t
 One benefit of `ActionRunner` is that it allows you to run actions in parallel with other code,
 such as setting drive powers.
 
-Finally, we need to call `actionRunner.update()` at the end of our `loop()` function. This will run the actions and keep them updated.
+Finally, we need to call `ActionRunner.update()` at the end of our `loop()` function. This will run the actions and keep them updated.
 
 :::tabs key:code
 
@@ -177,7 +183,7 @@ drive.setDrivePower(PoseVelocity2d(
     gamepad1.right_stick_x,
 ))
 
-actionRunner.update()
+ActionRunner.update()
 ```
 
 == Java
@@ -193,7 +199,7 @@ drive.setDrivePower(new PoseVelocity2d(
     gamepad1.right_stick_x,
 ));
 
-actionRunner.update();
+ActionRunner.update();
 ```
 
 :::
@@ -221,19 +227,19 @@ class MyTeleOp : OpMode() {
 
     override fun loop() {
         if (gamepad1.a) {
-            actionRunner.run(claw.open())
+            ActionRunner.run(claw.open())
         }
 
         if (gamepad1.b) {
-            actionRunner.run(claw.close())
+            ActionRunner.run(claw.close())
         }
 
         if (gamepad1.x) {
-            actionRunner.run(lift.goToPosition(1000.0))
+            ActionRunner.run(lift.goToPosition(1000.0))
         }
 
         if (gamepad1.y) {
-            actionRunner.run(lift.goToPosition(0.0))
+            ActionRunner.run(lift.goToPosition(0.0))
         }
 
         drive.setDrivePower(PoseVelocity2d(
@@ -244,7 +250,7 @@ class MyTeleOp : OpMode() {
             gamepad1.right_stick_x,
         ))
 
-        actionRunner.update()
+        ActionRunner.update()
     }
 }
 ```
@@ -268,19 +274,19 @@ public class MyTeleOp extends OpMode {
     @Override
     public void loop() {
         if (gamepad1.a) {
-            actionRunner.run(claw.open());
+            ActionRunner.run(claw.open());
         }
 
         if (gamepad1.b) {
-            actionRunner.run(claw.close());
+            ActionRunner.run(claw.close());
         }
 
         if (gamepad1.x) {
-            actionRunner.run(lift.goToPosition(1000));
+            ActionRunner.run(lift.goToPosition(1000));
         }
 
         if (gamepad1.y) {
-            actionRunner.run(lift.goToPosition(0));
+            ActionRunner.run(lift.goToPosition(0));
         }
 
         drive.setDrivePower(new PoseVelocity2d(
@@ -291,7 +297,7 @@ public class MyTeleOp extends OpMode {
             gamepad1.right_stick_x,
         ));
 
-        actionRunner.update();
+        ActionRunner.update();
     }
 }
 ```

@@ -1,8 +1,11 @@
-# Using Actions
+# Custom Actions
 
-In this guide, you will learn how to create your own custom actions for your subsystems. We will be creating a simple intake subsystem with a single motor.
+## Basic Examples
 
-## Step 1: Create your subsystem
+In this guide, you will learn how to create your own custom actions for your subsystems. 
+We will be creating a simple intake subsystem with a single motor.
+
+### Step 1: Create your subsystem
 
 First, we need to create our subsystem. 
 NextRunner does not include any formal Subsystem class or interface,
@@ -32,11 +35,11 @@ public class Intake {
 
 :::
 
-## Step 2: Create your actions
+### Step 2: Create your actions
 
 Now, we will create two actions: `run()` and `stop()`. The `run()` action will turn the intake motor on, and the `stop()` action will turn it off.
 
-### `run()` action
+#### `run()` action
 
 To create the `run()` action, we will create a new `Action` that sets the motor power to 1.
 
@@ -66,7 +69,7 @@ public Action run() {
 
 Note that we return `true` at the end of the action. This is because we want the action to continue running until it is interrupted by another action (like `stop()`).
 
-### `stop()` action
+#### `stop()` action
 
 Now, let's create the `stop()` action. This action will set the motor power to 0 and then complete.
 
@@ -96,7 +99,7 @@ public Action stop() {
 
 This time, we return `false` at the end of the action. This tells the `ActionRunner` that the action is complete and can be removed from the queue.
 
-## Final Result
+### Final Result
 
 Here is the final code for our `Intake` subsystem:
 
@@ -287,7 +290,7 @@ public Action close() {
 
 This time, we return `false` at the end of the action. This tells the `ActionRunner` that the action is complete and can be removed from the queue.
 
-## Final Result
+### Final Result
 
 Here is the final code for our `Lift` and `Claw` subsystems:
 
@@ -350,6 +353,8 @@ public class Lift {
     }
 }
 
+// in java these should be placed in separate files
+
 public class Claw {
     private Servo servo;
     public Claw(HardwareMap hwMap) { 
@@ -376,4 +381,5 @@ public class Claw {
 
 ## Next Steps
 
-Now that you have created your custom actions, you can learn how to use them in your TeleOp OpMode in the [next guide](./teleop-actions.md).
+Now that you have created your custom actions, 
+you can learn how to use them in your TeleOp OpMode in the [next guide](./teleop-actions.md).
