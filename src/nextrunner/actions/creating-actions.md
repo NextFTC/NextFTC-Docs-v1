@@ -6,6 +6,8 @@ There are a few ways to create actions:
 
 ## Action Interface
 
+### Implementing Directly
+
 The most basic way is to implement the `Action` interface. 
 This is a functional interface with a single abstract method, `run(p: TelemetryPacket)`, 
 which is called on every loop. 
@@ -38,13 +40,25 @@ class MyAction implements Action {
 }
 ```
 
+:::
+
+### Action Lambdas
+
 Note that while it is possible to create an `Action` 
 by making an implementation of the interface, 
 it can be tedious to do this for every possible robot action.
 Since `Action` is a functional interface, 
-it is easy to create objects of it without direct subclassing.
-This means you can create methods of your robot classes that simply return 
-anonymous objects of it.
+it is easy to create objects of it using lambda syntax.
+This means you can create methods of your robot classes that 
+return Actions without making an entire class.
+
+> [!TIP]
+> To learn more about lambdas, read 
+> [this guide on lambdas in Java](https://dev.java/learn/lambdas/first-lambdas/),
+> or [this guide on higher order functions and lambdas in Kotlin](https://kotlinlang.org/docs/lambdas.html).
+> NextRunner doesn't require any advanced knowledge about them, 
+> but if you're interested in contributing to any NextFTC library,
+> or programming in general, it might be useful to know.
 
 :::tabs key:code
 
@@ -80,7 +94,10 @@ class Subsystem {
 
 ### Previewing Actions
 
-The `Action` interface also provides a `preview()` method that can be overridden to draw a preview of the action on the FTC Dashboard field overlay. This is useful for visualizing the robot's path or other actions during autonomous.
+The `Action` interface also provides a `preview()` method 
+that can be overridden to draw a preview of the action on the FTC Dashboard field overlay.
+This is useful for visualizing the robot's path or other actions during autonomous.
+The QuickStart's `FollowTrajectoryAction` implements it to draw the trajectory!
 
 :::tabs key:code
 
@@ -94,6 +111,17 @@ class MyAction : Action {
     }
 
     override fun preview(fieldOverlay: Canvas) {
+        // ... draw on the field overlay
+    }
+}
+
+//or 
+
+fun myAction(): Action {
+    return Action {
+        // ... do something 
+        true // or false
+    }.withPreview {
         // ... draw on the field overlay
     }
 }
@@ -113,6 +141,17 @@ class MyAction implements Action {
     public void preview(@NonNull Canvas fieldOverlay) {
         // ... draw on the field overlay
     }
+}
+
+//or 
+
+Action myAction() {
+    return p -> { 
+        // ... do something 
+        return true; // or false
+    }.withPreview(c -> {
+        // ... draw on the field overlay
+    });
 }
 ```
 
@@ -170,7 +209,7 @@ class MyAction implements Action {
 
     public MyAction(Subsystem subsystem) {
         this.subsystem = subsystem;
-        this.reqs = new HashSet<>(Collections.singletonList(subsystem))
+        this.reqs = new HashSet<>(Collections.singletonList(subsystem));
     }
 
     @Override
@@ -199,6 +238,8 @@ class MySubsystem {
 ```
 
 :::
+
+## ActionEx
 
 `ActionEx`, the expanded Action class, 
 has two main methods of creating new Action types.
@@ -309,6 +350,60 @@ InstantAction myInstantAction = new InstantAction(() -> {
 
 :::
 
+## Interruptible
+
+The `Interruptible` interface represents an `Action` that can be interrupted. 
+When an interruption occurs, the `onInterrupt` method is called,
+and the resulting `Action` is added to the queue.
+
+We recommend defining it with the `interruptible` function, 
+which accepts an Action:
+
+:::tabs key:code
+
+== Kotlin
+
+```kotlin 
+class Subsystem {
+    fun myAction(): Action {
+        return Action { 
+            //the TelemetryPacket paramemter is named `it` by default in the lambda
+            // ... do something
+            true // or false
+        }.interruptible(Action {
+            // ... do something (like stop the motors the original action needed)
+            false
+        })
+    }
+}
+```
+
+== Java
+
+```java
+class Subsystem {
+    public Action myAction() {
+        return p -> { 
+            // ... do something
+            return true; // or false
+        }.interruptible(p -> {
+            // ... do something (like stop the motors the original action needed)
+            return false;
+        });
+    }
+}
+```
+
+:::
+
+Interruption is currently triggered by two things:
+1. If `ActionRunner` detects a requirements collision
+    (a newly added action has the same requirement as a previously added action),
+    it will remove the old action from the queue, 
+    and add its `onInterrupt` action instead.
+2. If one action in a `RaceAction` ends,
+    the other actions' `onInterrupt` actions are added to the queue.
+
 ## Action Groups
 
 `NextRunner` provides several ways to combine actions into groups.
@@ -340,7 +435,7 @@ val myAction = MyAction1()
 Action myAction = new MyAction1()
     .then(new MyAction2()) // run MyAction2 after MyAction1
     .with(new MyAction3())  // run MyAction3 at the same time
-    .delay(1.0) //wait 1 second before executing
+    .delay(1.0); //wait 1 second before executing
 ```
 
 :::
