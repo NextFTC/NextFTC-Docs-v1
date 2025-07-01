@@ -69,8 +69,34 @@ Then, sync your project with Gradle files.
 > 
 > The compatibility module is currently compatible with NextFTC 0.6.1 and 0.6.2.
 
+## Updating From RoadRunner 1.0
+
+NextRunner's API is mostly compatible with RoadRunner code,
+though package locations were changed.
+Simply replace your RoadRunner imports with the following:
+
+```groovy
+    implementation 'dev.nextftc.nextrunner:core:<latest>>'
+    implementation 'dev.nextftc.nextrunner:actions:<latest>'
+    implementation 'dev.nextftc.nextrunner:ftc:<latest>'
+```
+
+And sync your project with Gradle files. 
+
+> [!WARNING]
+> You will need to remove all of the RoadRunner imports from your files
+> and replace them with NextRunner's.
+> Once you delete the import statements, IntelliJ and Android Studio
+> can automatically replace them.
+
 ## Tuning 
 
 If you are using the QuickStart, the tuning process is
 the exact same as the [RoadRunner 1.0 tuning process](https://rr.brott.dev/docs/v1-0/tuning/).
 Future changes to the tuning process will be listed here.
+
+## KDoc 
+
+[KDoc for NextRunner can be found here](http://rr.zharel.me/).
+We recommend checking the KDoc pages, 
+as they include many features not directly discussed here.

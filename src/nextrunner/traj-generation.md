@@ -85,7 +85,7 @@ We recommend using the `trajectoryBuilder` API's
 
 ## Types of `PosePath`
 
-NextRunner also includes [three default functions](https://javadoc.io/static/dev.nextftc.nextrunner/core/2.4.0/core/com.acmerobotics.roadrunner.paths/-position-path/index.html#-1473791754%2FFunctions%2F-431355489)
+NextRunner also includes [three default functions](http://rr.zharel.me/core/com.acmerobotics.roadrunner.paths/-position-path/index.html#1182961430%2FFunctions%2F-431355489)
 in the `PositionPath` interface to add heading paths,
 which creates `PosePath` objects!
 

@@ -6,6 +6,8 @@ Both `TankDrive` and `MecanumDrive` have an `actionBuilder` method,
 with an optional `startPose: Pose2d` parameter.
 If `startPose` is not provided, it defaults to `localizer.pose`.
 
+[All of the `TrajectoryActionBuilder` functions are documented here.](http://rr.zharel.me/actions/com.acmerobotics.roadrunner.actions/-trajectory-action-builder/index.html)
+
 Here is an example of how to use `actionBuilder`:
 
 :::tabs key:code

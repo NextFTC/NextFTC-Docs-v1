@@ -16,6 +16,8 @@ which will eventually be discussed on a page of this guide.
 The following (haha) example uses `TimeFollower`, 
 but it can be switched out for `DisplacementFollower` with no other changes to the `OpMode`.
 
+[All of the `TrajectoryBuilder` functions are documented here](http://rr.zharel.me/core/com.acmerobotics.roadrunner.trajectories/-trajectory-builder/index.html).
+
 :::tabs key:code
 
 == Kotlin
