@@ -69,8 +69,14 @@ each of our libraries is also on this site.
 
 [**NextRunner is our modernized fork of RoadRunner**](/nextrunner) 
 
-- [**RoadRunner**](https://rr.brott.dev/) is a wheeled mobile robot 
-  motion planning library designed for FTC.
-- **Customize** your `Trajectory` following with `Follower`s.
-- **Easily queue** `Action`s using `ActionRunner`.
-- **Create** a `Trajectory` without `TrajectoryActionBuilder`.
+- **Path Planning** with smooth continuity, such as Bézier curves,
+  hermite splines, and more!
+- **Motion Profiling** paths to ensure the most optimal
+  trajectory for your robot, using either time or displacement
+- **Action Framework** for easily scalable robot actions
+  for asynchronous robot control
+- **Advanced Following** that uses PID control and
+  voltage-compensated feedforward to accurately follow
+  trajectories
+- **Unparalleled Customization** in path generation,
+  profiling, and following

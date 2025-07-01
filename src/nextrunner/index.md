@@ -1,7 +1,22 @@
 # NextRunner
 ![Maven Central Version](https://img.shields.io/maven-central/v/dev.nextftc.nextrunner/core?label=latest%20release&labelColor=darkBlue&color=yellow)
 
-NextRunner is our modernized fork of RoadRunner designed to make using RoadRunner easier.
+NextRunner offers a revolutionary motion profiling and planning
+algorithm that builds on RoadRunner from ACME Robotics,
+FTC Team 8367. 
+
+## Features
+- **Path Planning** with smooth continuity, such as Bézier curves,
+  hermite splines, and more! 
+- **Motion Profiling** paths to ensure the most optimal
+  trajectory for your robot, using either time or displacement
+- **Action Framework** for easily scalable robot actions
+  for asynchronous robot control
+- **Advanced Following** that uses PID control and 
+  voltage-compensated feedforward to accurately follow
+  trajectories
+- **Unparalleled Customization** in path generation, 
+  profiling, and following
 
 ## QuickStart
 
