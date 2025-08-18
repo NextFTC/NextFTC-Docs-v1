@@ -65,13 +65,13 @@ in that subsystem. For example:
 == Kotlin
 
 ```kotlin
-val open = SetPositon(claw, 1.0).setRequirements(this)
+val open = SetPositon(claw, 1.0).requires(this)
 ```
 
 == Java
 
 ```java
-public Command open = new SetPosition(claw, 1).setRequirements(this);
+public Command open = new SetPosition(claw, 1).requires(this);
 ```
 
 :::
@@ -88,11 +88,11 @@ do this is as follows.
 private val claw = Any()
 private val pivot = Any()
 
-val openClaw = SetPosition(clawServo, 1.0).setRequirements(claw)
-val closeClaw = SetPosition(clawServo, 0.0).setRequirements(claw)
+val openClaw = SetPosition(clawServo, 1.0).requires(claw)
+val closeClaw = SetPosition(clawServo, 0.0).requires(claw)
 
-val pivotLeft = SetPosition(pivotServo, 0.0).setRequirements(pivot)
-val pivotRight = SetPostion(pivotServo, 1.0).setRequirements(left) 
+val pivotLeft = SetPosition(pivotServo, 0.0).requires(pivot)
+val pivotRight = SetPostion(pivotServo, 1.0).requires(pivot) 
 ```
 
 == Java
@@ -101,11 +101,11 @@ val pivotRight = SetPostion(pivotServo, 1.0).setRequirements(left)
 private Object claw = new Object();
 private Object pivot = new Object();
 
-public Command openClaw = new SetPosition(clawServo, 1).setRequirements(claw);
-public Command closeClaw = new SetPosition(clawServo, 0).setRequirements(claw);
+public Command openClaw = new SetPosition(clawServo, 1).requires(claw);
+public Command closeClaw = new SetPosition(clawServo, 0).requires(claw);
 
-public Command pivotLeft = new SetPosition(pivotServo, 0.0).setRequirements(pivot);
-public Command pivotRight = new SetPosition(pivotServo, 0.0).setRequirements(pivot);
+public Command pivotLeft = new SetPosition(pivotServo, 0.0).requires(pivot);
+public Command pivotRight = new SetPosition(pivotServo, 0.0).requires(pivot);
 ```
 
 :::

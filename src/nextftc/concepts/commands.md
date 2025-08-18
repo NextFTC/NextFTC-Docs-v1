@@ -14,7 +14,7 @@ A command has four main components: `isDone`, `start`, `update`, and `stop`.
 Additionally, it has two more properties:
 
 -   `interruptible` determines whether or not the command is able to be interrupted. A command is interrupted when another command is scheduled that requires a subsystem the command is using. If a command is not interruptible, then the new command will not run.
--   `subsystems` is a set of all the subsystems a command uses. This is used for determing when two commands requrie the same subsystem. This is passed to the constructor of most premade commands.
+-   `requirements` is the set of all the objects a command uses, which are most commonly [subsystems](/subsystems). This is used for determining when two commands require the same subsystem. This is passed to the constructor of most premade commands.
 
 ## Creating Commands
 
@@ -29,10 +29,10 @@ A lambda command is the main way to create a command in NextFTC. A lambda comman
 
 ```kotlin
 val myLambdaCommand = LambdaCommand()
-    .setStart {
+    .setStart { 
         // Runs on start
     }
-    .setUpdate {
+    .setUpdate { 
         // Runs on update
     }
     .setStop { interrupted ->
@@ -66,7 +66,7 @@ Command myLambdaCommand = new LambdaCommand()
 > [!TIP]
 > All functions are completely optional. You only need to call the ones you will use. They can be called in any order.
 
-## Commands as Classes
+### Commands as Classes
 
 It is unlikely that you will need to use this very often, but you can also create a command as a class. This is useful for cases where you need to reuse your command a lot. An command can be created as a class as follows:
 
