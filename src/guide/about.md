@@ -59,24 +59,10 @@ each of our libraries is also on this site.
   certain events, for example when it
   is greater than a certain number. Ranges can also be mapped.
 
-[**NextPedro is our integration with PedroPathing**](/pedro)
+[**Extensions: PedroPathing is our integration with PedroPathing**](/extensions/pedro)
 
 - [**PedroPathing**](https://pedropathing.com) is an advanced reactive vector
   follower for FTC.
 - **Follow paths** and `PathChains` with the `FollowPath` command.
 - **Turn your robot** with the `Turn` and `TurnTo` commands.
 - **Position-based timing** with `ProximityDelay` and `DisplacementDelay`.
-
-[**NextRunner is our modernized fork of RoadRunner**](/nextrunner) 
-
-- **Path Planning** with smooth continuity, such as Bézier curves,
-  hermite splines, and more!
-- **Motion Profiling** paths to ensure the most optimal
-  trajectory for your robot, using either time or displacement
-- **Action Framework** for easily scalable robot actions
-  for asynchronous robot control
-- **Advanced Following** that uses PID control and
-  voltage-compensated feedforward to accurately follow
-  trajectories
-- **Unparalleled Customization** in path generation,
-  profiling, and following

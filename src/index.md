@@ -23,11 +23,8 @@ hero:
       text: NextBindings
       link: /bindings
     - theme: alt
-      text: NextPedro
-      link: /pedro
-    - theme: alt
-      text: NextRunner
-      link: /nextrunner
+      text: Extensions
+      link: /extensions
 features:
   - title: Easy to use
     details: >
@@ -51,15 +48,18 @@ features:
       of several steps and can be grouped into command groups, allowing them 
       to run sequentially or simultaneously, allowing you to create complex
       routines.
-  - title: PedroPathing
+  - title: Extensions
     details: >
-      NextFTC integrates with 
+      NextFTC has extensions to work with Pedro Pathing,
       <a style="text-decoration:underline;color:var(--vp-c-brand-1)" 
       target="_blank" href="https://pedropathing.com">PedroPathing</a>,
       an autonomous pathing library. We are also currently working on built-in
       integration with
       <a style="text-decoration:underline;color:var(--vp-c-brand-1)"
-      target="_blank" href="https://rr.brott.dev.com">RoadRunner</a>.
+      target="_blank" href="https://rr.brott.dev.com">RoadRunner</a>
+      and <a style="text-decoration:underline;color:var(--vp-c-brand-1)"
+      target="_blank" href="https://hermes.zharel.gay/">Hermes</a>,
+      two other pathing libraries.
   - title: Welcoming Community
     details: >
       NextFTC has a welcoming support Discord server where you can ask 
@@ -80,7 +80,7 @@ Each NextFTC library also has a section on these docs specific to that library:
 - [NextFTC](/nextftc)
 - [NextControl](/control)
 - [NextBindings](/bindings)
-- [NextPedro](/pedro)
+- [Extensions](/extensions)
 
 ## A note on these docs
 
@@ -91,7 +91,7 @@ Kotlin and Java tabs. It's recommended to
 choose one language for your project to avoid compatibility issues.
 
 To use Kotlin, configure it in your project. I recommend the Kotlin Gradle
-Plugin version `1.9.0`. (Kotlin is
+Plugin version `2.0.0`. (Kotlin is
 pre-installed in the Quickstart template.)
 
 <script setup>
@@ -101,7 +101,7 @@ const members = [
   {
     avatar: 'https://github.com/rowan-mcalpin.png',
     name: 'Rowan McAlpin',
-    title: 'Lead Dev | NextFTC | NextControl | NextPedro',
+    title: 'Lead Dev | NextFTC | NextControl | Extensions (PedroPathing)',
     links: [
       { icon: 'github', link: 'https://github.com/rowan-mcalpin' },
       { 
@@ -120,7 +120,7 @@ const members = [
   {
     avatar: 'https://github.com/beepbot99.png',
     name: 'Davis Luxenberg',
-    title: 'NextFTC | NextControl | NextPedro | NextBindings',
+    title: 'NextFTC | NextControl | Extensions (PedroPathing) | NextBindings',
     links: [
       {
         icon: "github",
@@ -131,7 +131,7 @@ const members = [
   {
     avatar: 'https://github.com/zachwaffle4.png',
     name: 'Zach Harel',
-    title: 'NextControl | NextRunner',
+    title: 'NextFTC | NextControl | Extensions (RoadRunner, Hermes)',
     links: [
       {
         icon: "github",
