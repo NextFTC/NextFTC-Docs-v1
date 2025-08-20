@@ -58,11 +58,3 @@ each of our libraries is also on this site.
 - **Ranges** represent a numeric variable and can be used to create buttons on
   certain events, for example when it
   is greater than a certain number. Ranges can also be mapped.
-
-[**NextPedro is our integration with PedroPathing**](/pedro)
-
-- [**PedroPathing**](https://pedropathing.com) is an advanced reactive vector
-  follower for FTC.
-- **Follow paths** and `PathChains` with the `FollowPath` command.
-- **Turn your robot** with the `Turn` and `TurnTo` commands.
-- **Position-based timing** with `ProximityDelay` and `DisplacementDelay`.

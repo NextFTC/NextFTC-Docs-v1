@@ -22,7 +22,9 @@ export default [
         items: [
             {text: "Autonomous", link: "/guide/opmodes/autonomous"},
             {text: "TeleOp", link: "/guide/opmodes/teleop"},
-            {text: "PedroPathing", link: "/guide/opmodes/pedropathing"}
+            {text: "Pedro Pathing", link: "/guide/opmodes/pedropathing"},
+            {text: "RoadRunner", link: "/guide/opmodes/roadrunner"},
+            {text: "Hermes", link: "/guide/opmodes/hermes"},
         ]
     },
     {

@@ -22,9 +22,6 @@ hero:
     - theme: alt
       text: NextBindings
       link: /bindings
-    - theme: alt
-      text: NextPedro
-      link: /pedro
 features:
   - title: Easy to use
     details: >
@@ -98,7 +95,7 @@ const members = [
   {
     avatar: 'https://github.com/rowan-mcalpin.png',
     name: 'Rowan McAlpin',
-    title: 'Lead Dev | NextFTC | NextControl | NextPedro',
+    title: 'Lead Dev | NextFTC | NextControl',
     links: [
       { icon: 'github', link: 'https://github.com/rowan-mcalpin' },
       { 
@@ -117,7 +114,7 @@ const members = [
   {
     avatar: 'https://github.com/beepbot99.png',
     name: 'Davis Luxenberg',
-    title: 'NextFTC | NextControl | NextPedro | NextBindings',
+    title: 'NextFTC | NextControl | NextBindings',
     links: [
       {
         icon: "github",
@@ -128,7 +125,7 @@ const members = [
   {
     avatar: 'https://github.com/zachwaffle4.png',
     name: 'Zach Harel',
-    title: 'NextControl | NextRunner',
+    title: 'NextFTC | NextControl',
     links: [
       {
         icon: "github",

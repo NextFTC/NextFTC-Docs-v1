@@ -65,13 +65,13 @@ servo and a target position.
 == Kotlin
 
 ```kotlin
-val open = SetPosition(servo, 0.1).setSubsystems(this)
+val open = SetPosition(servo, 0.1).requires(this)
 ```
 
 == Java
 
 ```java
-public Command open = new SetPosition(servo, 0.1).setSubsystems(this);
+public Command open = new SetPosition(servo, 0.1).requires(this);
 ```
 
 :::
@@ -82,13 +82,13 @@ Nice! Let's do the same with the `close` command:
 == Kotlin
 
 ```kotlin
-val close = SetPosition(servo, 0.2).setSubsystems(this)
+val close = SetPosition(servo, 0.2).requires(this)
 ```
 
 == Java
 
 ```java
-public Command close = new SetPosition(servo, 0.2).setSubsystems(this);
+public Command close = new SetPosition(servo, 0.2).requires(this);
 ```
 
 :::
@@ -104,8 +104,8 @@ You've successfully created your claw subsystem! Here's the final result:
 object Claw : Subsystem {
     private val servo = ServoEx("claw_servo")
 
-    val open = SetPosition(servo, 0.1).setSubsystems(this)
-    val close = SetPosition(servo, 0.2).setSubsystems(this)
+    val open = SetPosition(servo, 0.1).requires(this)
+    val close = SetPosition(servo, 0.2).requires(this)
 }
 ```
 
@@ -118,8 +118,8 @@ public class Claw implements Subsystem {
 
     private ServoEx servo = new ServoEx("claw_servo");
 
-    public Command open = new SetPosition(servo, 0.1).setSubsystems(this);
-    public Command close = new SetPosition(servo, 0.2).setSubsystems(this);
+    public Command open = new SetPosition(servo, 0.1).requires(this);
+    public Command close = new SetPosition(servo, 0.2).requires(this);
 }
 ```
 

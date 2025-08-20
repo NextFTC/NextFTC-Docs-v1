@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="add: basic nextcontrol info + sidebar">
-      <change afterPath="$PROJECT_DIR$/src/control/dashboard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/getting-started.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/usage/feedback-elements.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/usage/feedforward-elements.md" afterDir="false" />
+    <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/sidebar/control.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/sidebar/control.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/controlsystem.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/usage/control-systems.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/kineticstates.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/usage/kinetic-states.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vitepress/theme/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/theme/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/installation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/autonomous.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/autonomous.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/pedropathing.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/pedropathing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/teleop.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/teleop.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/claw.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/claw.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/lift.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/lift.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -73,7 +75,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rowan/Documents/Programming/Libraries/NextFTC-Docs/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/davis/NextFTCProjects/NextFTC-Docs&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -167,6 +169,7 @@
       <workItem from="1749422779347" duration="1533000" />
       <workItem from="1749501951564" duration="2931000" />
       <workItem from="1749508463549" duration="1659000" />
+      <workItem from="1755728425505" duration="2062000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
