@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0a43491-3fdc-480b-8421-4c588701afd1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitepress/theme/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/theme/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/installation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/autonomous.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/autonomous.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/pedropathing.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/pedropathing.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/opmodes/teleop.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/opmodes/teleop.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/claw.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/claw.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guide/subsystems/lift.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/guide/subsystems/lift.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vitepress/sidebar/nextftc.mts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitepress/sidebar/nextftc.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/concepts/commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/concepts/commands.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/concepts/components.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/concepts/components.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/concepts/subsystems.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/concepts/subsystems.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/concepts/units.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/concepts/units.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/hardware/drivetrain-commands/holonomic.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/hardware/drivetrain-commands/holonomic.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/helpful-commands/conditionals.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/helpful-commands/conditionals.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/helpful-commands/delays.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/helpful-commands/delays.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/helpful-commands/misc.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nextftc/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/nextftc/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +169,7 @@
       <workItem from="1749422779347" duration="1533000" />
       <workItem from="1749501951564" duration="2931000" />
       <workItem from="1749508463549" duration="1659000" />
-      <workItem from="1755728425505" duration="2062000" />
+      <workItem from="1755728425505" duration="3938000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Add NextControl and NextBindings to installation page&#10;&#10;- Version 1.0.0 of each">
       <option name="closed" value="true" />
@@ -307,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749422791098</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactor: touch up on the guide">
+      <option name="closed" value="true" />
+      <created>1755731104741</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1755731104741</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +350,19 @@
     <MESSAGE value="revert: Replace setRequirements with setSubsystems" />
     <MESSAGE value="fix: nextftc installation codeblock used language kotlin- instead of kotlin" />
     <MESSAGE value="add: basic nextcontrol info + sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: basic nextcontrol info + sidebar" />
+    <MESSAGE value="refactor: touch up on the guide" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: touch up on the guide" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/.vitepress/sidebar/nextftc.mts</url>
+          <line>49</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

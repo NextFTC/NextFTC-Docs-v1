@@ -1,10 +1,15 @@
 # Units
 
-NextFTC has an immutable, type-safe units system that allows you to pass quantities in any unit. It also prevents you from mixing up units accidentally. NextFTC has three types of units: `Distance`, `Angle`, and `TimeSpan`. All units extend the `Quantity` abstract class.
+NextFTC has an immutable, type-safe units system that allows you to pass
+quantities in any unit. It also prevents you from mixing up units accidentally.
+NextFTC has two types of units: `Distance` and `Angle`. All units extend the
+`Quantity` abstract class.
 
 ## `Distance`
 
-The first unit we'll look at is `Distance`. There are six units `Distance` accepts: millimeters, centimeters, meters, inches, feet, and yards. Internally it is stored in millimeters.
+The first unit we'll look at is `Distance`. There are six units `Distance`
+accepts: millimeters, centimeters, meters, inches, feet, and yards. Internally
+it is stored in millimeters.
 
 Creating a `Distance` is simple:
 
@@ -83,7 +88,6 @@ val inch = 1.inch
 
 val sum = foot + inch // 13 in
 val difference = foot - inch // 11 in
-val product = foot * inch // 12 in (should be in^2 but NextFTC isn't THAT complicated)
 val quotient = foot / inch // 12
 
 val bigger = foot * 2 // 24 in
@@ -115,7 +119,6 @@ Distance inch = Distance.fromIn(1);
 
 Distance sum = foot.plus(inch); // 13 in
 Distance difference = foot.minus(inch); // 11 in
-Distance product = foot.times(inch); // 12 in (should be in^2 but NextFTC isn't THAT complicated)
 double quotient = foot.div(inch); // 12
 
 Distance bigger = foot.times(2); // 24 in
@@ -140,42 +143,11 @@ boolean isNaN = foot.isNaN(); // false
 
 :::
 
-## `TimeSpan`
-
-`TimeSpan` is very similar to `Distance`, only with different units. Supported units are microseconds, milliseconds, and seconds. Internally it is stored in microseconds.
-
-Using `TimeSpans` is simple:
-
-:::tabs key:code
-== Kotlin
-
-```kotlin
-val seconds  = 1.sec
-val milliseconds = 5.ms
-val microseconds = 70000000.us
-
-val secondsInMilliseconds = seconds.inMs // 1,000
-val millisecondsInMicroseconds = milliseconds.inUs // 5,000
-val microsecondsInSeconds = microseconds.inSec // 70
-```
-
-== Java
-
-```java
-TimeSpan seconds = TimeSpan.fromSec(1);
-TimeSpan milliseconds = TimeSpan.fromMs(5);
-TimeSpan microseconds = TimeSpan.fromUs(70000000);
-
-double secondsInMilliseconds = seconds.inMs; // 1,000
-double millisecondsInMicroseconds = milliseconds.inUs; // 5,000
-double microsecondsInSeconds = microseconds.inSec; // 70
-```
-
-:::
-
 ## `Angle`
 
-An `Angle` is very similar to `Distance` and `TimeSpan`, but it also has functionality for wrapping and normalizing. Angles can be in radians, degrees, or full revolutions, and are stored internally as radians.
+`Angle` is very similar to `Distance`, but it also has
+functionality for wrapping and normalizing. Angles can be in radians, degrees,
+or full revolutions, and are stored internally as radians.
 
 :::tabs key:code
 == Kotlin
@@ -204,7 +176,8 @@ Double quarterRadians = quarterCircle.inRad; // pi/2
 
 :::
 
-You can also wrap and normalize angles. Below is a table of what wrapping and normalizing does for angles in different units.
+You can also wrap and normalize angles. Below is a table of what wrapping and
+normalizing does for angles in different units.
 
 | Unit        | Wrapping | Normalizing |
 |-------------|----------|-------------|

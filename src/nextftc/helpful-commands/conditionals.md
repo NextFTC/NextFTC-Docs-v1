@@ -13,7 +13,7 @@ be omitted, in which case no command will be run on false.
 == Kotlin
 
 ```kotlin
-BlockingConditionalCommand(
+IfElseCommand(
     { 1 == 2 },
     trueCommand,
     falseCommand
@@ -23,7 +23,7 @@ BlockingConditionalCommand(
 == Java
 
 ```java
-new BlockingConditionalCommand(
+new IfElseCommand(
     () -> 1 == 2,
     trueCommand,
     falseCommand

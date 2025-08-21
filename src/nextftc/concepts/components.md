@@ -9,8 +9,7 @@ accomplish a wide range of functions when they're used in your OpModes.
 NextFTC has several built-in components, including:
 
 - `BulkReadComponent`
-- `BindingsComponent` (for NextBindings)
-- `PedroComponent` (for NextPedro)
+- `BindingsComponent` (for [NextBindings](/bindings))
 - `SubsystemComponent`
 - `CommandManager`
 
@@ -71,7 +70,7 @@ For example:
 init {
     addComponents(
         MyComponent(),
-        BindingComponent()
+        BindingsComponent
     )
 }
 ```
@@ -82,7 +81,7 @@ init {
 {
     addComponents(
         new MyComponent(),
-        new BindingComponent()
+        BindingsComponent.INSTANCE
     );
 }
 ```

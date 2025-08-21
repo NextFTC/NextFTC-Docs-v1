@@ -49,10 +49,6 @@ export default [
             {
                 text: "Delays",
                 link: "/nextftc/helpful-commands/delays"
-            },
-            {
-                text: "Miscellaneous",
-                link: "/nextftc/helpful-commands/misc"
             }
         ]
     },
