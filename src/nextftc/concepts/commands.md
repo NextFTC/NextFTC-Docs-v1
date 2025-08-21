@@ -45,10 +45,10 @@ command can be created as follows:
 
 ```kotlin
 val myLambdaCommand = LambdaCommand()
-    .setStart {
+    .setStart { 
         // Runs on start
     }
-    .setUpdate {
+    .setUpdate { 
         // Runs on update
     }
     .setStop { interrupted ->
@@ -83,7 +83,7 @@ Command myLambdaCommand = new LambdaCommand()
 > All functions are completely optional. You only need to call the ones you will
 > use. They can be called in any order.
 
-## Commands as Classes
+### Commands as Classes
 
 It is unlikely that you will need to use this very often, but you can also
 create a command as a class. This is useful for cases where you need to reuse

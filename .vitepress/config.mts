@@ -4,6 +4,7 @@ import guide from "./sidebar/guide.mts";
 import nextftc from "./sidebar/nextftc.mts";
 import bindings from "./sidebar/bindings.mts";
 import control from "./sidebar/control.mts";
+import nextrunner from "./sidebar/nextrunner.mts";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -41,7 +42,8 @@ export default defineConfig({
                     {text: "NextFTC", link: "/nextftc/", activeMatch: "^/nextftc/"},
                     {text: "NextControl", link: "/control/", activeMatch: "^/control/"},
                     {text: "NextBindings", link: "/bindings/", activeMatch: "^/bindings/"},
-                    {text: "NextPedro", link: "/pedro/", activeMatch: "^/pedro/"}
+                    {text: "NextPedro", link: "/pedro/", activeMatch: "^/pedro/"},
+                    {text: "NextRunner", link: "/nextrunner/", activeMatch: "^/nextrunner/"}
                 ],
                 activeMatch: "^/(nextftc|control|bindings|pedro)/"
 
@@ -49,7 +51,7 @@ export default defineConfig({
             {
                 text: "v1.0.0",
                 items: [
-                    {text: "v0.6.1", link: "https://v0.nextftc.dev"}
+                    {text: "v0.6.1", link: "https://nextftc.dev"} // TODO: Update to `v0.nextftc.dev` when v1 is released
                 ]
             },
             {
@@ -64,17 +66,18 @@ export default defineConfig({
             '/guide/': guide,
             '/nextftc/': nextftc,
             '/bindings/': bindings,
-            '/control/': control
+            '/control/': control,
+            '/nextrunner/': nextrunner
         },
 
         socialLinks:
             [
-                {icon: "github", link: "https://github.com/rowan-mcalpin/nextftc"},
-                {icon: "discord", link: "https://discord.gg/PjP9Ze6fkX"}
+                {icon: "github", link: "https://github.com/NextFTC"},
+                {icon: "discord", link: "https://nextftc.dev/discord"}
             ],
         editLink:
             {
-                pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/src/:path"
+                pattern: "https://github.com/NextFTC/NextFTC-Docs-v1/edit/main/src/:path" // TODO: Update to `NextFTC-Docs` when v1 is released
             }
         ,
         search: {

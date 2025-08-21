@@ -56,5 +56,11 @@ each of our libraries is also on this site.
 - **Buttons** can be bound to in a multitude of ways, including rising and
   falling edges, toggles, and state changes.
 - **Ranges** represent a numeric variable and can be used to create buttons on
-  certain events, for example when it
-  is greater than a certain number. Ranges can also be mapped.
+  certain events, for example when it is greater than a certain number. Ranges
+  can also be mapped.
+
+[**Extensions are our integrations with other libraries**](/extensions)
+
+- [**Extension - Pedro Pathing**](/extensions/pedro) is our integration with
+  [Pedro Pathing](https://pedropathing.com), an advanced reactive vector
+  follower.

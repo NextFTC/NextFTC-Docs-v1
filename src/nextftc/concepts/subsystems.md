@@ -90,7 +90,7 @@ val openClaw = SetPosition(clawServo, 1.0).requires(clawServo)
 val closeClaw = SetPosition(clawServo, 0.0).requires(clawServo)
 
 val pivotLeft = SetPosition(pivotServo, 0.0).requires(pivotServo)
-val pivotRight = SetPostion(pivotServo, 1.0).requires(pivotServo) 
+val pivotRight = SetPostion(pivotServo, 1.0).requires(pivotServo)
 ```
 
 == Java
