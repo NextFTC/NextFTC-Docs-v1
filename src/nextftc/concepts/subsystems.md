@@ -96,7 +96,7 @@ val pivotRight = SetPostion(pivotServo, 1.0).requires(pivotServo)
 == Java
 
 ```java
-public Command openClaw = new SetPosition(clawServo, 1).requires(clawSerov);
+public Command openClaw = new SetPosition(clawServo, 1).requires(clawServo);
 public Command closeClaw = new SetPosition(clawServo, 0).requires(clawServo);
 
 public Command pivotLeft = new SetPosition(pivotServo, 0.0).requires(pivotServo);
