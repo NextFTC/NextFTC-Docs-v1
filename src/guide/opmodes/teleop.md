@@ -356,7 +356,9 @@ public class TeleOpProgram extends NextFTCOpMode {
         );
         driverControlled.schedule();
 
-        Gamepads.gamepad2.dpadUp whenBecomesTrue Lift.toHigh whenBecomesFalse Claw.open
+        Gamepads.gamepad2().dpadUp()
+          .whenBecomesTrue(Lift.INSTANCE.toHigh)
+          .whenBecomesFalse(Claw.INSTANCE.open);
                 
         Gamepads.gamepad2().rightTrigger().greaterThan(0.2)
           .whenBecomesTrue(
