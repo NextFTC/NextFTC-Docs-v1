@@ -94,8 +94,7 @@ private ControlSystem controlSystem = ControlSystem.builder()
 > Don't forget to tune your controller!
 
 Now, we must set our motor power to the `ControlSystem`'s output every loop. We
-can run code every loop by
-overriding the `periodic()` function.
+can run code every loop by overriding the `periodic()` function.
 
 :::tabs key:code
 
@@ -103,12 +102,7 @@ overriding the `periodic()` function.
 
 ```kotlin
 override fun periodic() {
-    motor.power = controlSystem.calculate(
-        KineticState(
-            motor.currentPosition,
-            motor.velocity
-        )
-    )
+    motor.power = controlSystem.calculate(motor.state)
 }
 ```
 
@@ -117,14 +111,7 @@ override fun periodic() {
 ```java
 @Override
 public void periodic() {
-    motor.setPower(
-        controlSystem.calculate(
-            new KineticState(
-                motor.getCurrentPosition(),
-                motor.getVelocity()
-            )
-        )
-    );
+    motor.setPower(controlSystem.calculate(motor.getState()));
 }
 ```
 
@@ -150,18 +137,18 @@ Let's create our first `RunToPosition` command.
 == Kotlin
 
 ```kotlin
-val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
+val toLow = RunToPosition(controlSystem, 0.0).requires(this)
 ```
 
 == Java
 
 ```java
-public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
+public Command toLow = new RunToPosition(controlSystem, 0).requires(this);
 ```
 
 :::
 
-Note the `setSubsystems(this)`. This is what tells NextFTC which commands should
+Note the `requires(this)`. This is what tells NextFTC which commands should
 be allowed to run at the same time. If it weren't set, `toLow` would be able to
 run at the same time as other commands that use the `Lift` subsystem - so there
 would be multiple things fighting to set the motor's power. Generally, you need
@@ -169,24 +156,23 @@ to pass `this` as the subsystem, although there are exceptions with more
 complicated custom commands.
 
 Pretty easy, right? Let's duplicate it and update our variable name and target
-position to create our other two
-commands:
+position to create our other two commands:
 
 :::tabs key:code
 == Kotlin
 
 ```kotlin
-val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
+val toMiddle = RunToPosition(controlSystem, 500.0).requires(this)
 
-val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
+val toHigh = RunToPosition(controlSystem, 1200.0).requires(this)
 ```
 
 == Java
 
 ```java
-public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
+public Command toMiddle = new RunToPosition(controlSystem, 500).requires(this);
 
-public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
+public Command toHigh = new RunToPosition(controlSystem, 1200).requires(this);
 ```
 
 :::
@@ -207,17 +193,12 @@ object Lift : Subsystem {
         elevatorFF(0.0)
     }
 
-    val toLow = RunToPosition(controlSystem, 0.0).setSubsystems(this)
-    val toMiddle = RunToPosition(controlSystem, 500.0).setSubsystems(this)
-    val toHigh = RunToPosition(controlSystem, 1200.0).setSubsystems(this)
+    val toLow = RunToPosition(controlSystem, 0.0).requires(this)
+    val toMiddle = RunToPosition(controlSystem, 500.0).requires(this)
+    val toHigh = RunToPosition(controlSystem, 1200.0).requires(this)
 
     override fun periodic() {
-        motor.power = controlSystem.calculate(
-            KineticState(
-                motor.currentPosition,
-                motor.velocity
-            )
-        )
+        motor.power = controlSystem.calculate(motor.state)
     }
 }
 ```
@@ -236,20 +217,13 @@ public class Lift implements Subsystem {
         .elevatorFF(0)
         .build();
 
-    public Command toLow = new RunToPosition(controlSystem, 0).setSubsystems(this);
-    public Command toMiddle = new RunToPosition(controlSystem, 500).setSubsystems(this);
-    public Command toHigh = new RunToPosition(controlSystem, 1200).setSubsystems(this);
+    public Command toLow = new RunToPosition(controlSystem, 0).requires(this);
+    public Command toMiddle = new RunToPosition(controlSystem, 500).requires(this);
+    public Command toHigh = new RunToPosition(controlSystem, 1200).requires(this);
 
     @Override
     public void periodic() {
-        motor.setPower(
-            controlSystem.calculate(
-                new KineticState(
-                    motor.getCurrentPosition(),
-                    motor.getVelocity()
-                )
-            )
-        );
+        motor.setPower(controlSystem.calculate(motor.getState()));
     }
 }
 ```

@@ -94,9 +94,9 @@ driverControlled = new MecanumDriverControlled(
     frontRightMotor,
     backLeftMotor,
     backRightMotor,
-    Gamepads.gamepad1.leftStickY(),
-    Gamepads.gamepad1.leftStickX(),
-    Gamepads.gamepad1.rightStickX()
+    Gamepads.gamepad1().leftStickY(),
+    Gamepads.gamepad1().leftStickX(),
+    Gamepads.gamepad1().rightStickX()
 );
 driverControlled.schedule();
 ```
@@ -130,9 +130,9 @@ driverControlled = new MecanumDriverControlled(
     frontRightMotor,
     backLeftMotor,
     backRightMotor,
-    Gamepads.gamepad1.leftStickY(),
-    Gamepads.gamepad1.leftStickX(),
-    Gamepads.gamepad1.rightStickX(),
+    Gamepads.gamepad1().leftStickY(),
+    Gamepads.gamepad1().leftStickX(),
+    Gamepads.gamepad1().rightStickX(),
     new HolonomicMode.FieldCentric(imu)
 );
 driverControlled.schedule();

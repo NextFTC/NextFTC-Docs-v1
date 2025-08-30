@@ -37,8 +37,7 @@ public class TeleOpProgram extends NextFTCOpMode {
 Just like for autonomous, we need to add the required subsystems as a
 `SubsystemComponent`. We will also add a
 `BulkReadComponent`. Additionally, we will add a `BindingsComponent`, which
-allows us to use gamepads
-from [NextBindings](/bindings).
+allows us to use gamepads from [NextBindings](/bindings).
 
 :::tabs key:code
 
@@ -49,8 +48,8 @@ class TeleOpProgram : NextFTCOpMode() {
     init {
         addComponents(
             SubsystemComponent(Lift, Claw),
-            BulkReadComponent(),
-            BindingsComponent()
+            BulkReadComponent,
+            BindingsComponent
         )
     }
 }
@@ -60,11 +59,11 @@ class TeleOpProgram : NextFTCOpMode() {
 
 ```java
 public class TeleOpProgram extends NextFTCOpMode {
-    {
+    public TeleOpProgram() {
         addComponents(
             new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE),
-            new BulkReadComponent(),
-            new BindingsComponent()
+            BulkReadComponent.INSTANCE,
+            BindingsComponent.INSTANCE
         );
     }
 }
@@ -79,9 +78,9 @@ That's all! Now we will allow the joysticks to control our robot's driving.
 NextFTC has built-in commands for common drivetrains.
 
 > [!IMPORTANT]
-> Currently, NextFTC only has support for mecanum, x-drive, and differential (
-> tank) drivetrains. If you write a command
-> for another, please share it with us!
+> Currently, NextFTC only has support for mecanum, x-drive, and differential
+> (tank) drivetrains. If you write a command for another, please share it with
+> us!
 
 Go to the [drivetrain commands](/nextftc/hardware/drivetrain-commands) page to
 get the code for your
@@ -133,9 +132,9 @@ public void onStartButtonPressed() {
         frontRightMotor,
         backLeftMotor,
         backRightMotor,
-        Gamepads.gamepad1.leftStickY(),
-        Gamepads.gamepad1.leftStickX(),
-        Gamepads.gamepad1.rightStickX()
+        Gamepads.gamepad1().leftStickY(),
+        Gamepads.gamepad1().leftStickX(),
+        Gamepads.gamepad1().rightStickX()
     );
     driverControlled.schedule();
 }
@@ -148,7 +147,7 @@ public void onStartButtonPressed() {
 In the last guide you learned how to schedule a command when the OpMode starts.
 Now you will learn how to schedule a
 command whenever the driver presses a button. We will
-use [NextBindings](/bindings) to accomplish this.
+use [NextBindings](/bindings) to do this.
 
 In this guide, we will have the following buttons, all on gamepad 2:
 
@@ -170,8 +169,7 @@ In this guide, we will have the following buttons, all on gamepad 2:
 > bumpers and triggers.
 
 We will bind our commands in `onStartButtonPressed()`. If we wanted them
-accessible in init, we would do it in
-`onInit()`.
+accessible in init, we would do it in `onInit()`.
 
 > [!CAUTION]
 > Although it is possible to bind the commands in init, keep in mind that your
@@ -192,7 +190,7 @@ Gamepads.gamepad2.dpadUp whenBecomesTrue Lift.toHigh
 == Java
 
 ```java
-Gamepads.gamepad2.dpadUp()
+Gamepads.gamepad2().dpadUp()
   .whenBecomesTrue(Lift.INSTANCE.toHigh);
 ```
 
@@ -210,7 +208,7 @@ Gamepads.gamepad2.dpadUp whenBecomesTrue Lift.toHigh whenBecomesFalse Claw.open
 == Java
 
 ```java
-Gamepads.gamepad2.dpadUp()
+Gamepads.gamepad2().dpadUp()
   .whenBecomesTrue(Lift.INSTANCE.toHigh)
   .whenBecomesFalse(Claw.INSTANCE.open);
 ```
@@ -222,8 +220,8 @@ Gamepads.gamepad2.dpadUp()
 > claw will open while the lift is moving up.
 
 Now, we must make the right trigger close the claw _and then_ move the lift up.
-To do this, we can use a
-`SequentialGroup`! We would like to schedule the command when the right trigger
+To do this, we can use a `SequentialGroup`! We would like to schedule the
+command when the right trigger
 is greater than 0.2.
 
 :::tabs key:code
@@ -239,7 +237,7 @@ is greater than 0.2.
 == Java
 
 ```java
-Gamepads.gamepad2.rightTrigger().greaterThan(0.2)
+Gamepads.gamepad2().rightTrigger().greaterThan(0.2)
   .whenBecomesTrue(
     Claw.INSTANCE.close.then(Lift.INSTANCE.toHigh)
   );
@@ -247,8 +245,15 @@ Gamepads.gamepad2.rightTrigger().greaterThan(0.2)
 
 :::
 
+> [!TIP]
+> The `command.then()` utility is a helper function for creating a
+> `SequentialGroup`! You can read about other helper functions on the
+> [groups](/nextftc/helpful-commands/groups) and
+> [utilities](/nextftc/helpful-commands/utilities) pages.
+
 Lastly, we must make the left bumper open the claw _and at the same time_ move
-the lift down. We can use a `ParallelGroup` for this!
+the lift down. We can use a `ParallelGroup` (using the `command.and()` utility)
+for this!
 
 :::tabs key:code
 == Kotlin
@@ -260,7 +265,7 @@ Gamepads.gamepad2.leftBumper whenBecomesTrue Claw.open.and(Lift.toLow)
 == Java
 
 ```java
-Gamepads.gamepad2.leftBumper().whenBecomesTrue(
+Gamepads.gamepad2().leftBumper().whenBecomesTrue(
   Claw.INSTANCE.open.and(Lift.INSTANCE.toLow)
 );
 ```
@@ -284,8 +289,8 @@ class TeleOpProgram : NextFTCOpMode() {
     init {
         addComponents(
             SubsystemComponent(Lift, Claw),
-            BulkReadComponent(),
-            BindingsComponent()
+            BulkReadComponent,
+            BindingsComponent
         )
     }
 
@@ -301,21 +306,20 @@ class TeleOpProgram : NextFTCOpMode() {
             frontRightMotor,
             backLeftMotor,
             backRightMotor,
-            { gamepad1.left_stick_y },
-            { gamepad1.left_stick_x },
-            { gamepad1.right_stick_x }
+            Gamepads.gamepad1.leftStickY,
+            Gamepads.gamepad1.leftStickX,
+            Gamepads.gamepad1.rightStickX
         )
         driverControlled()
 
-        whenButton { gamepad2.dpad_up } isPressed Lift.toHigh isReleased Claw.open
-        range { gamepad2.right_trigger } whenGreaterThan 0.2 isPressed SequentialGroup(
-            Claw.close,
-            Lift.toHigh
-        )
-        whenButton { gamepad2.left_bumper } isPressed ParallelGroup(
-            Claw.open,
-            Lift.toLow
-        )
+        Gamepads.gamepad2.dpadUp whenBecomesTrue Lift.toHigh whenBecomesFalse Claw.open
+        
+        (Gamepads.gamepad2.rightTrigger greaterThan 0.2)
+          .whenBecomesTrue(
+            Claw.close.then(Lift.toHigh)
+          )
+          
+        Gamepads.gamepad2.leftBumper whenBecomesTrue Claw.open.and(Lift.toLow)
     }
 }
 ```
@@ -325,11 +329,11 @@ class TeleOpProgram : NextFTCOpMode() {
 ```java
 @TeleOp(name = "NextFTC TeleOp Program Java")
 public class TeleOpProgram extends NextFTCOpMode {
-    {
+    public TeleOpProgram() {
         addComponents(
                 new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE),
-                new BulkReadComponent(),
-                new BindingsComponent()
+                BulkReadComponent.INSTANCE,
+                BindingsComponent.INSTANCE
         );
     }
 
@@ -346,26 +350,23 @@ public class TeleOpProgram extends NextFTCOpMode {
                 frontRightMotor,
                 backLeftMotor,
                 backRightMotor,
-                () -> gamepad1.left_stick_y,
-                () -> gamepad1.left_stick_x,
-                () -> gamepad1.right_stick_x
+                Gamepads.gamepad1().leftStickY(),
+                Gamepads.gamepad1().leftStickX(),
+                Gamepads.gamepad1().rightStickX()
         );
         driverControlled.schedule();
 
-        whenButton(() -> gamepad2.dpad_up)
-                .isPressed(Lift.INSTANCE.toHigh)
-                .isReleased(Claw.INSTANCE.open);
-        range(() -> gamepad2.right_trigger).whenGreaterThan(0.2).isPressed(
-                new SequentialGroup(
-                        Claw.INSTANCE.close,
-                        Lift.INSTANCE.toHigh
-                )
-        );
-        whenButton(() -> gamepad2.left_bumper).isPressed(
-                new ParallelGroup(
-                        Claw.INSTANCE.open,
-                        Lift.INSTANCE.toLow
-                )
+        Gamepads.gamepad2().dpadUp()
+          .whenBecomesTrue(Lift.INSTANCE.toHigh)
+          .whenBecomesFalse(Claw.INSTANCE.open);
+                
+        Gamepads.gamepad2().rightTrigger().greaterThan(0.2)
+          .whenBecomesTrue(
+            Claw.INSTANCE.close.then(Lift.INSTANCE.toHigh)
+          );
+  
+        Gamepads.gamepad2().leftBumper().whenBecomesTrue(
+          Claw.INSTANCE.open.and(Lift.INSTANCE.toLow)
         );
     }
 }

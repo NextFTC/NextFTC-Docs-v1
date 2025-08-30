@@ -6,7 +6,6 @@ libraries for more specific documentation on every aspect of NextFTC there is:
 - [NextFTC](/nextftc)
 - [NextControl](/control)
 - [NextBindings](/bindings)
-- [NextPedro](/pedro)
 
 Anything that is not on the docs can be found in our
 [Dokka documentation](https://javadoc.io/doc/dev.nextftc).

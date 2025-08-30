@@ -78,34 +78,29 @@ public Command open = new SetPosition(claw, 1).requires(this);
 
 However, if you have multiple degrees of freedom in one subsystem, commands
 for each degree of freedom should get its own requirement. A simple way to
-do this is as follows.
+do this is by using the hardware objects as requirements. See the following
+example.
 
 :::tabs key:code
 
 == Kotlin
 
 ```kotlin
-private val claw = Any()
-private val pivot = Any()
+val openClaw = SetPosition(clawServo, 1.0).requires(clawServo)
+val closeClaw = SetPosition(clawServo, 0.0).requires(clawServo)
 
-val openClaw = SetPosition(clawServo, 1.0).requires(claw)
-val closeClaw = SetPosition(clawServo, 0.0).requires(claw)
-
-val pivotLeft = SetPosition(pivotServo, 0.0).requires(pivot)
-val pivotRight = SetPostion(pivotServo, 1.0).requires(pivot) 
+val pivotLeft = SetPosition(pivotServo, 0.0).requires(pivotServo)
+val pivotRight = SetPostion(pivotServo, 1.0).requires(pivotServo)
 ```
 
 == Java
 
 ```java
-private Object claw = new Object();
-private Object pivot = new Object();
+public Command openClaw = new SetPosition(clawServo, 1).requires(clawServo);
+public Command closeClaw = new SetPosition(clawServo, 0).requires(clawServo);
 
-public Command openClaw = new SetPosition(clawServo, 1).requires(claw);
-public Command closeClaw = new SetPosition(clawServo, 0).requires(claw);
-
-public Command pivotLeft = new SetPosition(pivotServo, 0.0).requires(pivot);
-public Command pivotRight = new SetPosition(pivotServo, 0.0).requires(pivot);
+public Command pivotLeft = new SetPosition(pivotServo, 0.0).requires(pivotServo);
+public Command pivotRight = new SetPosition(pivotServo, 0.0).requires(pivotServo);
 ```
 
 :::

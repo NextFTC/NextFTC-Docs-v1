@@ -56,13 +56,11 @@ each of our libraries is also on this site.
 - **Buttons** can be bound to in a multitude of ways, including rising and
   falling edges, toggles, and state changes.
 - **Ranges** represent a numeric variable and can be used to create buttons on
-  certain events, for example when it
-  is greater than a certain number. Ranges can also be mapped.
+  certain events, for example when it is greater than a certain number. Ranges
+  can also be mapped.
 
-[**Extensions: PedroPathing is our integration with PedroPathing**](/extensions/pedro)
+[**Extensions are our integrations with other libraries**](/extensions)
 
-- [**PedroPathing**](https://pedropathing.com) is an advanced reactive vector
-  follower for FTC.
-- **Follow paths** and `PathChains` with the `FollowPath` command.
-- **Turn your robot** with the `Turn` and `TurnTo` commands.
-- **Position-based timing** with `ProximityDelay` and `DisplacementDelay`.
+- [**Extension - Pedro Pathing**](/extensions/pedro) is our integration with
+  [Pedro Pathing](https://pedropathing.com), an advanced reactive vector
+  follower.

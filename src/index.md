@@ -101,7 +101,7 @@ const members = [
   {
     avatar: 'https://github.com/rowan-mcalpin.png',
     name: 'Rowan McAlpin',
-    title: 'Lead Dev | NextFTC | NextControl | Extensions (PedroPathing)',
+    title: 'Lead Dev | NextFTC | NextControl | Extensions',
     links: [
       { icon: 'github', link: 'https://github.com/rowan-mcalpin' },
       { 
@@ -120,7 +120,7 @@ const members = [
   {
     avatar: 'https://github.com/beepbot99.png',
     name: 'Davis Luxenberg',
-    title: 'NextFTC | NextControl | Extensions (PedroPathing) | NextBindings',
+    title: 'NextFTC | NextControl | NextBindings | Extensions',
     links: [
       {
         icon: "github",
@@ -131,7 +131,7 @@ const members = [
   {
     avatar: 'https://github.com/zachwaffle4.png',
     name: 'Zach Harel',
-    title: 'NextFTC | NextControl | Extensions (RoadRunner, Hermes)',
+    title: 'NextFTC | NextControl | Extensions',
     links: [
       {
         icon: "github",

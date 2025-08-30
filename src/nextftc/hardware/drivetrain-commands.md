@@ -4,6 +4,8 @@
 > Some of the content on the following pages was taken with permission from
 > the [FTCLib Drivebases page](https://docs.ftclib.org/ftclib/features/drivebases).
 
+## Drivetrains
+
 > [!IMPORTANT]
 > Currently, NextFTC only has support for mecanum, x-drive, and differential
 > (tank) drivetrains. If you write a command for another, please share it with
@@ -12,7 +14,7 @@
 NextFTC has commands to control different types of drivetrains. This page goes
 through the different options for controlling your drivetrain in TeleOp.
 
-## Holonomic Drivetrains
+### Holonomic Drivetrains
 
 A holonomic drive is one that can move in omnidirectional space, which is why it
 is often called an omnidirectional drive. There are different subtypes of
@@ -48,7 +50,7 @@ To control a holonomic drivetrain in TeleOp, see
 the [holonomic drivetrain](/nextftc/hardware/drivetrain-commands/holonomic)
 page.
 
-## Differential (Tank) Drivetrains
+### Differential (Tank) Drivetrains
 
 A differential drivetrain is one that has two motors or motor groups on either
 side of the robot. Each side acts as a connected set or motor group.
@@ -63,3 +65,27 @@ side of the robot. Each side acts as a connected set or motor group.
 
 To control a differential drivetrain in TeleOp, see the [differential
 drivetrain](/nextftc/hardware/drivetrain-commands/differential) page.
+
+## Scalars
+
+All drivetrain commands extend `DriverControlledCommand`, which provides scalars.
+
+:::tabs key:code
+
+== Kotlin
+
+```kotlin
+val driverControlled: DriverControlledCommand = MecanumDriverControlled(...)
+
+driverControlled.scalar = 0.5 // makes it half the speed
+```
+
+== Java
+
+```java
+DriverControlledCommand driverControlled = new MecanumDriverControlled(...);
+
+driverControlled.setScalar(0.5); // makes it half the speed
+```
+
+:::

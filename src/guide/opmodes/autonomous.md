@@ -1,9 +1,9 @@
 # Autonomous
 
-Creating an autonomous in NextFTC is fairly straightforward. This page will walk
-you through creating an autonomous. Usage of PedroPathing will not be covered in
-this page; refer to the [PedroPathing page](/guide/opmodes/pedropathing)for
-details on that.
+This page will walk you through creating an autonomous program using NextFTC.
+Usage of RoadRunner, Pedro Pathing, or Hermes will not be covered in this guide;
+see
+the guides for those libraries on the following pages.
 
 This autonomous program will introduce you to some core features of NextFTC such
 as command groups, delays, and running the commands you created in your
@@ -13,7 +13,7 @@ Let's get started!
 
 ## Step 1: Create your OpMode
 
-OpModes in NextFTC will extend the `NextFTCOpMode` superclass. Here is the basic
+OpModes in NextFTC extend the `NextFTCOpMode` superclass. Here is the basic
 structure for every autonomous OpMode:
 
 :::tabs key:code
@@ -60,7 +60,7 @@ init {
 ```java
 @Autonomous(name = "NextFTC Autonomous Program Java")
 public class AutonomousProgram extends NextFTCOpMode {
-    {
+    public AutonomousProgram() {
         addComponents(
             new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE)
         );
@@ -76,17 +76,14 @@ and will initialize them accordingly.
 ### A Quick Note on Components
 
 Components are NextFTC's approach to making OpModes more modular and
-customizable. Each component has 10 functions that
-get run before and after each OpMode function (`onInit`, `onWaitForStart`,
-`onStartButtonPressed`, `onUpdate`, and
-`onStop`). This means that components are extremely versatile and can be used to
-accomplish a wide range of
-functions when they're used in your OpModes.
+customizable. Each component has 10 functions that get run before and after each
+OpMode function (`onInit`, `onWaitForStart`,`onStartButtonPressed`, `onUpdate`,
+and`onStop`). This means that components are extremely versatile and can be used
+to achieve a wide range of functions when they're used in your OpModes.
 
 We already have used a component: `SubsystemComponent`! Let's add one more
-component to our OpMode:
-`BulkReadComponent`. This component automatically adds bulk reading to our
-OpMode.
+component to our OpMode:`BulkReadComponent`. This component automatically adds
+bulk reading to our OpMode.
 
 :::tabs key:code
 
@@ -96,7 +93,7 @@ OpMode.
 init {
     addComponents(
         SubsystemComponent(Lift, Claw),
-        BulkReadComponent()
+        BulkReadComponent
     )
 }
 ```
@@ -106,12 +103,10 @@ init {
 ```java
 @Autonomous(name = "NextFTC Autonomous Program Java")
 public class AutonomousProgram extends NextFTCOpMode {
-   
-    // if you've never seen this before, it's called an instance initialization block, or IIB.
-    {
+    public AutonomousProgram() {
         addComponents(
             new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE),
-            new BulkReadComponent()
+            BulkReadComponent.INSTANCE
         );
     }
 }
@@ -122,10 +117,9 @@ public class AutonomousProgram extends NextFTCOpMode {
 ## Step 2: Creating a routine
 
 You've already learned how to create individual commands, such as motor and
-servo movements. Now, it's time to group
-them together into useful behaviors. This is where `CommandGroups` and routines
-come into play. Before we can create our
-own, we first need to understand how commands are run behind the scenes.
+servo movements. Now, it's time to group them together into useful behaviors.
+This is where command groups come into play. Before we can create our own, we
+first need to understand how commands are run behind the scenes.
 
 The `CommandManager` stores an internal list of actively running commands. It
 goes through each command and calls its
@@ -133,7 +127,8 @@ goes through each command and calls its
 cancel, handles subsystem conflicts, and
 offers additional functionality as well. The important thing to note is that all
 commands that are directly stored by
-the CommandManager run _simultaneously_. Knowing that, you may be wondering why
+the `CommandManager` run _simultaneously_. Knowing that, you may be wondering
+why
 `ParallelGroups` exist, if you can just
 schedule commands directly. Trust me, we'll get there. Before that, we need to
 understand what a `SequentialGroup` does.
@@ -144,7 +139,7 @@ at once, it schedules the first one, and then waits to schedule the next one
 until the first has completed, then
 continues scheduling them one by one until they've all completed. If you think
 about it a little bit, it may become
-apparent what a `ParallelGroup` is for. If you are using a `SequentialGroup`,
+clear what a `ParallelGroup` is for. If you are using a `SequentialGroup`,
 you may have things you want to happen
 simultaneously _within_ that group. For example:
 
@@ -154,10 +149,10 @@ simultaneously _within_ that group. For example:
 4. _Simultaneously_ lower the lift, reset the arm, and drive to a different
    location
 
-This could only be accomplished using `ParallelGroups` in conjunction with
+This could only be done using `ParallelGroups` in conjunction with
 `SequentialGroups`.
 
-Now that we know what `CommandGroups` do, let's learn how to create them. For
+Now that we know what command groups do, let's learn how to create them. For
 this example, we will create a routine that
 does the following:
 
@@ -191,21 +186,9 @@ public Command autonomousRoutine() {
 
 :::
 
-I've made an empty SequentialGroup here, for demonstration purposes.
-
-> [!CAUTION]
-> Do not attempt to use empty `SequentialGroups` in your code. They will cause
-> errors that break your OpMode. If you
-> need a placeholder, use a [
-`NullCommand`](https://nextftc.dev/reference/core/com.rowanmcalpin.nextftc.core.command.utility/-null-command/).
->
-> The above snippet is incomplete and that's why it appears to create an empty
-`SequentialGroup`. That won't work in
-> practice.
-
-As mentioned above, we need to put something in our sequential group in order to
-avoid errors. In our list, we said the
-first thing we want to do is raise the lift to the high position. We can add the
+However, an empty `SequentialGroup` won't do much. Let's add some stuff to it.
+In our list, we said the first thing we want to do is raise the lift to the high
+position. We can add the
 `Lift.toHigh` command into our group
 very easily:
 
@@ -265,9 +248,8 @@ public Command autonomousRoutine() {
 
 :::
 
-Just like with `SequentialGroups`, you shouldn't create empty `ParallelGroups`.
-Let's populate it with our
-`Lift.toMiddle` and `Claw.close` commands:
+Let's populate the `ParallelGroup` with our `Lift.toMiddle` and `Claw.close`
+commands:
 
 :::tabs key:code
 
@@ -328,7 +310,7 @@ val autonomousRoutine: Command
             Lift.toMiddle,
             Claw.close
         ),
-        Delay(0.5.sec)
+        Delay(0.5.seconds)
     )
 ```
 
@@ -364,7 +346,7 @@ private val autonomousRoutine: Command
             Lift.toMiddle,
             Claw.close
         ),
-        Delay(0.5.sec),
+        Delay(0.5.seconds),
         ParallelGroup(
             Claw.open,
             Lift.toLow
@@ -445,7 +427,7 @@ class AutonomousProgram : NextFTCOpMode() {
     init {
         addComponents(
             SubsystemComponent(Lift, Claw),
-            BulkReadComponent()
+            BulkReadComponent
         )
     }
 
@@ -456,7 +438,7 @@ class AutonomousProgram : NextFTCOpMode() {
                 Lift.toMiddle,
                 Claw.close
             ),
-            Delay(0.5.sec),
+            Delay(0.5.seconds),
             ParallelGroup(
                 Claw.open,
                 Lift.toLow
@@ -474,10 +456,10 @@ class AutonomousProgram : NextFTCOpMode() {
 ```java
 @Autonomous(name = "NextFTC Autonomous Program Java")
 public class AutonomousProgram extends NextFTCOpMode {
-    {
+    public AutonomousProgram() {
         addComponents(
             new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE),
-            new BulkReadComponent()
+            BulkReadComponent.INSTANCE
         );
     }
 
