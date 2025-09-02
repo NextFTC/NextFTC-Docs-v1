@@ -30,8 +30,8 @@ Additionally, it has two more properties:
 - `requirements` is a set of all the requirements a command has. This is
   used to determine when two commands require the same resource.
 - `name` is a string that is used to identify the command. By default, it is the
-  class name of the command, but it can be set to anything. More information 
-  on command naming and debugging can be found [here](/command-debugging).
+  class name of the command, but it can be set to anything. More information
+  on command naming and debugging can be found later on this page.
 
 ## Creating Commands
 
