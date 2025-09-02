@@ -64,3 +64,6 @@ each of our libraries is also on this site.
 - [**Extension - Pedro Pathing**](/extensions/pedro) is our integration with
   [Pedro Pathing](https://pedropathing.com), an advanced reactive vector
   follower.
+- [**Extension - Road Runner**](/extensions/roadrunner) is our integration with
+  [Road Runner](https://rr.brott.dev/), a popular
+  motion planning library for FTC.

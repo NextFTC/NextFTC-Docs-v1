@@ -96,6 +96,14 @@ private ControlSystem controlSystem = ControlSystem.builder()
 Now, we must set our motor power to the `ControlSystem`'s output every loop. We
 can run code every loop by overriding the `periodic()` function.
 
+The reason we set the motor power in `periodic()` instead of in our commands is
+that the `ControlSystem` needs to be updated every loop to work properly. If we
+only set the motor power in our commands, the motor power would only be updated
+when a command is running, meaning once a command finishes, the motor power
+would stop being updated and thus remain at whatever it was last set to,
+pushing it past its target position. Putting it in `periodic()` also ensures that the
+feedforward is always being applied, which is important to counteract gravity.
+
 :::tabs key:code
 
 == Kotlin

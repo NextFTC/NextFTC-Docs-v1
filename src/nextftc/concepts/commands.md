@@ -29,6 +29,9 @@ Additionally, it has two more properties:
   then the new command will not run.
 - `requirements` is a set of all the requirements a command has. This is
   used to determine when two commands require the same resource.
+- `name` is a string that is used to identify the command. By default, it is the
+  class name of the command, but it can be set to anything. More information 
+  on command naming and debugging can be found [here](/command-debugging).
 
 ## Creating Commands
 
@@ -57,6 +60,7 @@ val myLambdaCommand = LambdaCommand()
     .setIsDone { true } // Returns if the commmand has finished
     .requires(/* subsystems the command implements */)
     .setInterruptible(true)
+    .named("My Command") // sets the name of the command; optional
 ```
 
 == Java
@@ -75,6 +79,7 @@ Command myLambdaCommand = new LambdaCommand()
     .setIsDone(() -> true) // Returns if the command has finished
     .requires(/* subsystems the command implements */)
     .setInterruptible(true)
+    .named("My Command"); // sets the name of the command; optional
 ```
 
 :::
@@ -190,3 +195,21 @@ myCommand.schedule();
 ```
 
 :::
+
+## Debugging Commands
+
+When working with commands, it can be helpful to have some debugging information 
+to understand what is happening during their execution,
+especially when writing custom commands or using custom end conditions.
+
+Here are some tips for debugging commands in NextFTC:
+- **Set Command Names**: When creating commands, use the `named` method to give
+  your commands meaningful names. This makes it easier to identify them in telemetry.
+- **Use Telemetry**: You can add telemetry data in the `start`, `update`, and `stop`
+  methods of your commands to track their execution. For example, you can log when
+  a command starts, updates, and stops, along with any relevant state information,
+  using `ActiveOpMode.telemetry`.
+- **Use Snapshots**: You can output snapshots of the command state at any point using
+  `CommandManager.snapshot`, which can be printed to telemetry in an OpMode,
+  logged using a framework of your choice, or displayed on a dashboard
+  such as FTC Dashboard or Panels.

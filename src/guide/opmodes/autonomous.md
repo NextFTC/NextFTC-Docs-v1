@@ -215,7 +215,7 @@ public Command autonomousRoutine() {
 
 :::
 
-The next thing we wanted to do is _simultaneously_ open the claw and move the
+The next thing we wanted to do is _simultaneously_ close the claw and move the
 lift to the middle position. To add
 another command to the group, add a comma at the end of your last item (in this
 case, `Lift.toHigh`) and add the next
