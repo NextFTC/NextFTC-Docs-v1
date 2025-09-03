@@ -86,10 +86,12 @@ class MyOpModeKt : NextFTCOpMode() {
         )
     }
 
-    val pathCommand = FollowPath(PedroComponent.follower.pathBuilder()
-        .addPath(BezierLine(startPose, scorePose))
-        .setLinearHeadingInterpolation(startPose.heading, scorePose.heading)
-        .build())
+    val pathCommand by onInit { 
+        FollowPath(PedroComponent.follower.pathBuilder()
+            .addPath(BezierLine(startPose, scorePose))
+            .setLinearHeadingInterpolation(startPose.heading, scorePose.heading)
+            .build())
+    }
 
     override fun onWaitForStart() {
         pathCommand.schedule()
@@ -106,6 +108,8 @@ public class MyOpMode extends NextFTCOpMode {
     private final Pose pickup2Pose = new Pose(30.0, 131.0, Math.toRadians(0.0));
     private final Pose pickup3Pose = new Pose(45.0, 128.0, Math.toRadians(90.0));
     private final Pose parkPose = new Pose(68.0, 96.0, Math.toRadians(-90.0));
+    
+    private FollowPath pathCommand;
 
     public MyOpMode() {
         addComponents(
@@ -113,10 +117,13 @@ public class MyOpMode extends NextFTCOpMode {
         );
     }
 
-    private final FollowPath pathCommand = new FollowPath(PedroComponent.follower().pathBuilder()
-        .addPath(new BezierLine(startPose, scorePose))
-        .setLinearHeadingInterpolation(startPose.getHeading(), scorePose.getHeading())
-        .build());
+    @Override
+    public void onInit() {
+        pathCommand = new FollowPath(PedroComponent.follower().pathBuilder()
+            .addPath(new BezierLine(startPose, scorePose))
+            .setLinearHeadingInterpolation(startPose.getHeading(), scorePose.getHeading())
+            .build());
+    }
 
     @Override
     public void onWaitForStart() {
