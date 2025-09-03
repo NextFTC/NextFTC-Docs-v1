@@ -7,7 +7,7 @@ export default [
         text: "Overview", link: '/extensions/'
     },
     {
-        text: "PedroPathing", items: [
+        text: "Pedro Pathing", items: [
             {text: "PedroPathing Extension", link: "/extensions/pedro/"},
         ]
     },

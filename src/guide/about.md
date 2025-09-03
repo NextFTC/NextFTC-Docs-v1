@@ -59,7 +59,7 @@ each of our libraries is also on this site.
   certain events, for example when it is greater than a certain number. Ranges
   can also be mapped.
 
-[**Extensions are our integrations with other libraries**](/extensions)
+[**Extensions are our integrations with other libraries.**](/extensions)
 
 - [**Extension - Pedro Pathing**](/extensions/pedro) is our integration with
   [Pedro Pathing](https://pedropathing.com), an advanced reactive vector
