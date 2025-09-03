@@ -21,6 +21,9 @@ implementation 'dev.nextftc.extensions:pedro:1.0.0'
 ::: warning
 Version `1.0.0` supports Pedro Pathing `2.0.0`,
 and is not compatible with earlier versions.
+
+This guide also assumes you are using 
+the QuickStart for Pedro Pathing.
 :::
 
 ## Usage
