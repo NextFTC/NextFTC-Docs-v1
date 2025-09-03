@@ -6,7 +6,7 @@ NextFTC Extensions are a set of libraries that extend the functionality of NextF
 
 This extension provides integration with the 
 [Pedro Pathing Library](https://pedropathing.com/).
-More information about the extension can be found [here](pedro/pedro).
+More information about the extension can be found [here](pedro/index).
 
 ## RoadRunner
 

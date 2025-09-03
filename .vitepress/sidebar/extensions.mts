@@ -8,7 +8,7 @@ export default [
     },
     {
         text: "PedroPathing", items: [
-            {text: "PedroPathing Extension", link: "/extensions/pedro/pedro"},
+            {text: "PedroPathing Extension", link: "/extensions/pedro/"},
         ]
     }
 ] satisfies SidebarItem[]
