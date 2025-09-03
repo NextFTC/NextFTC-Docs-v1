@@ -4,7 +4,7 @@ import guide from "./sidebar/guide.mts";
 import nextftc from "./sidebar/nextftc.mts";
 import bindings from "./sidebar/bindings.mts";
 import control from "./sidebar/control.mts";
-import nextrunner from "./sidebar/nextrunner.mts";
+import extensions from "./sidebar/extensions.mts";
 import llmstxt from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
@@ -43,10 +43,9 @@ export default defineConfig({
                     {text: "NextFTC", link: "/nextftc/", activeMatch: "^/nextftc/"},
                     {text: "NextControl", link: "/control/", activeMatch: "^/control/"},
                     {text: "NextBindings", link: "/bindings/", activeMatch: "^/bindings/"},
-                    {text: "NextPedro", link: "/pedro/", activeMatch: "^/pedro/"},
-                    {text: "NextRunner", link: "/nextrunner/", activeMatch: "^/nextrunner/"}
+                    {text: "Extensions", link: "/extensions/", activeMatch: "^/extensions/"},
                 ],
-                activeMatch: "^/(nextftc|control|bindings|pedro)/"
+                activeMatch: "^/(nextftc|control|bindings|extensions)/"
 
             },
             {
@@ -68,7 +67,7 @@ export default defineConfig({
             '/nextftc/': nextftc,
             '/bindings/': bindings,
             '/control/': control,
-            '/nextrunner/': nextrunner
+            '/extensions/': extensions
         },
 
         socialLinks:
