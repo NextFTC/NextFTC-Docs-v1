@@ -35,6 +35,29 @@ class MyOpMode : NextFTCOpMode() {
 }
 ```
 
+There is also an `onInit` function that can be used to create properties that depend on hardware. 
+It runs before the main `onInit` function, 
+so properties created with it can be used in the main `onInit` function.
+
+Here is an example OpMode that uses `onInit` to create a property for a color sensor,
+since there is no NextFTC wrapper for color sensors.
+
+```kotlin
+class MyOpMode : NextFTCOpMode() {
+    val sensor by onInit { hardwareMap.get(NormalizedColorSensor::class.java, "colorSensor") }
+
+    init {
+        addComponents(/* vararg components */)
+    }
+    
+    override fun onInit() { }
+    override fun onWaitForStart() { }
+    override fun onStartButtonPressed() { }
+    override fun onUpdate() { }
+    override fun onStop() { }
+}
+```
+
 == Java
 
 ```java
