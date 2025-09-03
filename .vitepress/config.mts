@@ -5,6 +5,7 @@ import nextftc from "./sidebar/nextftc.mts";
 import bindings from "./sidebar/bindings.mts";
 import control from "./sidebar/control.mts";
 import nextrunner from "./sidebar/nextrunner.mts";
+import llmstxt from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -83,6 +84,8 @@ export default defineConfig({
         search: {
             provider: "local"
         }
+    },
+    vite: {
+        plugins: [llmstxt()]
     }
-})
-;
+});
