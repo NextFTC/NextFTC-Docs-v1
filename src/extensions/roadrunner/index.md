@@ -99,3 +99,7 @@ you can copy the following implementations into your class:
 
 Android Studio will probably suggest the necessary imports.
 
+There is an example `MecanumDrive` class in the NextFTC branch of my 
+[RoadRunner QuickStart fork](https://github.com/zachwaffle4/road-runner-quickstart/tree/nextftc).
+Do note that this is just an example,
+and it may not be updated to the latest version of RoadRunner or NextFTC.
