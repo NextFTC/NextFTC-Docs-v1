@@ -14,7 +14,8 @@ export default [
         items: [
             {text: "Overview", link: "/guide/subsystems/overview"},
             {text: "Lift", link: "/guide/subsystems/lift"},
-            {text: "Claw", link: "/guide/subsystems/claw"}
+            {text: "Claw", link: "/guide/subsystems/claw"},
+            {text: "Groups and Robots", link: "/guide/subsystems/groups-and-robot"},
         ]
     },
     {
@@ -22,9 +23,6 @@ export default [
         items: [
             {text: "Autonomous", link: "/guide/opmodes/autonomous"},
             {text: "TeleOp", link: "/guide/opmodes/teleop"},
-            {text: "Pedro Pathing", link: "/guide/opmodes/pedropathing"},
-            {text: "RoadRunner", link: "/guide/opmodes/roadrunner"},
-            {text: "Hermes", link: "/guide/opmodes/hermes"},
         ]
     },
     {
