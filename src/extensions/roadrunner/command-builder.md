@@ -2,7 +2,7 @@
 
 The RoadRunner extension provides a `TrajectoryCommandBuilder` class 
 that makes it easy to create commands that follow trajectories,
-similarly to `TrajectoryActionBuilder` in the RoadRunner library.
+similar to `TrajectoryActionBuilder` in the RoadRunner library.
 
 Once you've set up the RoadRunner extension in your project,
 including the relevant changes to your `MecanumDrive` class,
@@ -30,7 +30,7 @@ class CommandBuilderKt : NextFTCOpMode() {
     }
     
     // the onInit blocks are executed in the order they are defined,
-    // so drive will be initialized before driveCommand
+    // so `drive` will be initialized before `driveCommand`.
     val driveCommand: Command by onInit {
         drive.commandBuilder(startPose)
             .splineTo(scorePose.position, scorePose.heading)

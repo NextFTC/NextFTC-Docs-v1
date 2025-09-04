@@ -1,32 +1,30 @@
 # RoadRunner Extension
 
-This extension provides integration with the 
-[RoadRunner Library](https://rr.brott.dev/),
+This extension provides integration with the
+[RoadRunner Library](https://rr.brott.dev/)
 and [QuickStart](https://github.com/acmerobotics/road-runner-quickstart).
 
 ## Installation
 
-To install the RoadRunner extension,
-add the following line to your `build.gradle` file:
+Add the following line to your `build.gradle` file
+to install the RoadRunner extension:
 
 ```groovy
 implementation 'dev.nextftc.extensions:roadrunner:1.0.0'
 ```
 
 ::: warning
-Version `1.0.0` supports RoadRunner `1.0.1`,
-and RoadRunner FTC `0.1.25`,
-and is not compatible with earlier versions.
+Version `1.0.0` supports RoadRunner `1.0.1`
+and RoadRunner FTC `0.1.25`, and is not compatible with earlier versions.
 
-This guide also assumes you are using
-the QuickStart for RoadRunner,
+This guide also assumes you are using QuickStart for RoadRunner
 and its `MecanumDrive` class.
 :::
 
 ## QuickStart Additions
 
 To use the RoadRunner extension,
-you will need to make a few additions to the QuickStart code.
+make the following additions to the QuickStart code.
 
 First, make your `MecanumDrive` class extend `NextFTCMecanumDrive`:
 
@@ -36,8 +34,8 @@ public class MecanumDrive extends NextFTCMecanumDrive {
 }
 ```
 
-You will probably get an error about unimplemented members;
-you can copy the following implementations into your class:
+You will probably get an error about unimplemented members.
+You can copy the following implementations into your class:
 
 ```java
     HolonomicController controller = new HolonomicController(
@@ -59,17 +57,21 @@ you can copy the following implementations into your class:
 
     @Override
     public void setDrivePowersFF(@NotNull PoseVelocity2dDual<Time> powers) {
-        MecanumKinematics.WheelVelocities<Time> wheelVels = kinematics.inverse(poseVelocity2dDual);
+        MecanumKinematics.WheelVelocities<Time> wheelVels =
+            kinematics.inverse(poseVelocity2dDual);
         double voltage = voltageSensor.getVoltage();
        
-        final MotorFeedforward feedforward = new MotorFeedforward(PARAMS.kS,
-                PARAMS.kV / PARAMS.inPerTick, PARAMS.kA / PARAMS.inPerTick);
+        final MotorFeedforward feedforward = new MotorFeedforward(
+            PARAMS.kS,
+            PARAMS.kV / PARAMS.inPerTick,
+            PARAMS.kA / PARAMS.inPerTick
+        );
         double leftFrontPower = feedforward.compute(wheelVels.leftFront) / voltage;
         double leftBackPower = feedforward.compute(wheelVels.leftBack) / voltage;
         double rightBackPower = feedforward.compute(wheelVels.rightBack) / voltage;
         double rightFrontPower = feedforward.compute(wheelVels.rightFront) / voltage;
         mecanumCommandWriter.write(new MecanumCommandMessage(
-                voltage, leftFrontPower, leftBackPower, rightBackPower, rightFrontPower
+            voltage, leftFrontPower, leftBackPower, rightBackPower, rightFrontPower
         ));
 
         leftFront.setPower(feedforward.compute(wheelVels.leftFront) / voltage);
@@ -99,7 +101,7 @@ you can copy the following implementations into your class:
 
 Android Studio will probably suggest the necessary imports.
 
-There is an example `MecanumDrive` class in the NextFTC branch of my 
+There is an example `MecanumDrive` class in the NextFTC branch of my
 [RoadRunner QuickStart fork](https://github.com/zachwaffle4/road-runner-quickstart/tree/nextftc).
-Do note that this is just an example,
-and it may not be updated to the latest version of RoadRunner or NextFTC.
+Note that this is just an example and may not be updated
+to the latest version of RoadRunner or NextFTC.

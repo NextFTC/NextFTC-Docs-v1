@@ -4,31 +4,34 @@ The `TrajectoryCommandBuilder` has functions to schedule other commands
 during trajectory execution. This can be useful for coordinating
 mechanisms on your robot while following a path.
 
-Here are the functions available in `TrajectoryCommandBuilder` for this purpose:
+Here are the functions available in `TrajectoryCommandBuilder`
+for this purpose:
 - `waitSeconds(seconds: Double)`: Adds a wait period to the trajectory.
   An additional overload accepts a `Duration` argument instead of a `Double`.
-  - `afterTime(seconds: Double, command: Command)`: Schedules a command to run after a specified time into the trajectory.
-  An additional overload accepts a `Duration` argument instead of a `Double`.
-- `afterDisplacement(displacement: Double, command: Command)`: 
-  Schedules a command to run after the robot has traveled a specified distance along the trajectory.
-- `stopAndAdd(command: Command)`: 
-  Stops the trajectory following and runs the specified command. 
-  The trajectory will not resume after the command completes.
+- `afterTime(seconds: Double, command: Command)`: Schedules a command to run
+after a specified time into the trajectory.
+  An additional overload accepts
+a `Duration` argument instead of a `Double`.
+- `afterDisplacement(displacement: Double, command: Command)`: Schedules a command
+to run after the robot has traveled a specified distance along the trajectory.
+- `stopAndAdd(command: Command)`: Stops the trajectory following and runs
+the specified command.
+  The trajectory will resume after the command completes.
 
 `afterTime`, `afterDisplacement`, and `stopAndAdd` also have overloads
 that accept a `Runnable` instead of a `Command` object,
 which schedules an `InstantCommand`.
 
 Here is an example of using these functions in an OpMode,
-using the [lift](../../guide/subsystems/lift) and 
+using the [lift](../../guide/subsystems/lift) and
 [claw](../../guide/subsystems/claw) subsystems from the previous guides.
 
-As you can see, this example requires us to use
-the `SubsystemComponent` to add the subsystems to our OpMode,
-so that their `periodic` methods are called during the OpMode.
-You can add other subsystems to the same `SubsystemComponent` if needed,
-and other `Component` types can be added alongside it,
-if needed or desired.
+As you can see, this example requires you to use the `SubsystemComponent`
+to add the subsystems to your OpMode, so that their `periodic` methods
+are called during the OpMode.
+You can add other subsystems to the same
+`SubsystemComponent` if needed, and other `Component` types can be added
+alongside it if needed or desired.
 
 ::: tabs key:code
 == Kotlin
@@ -71,7 +74,7 @@ public class OtherCommands extends NextFTCOpMode {
     
     public OtherCommands() {
         addComponents(
-                new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE)
+            new SubsystemComponent(Lift.INSTANCE, Claw.INSTANCE)
         );
     }
 
@@ -80,10 +83,10 @@ public class OtherCommands extends NextFTCOpMode {
         drive = new MecanumDrive(hardwareMap, startPose);
 
         driveCommand = drive.commandBuilder(startPose)
-                .splineTo(scorePose.position, scorePose.heading)
-                .afterTime(0.5, Lift.INSTANCE.toHigh())
-                .stopAndAdd(Claw.INSTANCE.open())
-                .build();
+            .splineTo(scorePose.position, scorePose.heading)
+            .afterTime(0.5, Lift.INSTANCE.toHigh())
+            .stopAndAdd(Claw.INSTANCE.open())
+            .build();
     }
 
     @Override
