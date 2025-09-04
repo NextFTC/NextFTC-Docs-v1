@@ -8,7 +8,11 @@ export default [
     },
     {
         text: "Pedro Pathing", items: [
-            {text: "PedroPathing Extension", link: "/extensions/pedro/"},
+            {text: "Installation", link: "/extensions/pedro/"},
+            {text: "Getting Started", link: "/extensions/pedro/getting-started"},
+            {text: "Following Paths", link: "/extensions/pedro/following-paths"},
+            {text: "Turning", link: "/extensions/pedro/turning"},
+            {text: "TeleOp Driving", link: "/extensions/pedro/teleop"},
         ]
     },
     {
