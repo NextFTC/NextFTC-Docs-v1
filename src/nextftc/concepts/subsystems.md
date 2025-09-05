@@ -104,3 +104,15 @@ public Command pivotRight = new SetPosition(pivotServo, 0.0).requires(pivotServo
 ```
 
 :::
+
+## Subsystem Groups
+
+NextFTC provides a `SubsystemGroup` class that can be used to group multiple
+subsystems into a single object.
+This is useful for commands that require
+multiple subsystems to be active at the same time.
+It can also be used to simplify the process of adding multiple
+subsystems to a `SubsystemComponent`.
+
+For examples of SubsystemGroups,
+see the [corresponding guide page](../../guide/subsystems/groups-and-robot).
