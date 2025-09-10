@@ -14,13 +14,13 @@ Add the following lines to the bottom:
 == .gradle
 
 ```groovy
-implementation 'dev.nextftc:bindings:1.0.0'
+implementation 'dev.nextftc:bindings:1.0.1'
 ```
 
 == .gradle.kts
 
 ```kotlin
-implementation("dev.nextftc:bindings:1.0.0")
+implementation("dev.nextftc:bindings:1.0.1")
 ```
 
 :::
