@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.rowanmcalpin.nextftc.ftc.hardware.controllables</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    NextFTC
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ftc:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ftc:dokkaHtmlPartial/release" data-filter=":ftc:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    NextFTC
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ftc::com.rowanmcalpin.nextftc.ftc.hardware.controllables////PointingToDeclaration//-421602704">
+  <div class="breadcrumbs"><a href="../index.html">ftc</a><span class="delimiter">/</span><span class="current">com.rowanmcalpin.nextftc.ftc.hardware.controllables</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="570223638%2FClasslikes%2F-421602704" anchor-label="Controllable" id="570223638%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-controllable/index.html"><span><span>Controllable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="570223638%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-controllable/index.html">Controllable</a></div><div class="brief "><p class="paragraph">An item that has a position and a power.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="562238071%2FClasslikes%2F-421602704" anchor-label="HoldPosition" id="562238071%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hold-position/index.html"><span>Hold</span><wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="562238071%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-hold-position/index.html">HoldPosition</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>controllable<span class="token operator">: </span><a href="-controllable/index.html">Controllable</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>controller<span class="token operator">: </span><a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">This implements a <a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a> to hold a <a href="-controllable/index.html">Controllable</a> in its current position.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1459928765%2FClasslikes%2F-421602704" anchor-label="HoldVelocity" id="-1459928765%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hold-velocity/index.html"><span>Hold</span><wbr><span><span>Velocity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1459928765%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-hold-velocity/index.html">HoldVelocity</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>controllable<span class="token operator">: </span><a href="-controllable/index.html">Controllable</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>controller<span class="token operator">: </span><a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">This implements a PID controller to hold a motor at its current velocity. This command never finishes, so it should be implemented as a DefaultCommand in your subsystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1147455461%2FClasslikes%2F-421602704" anchor-label="MotorEx" id="-1147455461%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-motor-ex/index.html"><span>Motor</span><wbr><span><span>Ex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147455461%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-motor-ex/index.html">MotorEx</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>motor<span class="token operator">: </span><span data-unresolved-link="com.qualcomm.robotcore.hardware/DcMotorEx///PointingToDeclaration/">DcMotorEx</span></span></span><span class="token punctuation">)</span> : <a href="-controllable/index.html">Controllable</a></div><div class="brief "><p class="paragraph">Wrapper class for motors that implements controllable (and can therefore be used with RunToPosition commands).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-433493963%2FClasslikes%2F-421602704" anchor-label="MotorGroup" id="-433493963%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-motor-group/index.html"><span>Motor</span><wbr><span><span>Group</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-433493963%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-motor-group/index.html">MotorGroup</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leader<span class="token operator">: </span><a href="-motor-ex/index.html">MotorEx</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>followers<span class="token operator">: </span><a href="-motor-ex/index.html">MotorEx</a></span></span><span class="token punctuation">)</span> : <a href="-controllable/index.html">Controllable</a></div><div class="brief "><p class="paragraph">A MotorGroup is a collection of <a href="-motor-ex/index.html">MotorEx</a>s that are all controlled by a single encoder (connected to the leader motor)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1643105198%2FClasslikes%2F-421602704" anchor-label="ResetEncoder" id="-1643105198%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reset-encoder/index.html"><span>Reset</span><wbr><span><span>Encoder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1643105198%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-reset-encoder/index.html">ResetEncoder</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>motor<span class="token operator">: </span><a href="-motor-ex/index.html">MotorEx</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">This command resets the encoder using a custom implementation (in other words, it does not change the RunMode of the motor.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-328956204%2FClasslikes%2F-421602704" anchor-label="RunToPosition" id="-328956204%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-run-to-position/index.html"><span>Run</span><wbr><span>To</span><wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-328956204%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-run-to-position/index.html">RunToPosition</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>controllable<span class="token operator">: </span><a href="-controllable/index.html">Controllable</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>target<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>controller<span class="token operator">: </span><a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">This implements a <a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a> to drive a <a href="-controllable/index.html">Controllable</a> to a specified target position. When it finishes, it will set the <a href="-controllable/index.html">Controllable</a>'s power to 0. To have it hold position, set the default command to a <a href="-hold-position/index.html">HoldPosition</a> command.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1943844256%2FClasslikes%2F-421602704" anchor-label="RunToVelocity" id="1943844256%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-run-to-velocity/index.html"><span>Run</span><wbr><span>To</span><wbr><span><span>Velocity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1943844256%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-run-to-velocity/index.html">RunToVelocity</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>controllable<span class="token operator">: </span><a href="-controllable/index.html">Controllable</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>targetVelocity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>controller<span class="token operator">: </span><a href="../../core/com.rowanmcalpin.nextftc.core.control.controllers/-controller/index.html">Controller</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>outCondition<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>{ abs(controllable.velocity)-targetVelocity &lt; 10 }</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">This implements a PID controller to drive a motor to a specified target velocity. Note that this command will spin a motor to a specific velocity, <i>and then depower the motor</i>. To have it hold velocity, set the subsystem's default command to a <a href="-hold-velocity/index.html">HoldVelocity</a> command.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1992336612%2FClasslikes%2F-421602704" anchor-label="SetPower" id="-1992336612%2FClasslikes%2F-421602704" data-filterable-set=":ftc:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ftc:dokkaHtmlPartial/release" data-filterable-set=":ftc:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-set-power/index.html"><span>Set</span><wbr><span><span>Power</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1992336612%2FClasslikes%2F-421602704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ftc:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-set-power/index.html">SetPower</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>controllable<span class="token operator">: </span><a href="-controllable/index.html">Controllable</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>power<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subsystems<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../core/com.rowanmcalpin.nextftc.core/-subsystem/index.html">Subsystem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>setOf()</span></span><span class="token punctuation">)</span> : <a href="../../core/com.rowanmcalpin.nextftc.core.command/-command/index.html">Command</a></div><div class="brief "><p class="paragraph">Sets a controllable to a specific power without any internal feedback</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
