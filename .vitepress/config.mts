@@ -1,8 +1,15 @@
 import {defineConfig} from "vitepress";
 import {tabsMarkdownPlugin} from "vitepress-plugin-tabs";
+import guide from "./sidebar/guide.mts";
+import nextftc from "./sidebar/nextftc.mts";
+import bindings from "./sidebar/bindings.mts";
+import control from "./sidebar/control.mts";
+import extensions from "./sidebar/extensions.mts";
+import llmstxt from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    srcDir: "src",
     head: [
         ["link", {rel: "shortcut icon", type: "image/x-icon", href: "/favicon.ico"}],
         ["link", {rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96"}],
@@ -19,7 +26,6 @@ export default defineConfig({
     ],
     cleanUrls: true,
     ignoreDeadLinks: true,
-    base: "/",
     markdown: {
         config(md) {
             md.use(tabsMarkdownPlugin);
@@ -30,136 +36,55 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: "Home", link: "/"},
-            {text: "Documentation", link: "/installation"},
-            {text: "Reference", link: "https://nextftc.dev/reference/"}
-        ],
-
-        sidebar: [
-            {text: "Installation", link: "/installation"},
+            {text: "Guide", link: "/guide/about", activeMatch: "^/guide/"},
             {
-                text: "User Guide",
+                text: "Libraries",
                 items: [
-                    {
-                        text: "Subsystems",
-                        link: "/user-guide/subsystems",
-                        items: [
-                            {text: "Lift", link: "/user-guide/subsystems/lift"},
-                            {text: "Claw", link: "/user-guide/subsystems/claw"}
-                        ]
-                    },
-                    {
-                        text: "OpModes",
-                        items: [
-                            {text: "Autonomous", link: "/user-guide/opmodes/autonomous"},
-                            {text: "TeleOp", link: "/user-guide/opmodes/teleop"},
-                            {text: "PedroPathing", link: "/user-guide/opmodes/pedropathing"}
-                        ]
-                    }
+                    {text: "NextFTC", link: "/nextftc/", activeMatch: "^/nextftc/"},
+                    {text: "NextControl", link: "/control/", activeMatch: "^/control/"},
+                    {text: "NextBindings", link: "/bindings/", activeMatch: "^/bindings/"},
+                    {text: "Extensions", link: "/extensions/", activeMatch: "^/extensions/"},
+                ],
+                activeMatch: "^/(nextftc|control|bindings|extensions)/"
+
+            },
+            {
+                text: "v1.0.0",
+                items: [
+                    {text: "v0.6.1", link: "https://nextftc.dev"} // TODO: Update to `v0.nextftc.dev` when v1 is released
                 ]
             },
             {
-                text: "Core concepts",
-                items: [
-                    {
-                        text: "Commands",
-                        link: "/concepts/commands"
-                    },
-                    {
-                        text: "Hardware",
-                        items: [
-                            {
-                                text: "Motors",
-                                link: "/concepts/hardware/motors"
-                            }
-                        ]
-                    },
-                    {
-                        text: "Units",
-                        link: "/concepts/units"
-                    }
-                ]
+                text: "KDoc",
+                link: "https://javadoc.io/doc/dev.nextftc"
             },
-            {
-                text: "Built-In Commands",
-                items: [
-                    {
-                        text: "Command Groups",
-                        link: "/builtin-commands/commandgroups"
-                    },
-                    {
-                        text: "Utilities",
-                        link: "/builtin-commands/utilities"
-                    },
-                    {
-                        text: "Conditionals",
-                        link: "/builtin-commands/conditionals"
-                    },
-                    {
-                        text: "Delays",
-                        link: "/builtin-commands/delays"
-                    },
-                    {
-                        text: "Drivetrain Commands",
-                        link: "/builtin-commands/drivetrain-commands",
-                        items: [
-                            {
-                                text: "PedroPathing",
-                                link: "/builtin-commands/drivetrain-commands/pedropathing"
-                            },
-                            {
-                                text: "Holonomic",
-                                link: "/builtin-commands/drivetrain-commands/holonomic"
-                            },
-                            {
-                                text: "Differential",
-                                link: "/builtin-commands/drivetrain-commands/differential"
-                            }
-                        ]
-                    },
-                    {
-                        text: "Hardware Commands",
-                        items: [
-                            {
-                                text: "Motor Commands",
-                                link: "/builtin-commands/hardware/motors"
-                            },
-                            {
-                                text: "Servo Commands",
-                                link: "/builtin-commands/hardware/servos"
-                            }
-                        ]
-                    },
-                    {
-                        text: "PedroPathing",
-                        items: [
-                           {
-                               text: "Movement",
-                               link: "/builtin-commands/pedro/movement"
-                           },
-                           {
-                               text: "Delays",
-                               link: "/builtin-commands/pedro/delays"
-                           }
-                        ]
-                    },
-                    {
-                        text: "Miscellanous",
-                        link: "/builtin-commands/misc"
-                    }
-                ]
-            }
+            {text: "Contributing", link: "/contributing"},
+            {text: "Code of Conduct", link: "/code-of-conduct"}
         ],
 
-        socialLinks: [
-            {icon: "github", link: "https://github.com/rowan-mcalpin/nextftc"},
-            {icon: "discord", link: "https://discord.gg/PjP9Ze6fkX"}
-        ],
-        editLink: {
-            pattern: "https://github.com/rowan-mcalpin/nextftc-docs/edit/main/:path"
+        sidebar: {
+            '/guide/': guide,
+            '/nextftc/': nextftc,
+            '/bindings/': bindings,
+            '/control/': control,
+            '/extensions/': extensions
         },
+
+        socialLinks:
+            [
+                {icon: "github", link: "https://github.com/NextFTC"},
+                {icon: "discord", link: "https://nextftc.dev/discord"}
+            ],
+        editLink:
+            {
+                pattern: "https://github.com/NextFTC/NextFTC-Docs-v1/edit/main/src/:path" // TODO: Update to `NextFTC-Docs` when v1 is released
+            }
+        ,
         search: {
             provider: "local"
         }
+    },
+    vite: {
+        plugins: [llmstxt()]
     }
 });
