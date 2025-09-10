@@ -26,6 +26,12 @@ export default [
         ]
     },
     {
+        text: "Commands",
+        items: [
+            {text: "Overview", link: "/guide/commands/custom-commands"},
+        ]
+    },
+    {
         text: "Further Reading",
         link: "/guide/further-reading"
     }
