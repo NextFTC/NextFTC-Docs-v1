@@ -8,12 +8,6 @@ subsystems, and components. It also has an optional hardware module that
 provides built-in, ready-to-use hardware commands for almost all of your
 hardware needs.
 
-::: danger
-These docs are for a beta version of NextFTC. 
-There may be unexpected bugs and changes.
-Please let us know on Discord and GitHub if you find any issues!
-:::
-
 ## Installation
 
 In the TeamCode `build.gradle`, go to the `dependencies` block.
@@ -24,15 +18,15 @@ Add the following lines:
 == .gradle
 
 ```groovy
-implementation 'dev.nextftc:ftc:1.0.0-beta.3'
-implementation 'dev.nextftc:hardware:1.0.0-beta.3' // If you would like to use the hardware module
+implementation 'dev.nextftc:ftc:1.0.0'
+implementation 'dev.nextftc:hardware:1.0.0' // If you would like to use the hardware module
 ```
 
 == .gradle.kts
 
 ```kotlin
-implementation("dev.nextftc:ftc:1.0.0-beta.3")
-implementation("dev.nextftc:hardware:1.0.0-beta.3") // If you would like to use the hardware module
+implementation("dev.nextftc:ftc:1.0.0")
+implementation("dev.nextftc:hardware:1.0.0") // If you would like to use the hardware module
 ```
 
 :::
