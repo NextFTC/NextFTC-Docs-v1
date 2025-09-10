@@ -51,7 +51,7 @@ export default defineConfig({
             {
                 text: "v1.0.0",
                 items: [
-                    {text: "v0.6.1", link: "https://nextftc.dev"} // TODO: Update to `v0.nextftc.dev` when v1 is released
+                    {text: "v0.6", link: "https://v0.nextftc.dev"} // TODO: Update to `v0.nextftc.dev` when v1 is released
                 ]
             },
             {
