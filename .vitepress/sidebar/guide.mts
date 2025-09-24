@@ -14,8 +14,7 @@ export default [
         items: [
             {text: "Overview", link: "/guide/subsystems/overview"},
             {text: "Lift", link: "/guide/subsystems/lift"},
-            {text: "Claw", link: "/guide/subsystems/claw"},
-            {text: "Groups and Robots", link: "/guide/subsystems/groups-and-robot"},
+            {text: "Claw", link: "/guide/subsystems/claw"}
         ]
     },
     {
@@ -23,12 +22,6 @@ export default [
         items: [
             {text: "Autonomous", link: "/guide/opmodes/autonomous"},
             {text: "TeleOp", link: "/guide/opmodes/teleop"},
-        ]
-    },
-    {
-        text: "Commands",
-        items: [
-            {text: "Overview", link: "/guide/commands/custom-commands"},
         ]
     },
     {
