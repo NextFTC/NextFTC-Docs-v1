@@ -23,8 +23,8 @@ private val frontRightMotor = MotorEx("front_right").breakMode()
 private val backLeftMotor = MotorEx("back_left").breakMode().reversed()
 private val backRightMotor = MotorEx("back_right").breakMode()
 
-private val leftMotors = new MotorGroup(leftFront, leftBack)
-private val rightMotors = new MotorGroup(rightFront, rightBack)
+private val leftMotors = new MotorGroup(frontLeftMotor, backLeftMotor);
+private val rightMotors = new MotorGroup(frontRightMotor, backRightMotor);
 ```
 
 == Java
@@ -35,8 +35,8 @@ private MotorEx frontRightMotor = new MotorEx("front_right").breakMode();
 private MotorEx backLeftMotor = new MotorEx("back_left").breakMode().reversed();
 private MotorEx backRightMotor = new MotorEx("back_right").breakMode();
 
-private MotorGroup leftMotors = new MotorGroup(leftFront, leftBack);
-private MotorGroup rightMotors = new MotorGroup(rightFront, rightBack);
+private MotorGroup leftMotors = new MotorGroup(frontLeftMotor, backLeftMotor);
+private MotorGroup rightMotors = new MotorGroup(frontRightMotor, backRightMotor);
 ```
 
 :::
