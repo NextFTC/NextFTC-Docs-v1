@@ -68,7 +68,7 @@ driverControlled = new DifferentialTankDriverControlled(
   leftMotors,
   rightMotors,
   Gamepads.gamepad1().leftStickY(),
-  Gamepads.gamepad1().rightStickX()
+  Gamepads.gamepad1().rightStickY()
 );
 driverControlled.schedule();
 ```
