@@ -52,7 +52,8 @@ You can run it as a tank drive:
 == Kotlin
 
 ```kotlin
-val driverControlled = DifferentialTankDriverControlled(leftMotors,
+driverControlled = DifferentialTankDriverControlled(
+  leftMotors,
   rightMotors,
   Gamepads.gamepad1.leftStickY,
   Gamepads.gamepad1.rightStickY
@@ -63,7 +64,7 @@ driverControlled()
 == Java
 
 ```java
-Command driverControlled = new DifferentialTankDriverControlled(
+driverControlled = new DifferentialTankDriverControlled(
   leftMotors,
   rightMotors,
   Gamepads.gamepad1().leftStickY(),
@@ -80,7 +81,7 @@ Or as an arcade drive:
 == Kotlin
 
 ```kotlin
-val driverControlled = DifferentialArcadeDriverControlled(
+driverControlled = DifferentialArcadeDriverControlled(
   leftMotors,
   rightMotors,
   Gamepads.gamepad1.leftStickY,
@@ -92,7 +93,7 @@ driverControlled()
 == Java
 
 ```java
-Command driverControlled = new DifferentialArcadeDriverControlled(
+driverControlled = new DifferentialArcadeDriverControlled(
   leftMotors,
   rightMotors,
   Gamepads.gamepad1().leftStickY(),
