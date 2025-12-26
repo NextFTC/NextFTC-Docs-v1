@@ -97,7 +97,7 @@ driverControlled = new DifferentialArcadeDriverControlled(
   leftMotors,
   rightMotors,
   Gamepads.gamepad1().leftStickY(),
-  Gamepads.gamepad1().rightStickY()
+  Gamepads.gamepad1().rightStickX()
  );
 driverControlled.schedule();
 ```
